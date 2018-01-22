@@ -10,8 +10,8 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    let cellId = "cellId"
-    let headerId = "HeaderId"
+    private let cellId = "cellId"
+    private let headerId = "HeaderId"
 
     override func viewDidLoad() {
         super.viewDidLoad()

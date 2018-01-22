@@ -13,6 +13,8 @@
 		BE5F68A320168606006F28EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F68A120168606006F28EF /* LaunchScreen.storyboard */; };
 		BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AA20168892006F28EF /* StuffedNavController.swift */; };
 		BE5F68AE201688ED006F28EF /* UIColor+themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AD201688ED006F28EF /* UIColor+themes.swift */; };
+		BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */; };
+		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BE5F68A420168607006F28EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE5F68AA20168892006F28EF /* StuffedNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedNavController.swift; sourceTree = "<group>"; };
 		BE5F68AD201688ED006F28EF /* UIColor+themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
+		BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				BE5F689820168606006F28EF /* AppDelegate.swift */,
 				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
+				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
 				BE5F689A20168606006F28EF /* HomeController.swift */,
 				BE5F68AD201688ED006F28EF /* UIColor+themes.swift */,
+				BE5F68B12016A7F6006F28EF /* UIView+layout.swift */,
 				BE5F689F20168606006F28EF /* Assets.xcassets */,
 				BE5F68A120168606006F28EF /* LaunchScreen.storyboard */,
 				BE5F68A420168607006F28EF /* Info.plist */,
@@ -141,6 +147,8 @@
 				BE5F689B20168606006F28EF /* HomeController.swift in Sources */,
 				BE5F68AE201688ED006F28EF /* UIColor+themes.swift in Sources */,
 				BE5F689920168606006F28EF /* AppDelegate.swift in Sources */,
+				BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */,
+				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
