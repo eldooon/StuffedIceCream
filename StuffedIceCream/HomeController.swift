@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UICollectionViewController {
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     let headerId = "HeaderId"
@@ -43,7 +43,7 @@ class HomeController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
+        cell.backgroundColor = .stuffedBlue
         return cell
     }
     
