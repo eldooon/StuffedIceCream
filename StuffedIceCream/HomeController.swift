@@ -11,15 +11,19 @@ import UIKit
 class HomeController: UICollectionViewController {
     
     let cellId = "cellId"
+    let headerId = "HeaderId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.]
         
         view.backgroundColor = .white
-        navigationItem.title = "STUFFED"
         
+        navigationItem.title = "STUFFED"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(menuButtonTapped))
+        
+        collectionView?.backgroundColor = .white
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
     }
 
     @objc func menuButtonTapped() {
@@ -46,7 +50,7 @@ class HomeController: UICollectionViewController {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-
+        return CGSize(width: view.frame.width, height: 200)
     }
 
 }
