@@ -16,7 +16,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .blue
         
         return collectionView
     }()
@@ -24,7 +24,9 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        headerCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        headerCollectionView.dataSource = self
+        headerCollectionView.delegate = self
+        headerCollectionView.register(HomeHeaderItemCell.self, forCellWithReuseIdentifier: cellId)
         
         createLayout()
     }
@@ -36,6 +38,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     private func createLayout() {
     
         addSubview(headerCollectionView)
+        headerCollectionView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,8 +47,13 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .stuffedBlue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeHeaderItemCell
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: frame.width, height: frame.height)
     }
 }
