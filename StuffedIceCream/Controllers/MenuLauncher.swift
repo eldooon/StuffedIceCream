@@ -21,6 +21,8 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     
     private let cellId = "cellId"
     
+    let menuItems = MenuItems()
+    
     override init() {
         super.init()
         
@@ -64,13 +66,16 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return menuItems.items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MenuCell
+        
+        cell.menuImageView.image = menuItems.items[indexPath.item].menuImage
+        cell.menuNameLabel.text = menuItems.items[indexPath.item].menuName
         
         return cell
     }
