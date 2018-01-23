@@ -64,6 +64,31 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
+    func changeRootView(){
+        guard let delegate = UIApplication.shared.delegate else { return }
+        guard let window = (delegate as! AppDelegate).window else { return }
+        
+        // capture a reference to the old root controller so it doesn't
+        // go away until the animation completes
+        var oldRootController = window.rootViewController
+        
+        UIView.transition(with: window,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                            let aboutController = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
+                            window.rootViewController = StuffedNavController(rootViewController: aboutController)
+        },
+                          completion: { completed in
+                            
+                            // OK, we're done with the old root controller now
+                            oldRootController = nil
+                            
+                            self.dismissLauncher()
+                            print ("changed")
+        })
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return menuItems.items.count
@@ -83,7 +108,8 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-        
+        changeRootView()
+    
     }
     
     
@@ -106,7 +132,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
-        menuCollectionView.contentInset = UIEdgeInsets(top: 100, left: 10, bottom: 0, right: 0)
+        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 10, bottom: 0, right: 0)
         menuCollectionView.backgroundColor = .stuffedBlue
         
     }

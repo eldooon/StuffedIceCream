@@ -32,6 +32,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         menuLauncher.showMenu()
     }
     
+    func didSelectAboutCell() {
+        
+        let aboutVC = AboutController()
+        navigationController?.pushViewController(aboutVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
