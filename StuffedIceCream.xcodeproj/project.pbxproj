@@ -45,6 +45,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0958802017BED1005C9901 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
+				BE5F689A20168606006F28EF /* HomeController.swift */,
+				BE09587E2017BB18005C9901 /* MenuLauncher.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE0958812017BEE6005C9901 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
+				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE0958822017BEF3005C9901 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F68AD201688ED006F28EF /* UIColor+themes.swift */,
+				BE5F68B12016A7F6006F28EF /* UIView+layout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE0958832017BF00005C9901 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F689F20168606006F28EF /* Assets.xcassets */,
+				BE5F68A120168606006F28EF /* LaunchScreen.storyboard */,
+				BE5F68A420168607006F28EF /* Info.plist */,
+				BE5F689820168606006F28EF /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BE5F688C20168606006F28EF = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +103,10 @@
 		BE5F689720168606006F28EF /* StuffedIceCream */ = {
 			isa = PBXGroup;
 			children = (
-				BE5F689820168606006F28EF /* AppDelegate.swift */,
-				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
-				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
-				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
-				BE5F689A20168606006F28EF /* HomeController.swift */,
-				BE09587E2017BB18005C9901 /* MenuLauncher.swift */,
-				BE5F68AD201688ED006F28EF /* UIColor+themes.swift */,
-				BE5F68B12016A7F6006F28EF /* UIView+layout.swift */,
-				BE5F689F20168606006F28EF /* Assets.xcassets */,
-				BE5F68A120168606006F28EF /* LaunchScreen.storyboard */,
-				BE5F68A420168607006F28EF /* Info.plist */,
+				BE0958832017BF00005C9901 /* Resources */,
+				BE0958822017BEF3005C9901 /* Extensions */,
+				BE0958812017BEE6005C9901 /* Views */,
+				BE0958802017BED1005C9901 /* Controllers */,
 			);
 			path = StuffedIceCream;
 			sourceTree = "<group>";
