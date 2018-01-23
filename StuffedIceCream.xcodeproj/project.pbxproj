@@ -91,7 +91,6 @@
 		BE5F688C20168606006F28EF = {
 			isa = PBXGroup;
 			children = (
-				BE0958862017C636005C9901 /* Default-568h@2x.png */,
 				BE5F689720168606006F28EF /* StuffedIceCream */,
 				BE5F689620168606006F28EF /* Products */,
 			);
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5F68A420168607006F28EF /* Info.plist */,
+				BE0958862017C636005C9901 /* Default-568h@2x.png */,
 				BE0958832017BF00005C9901 /* Resources */,
 				BE0958822017BEF3005C9901 /* Extensions */,
 				BE0958812017BEE6005C9901 /* Views */,

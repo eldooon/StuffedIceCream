@@ -70,7 +70,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MenuCell
         
         return cell
     }
@@ -93,12 +93,12 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         layout.scrollDirection = UICollectionViewScrollDirection.vertical
         layout.itemSize = CGSize(width: screenWidth/2.005, height: screenWidth/5)
         layout.minimumLineSpacing = 1
-        layout.minimumInteritemSpacing = 0
+        layout.minimumInteritemSpacing = 1
         
         menuCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
-        menuCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
         menuCollectionView.contentInset = UIEdgeInsets(top: 100, left: 10, bottom: 0, right: 0)
