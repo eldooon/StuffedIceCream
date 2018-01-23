@@ -12,6 +12,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     private let cellId = "cellId"
     private let headerId = "HeaderId"
+    let menuLauncher = MoreMenuLauncher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     @objc func menuButtonTapped() {
-        print("Menu button tapped")
+        menuLauncher.showMenu()
     }
     
     override func didReceiveMemoryWarning() {
