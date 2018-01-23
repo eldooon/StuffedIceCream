@@ -55,7 +55,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     
     func startTimer() {
         
-        let timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true);
+        _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true);
         
         
     }
