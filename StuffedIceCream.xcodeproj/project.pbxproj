@@ -14,6 +14,7 @@
 		BE09588A2017CA5C005C9901 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958892017CA5C005C9901 /* MenuItem.swift */; };
 		BE09588C2017DC03005C9901 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09588B2017DC03005C9901 /* AboutController.swift */; };
 		BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */; };
+		BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958912019231D005C9901 /* AboutFounderCell.swift */; };
 		BE5F689920168606006F28EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689820168606006F28EF /* AppDelegate.swift */; };
 		BE5F689B20168606006F28EF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689A20168606006F28EF /* HomeController.swift */; };
 		BE5F68A020168606006F28EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F689F20168606006F28EF /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		BE0958892017CA5C005C9901 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BE09588B2017DC03005C9901 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderCell.swift; sourceTree = "<group>"; };
+		BE0958912019231D005C9901 /* AboutFounderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFounderCell.swift; sourceTree = "<group>"; };
 		BE5F689520168606006F28EF /* StuffedIceCream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedIceCream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F689820168606006F28EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F689A20168606006F28EF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
 				BE0958842017C1C9005C9901 /* MenuCell.swift */,
 				BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */,
+				BE0958912019231D005C9901 /* AboutFounderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
 				BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */,
 				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
+				BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 				BE09588C2017DC03005C9901 /* AboutController.swift in Sources */,
 			);
