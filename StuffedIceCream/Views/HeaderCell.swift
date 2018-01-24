@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeHeaderItemCell: UICollectionViewCell {
+class HeaderCell: UICollectionViewCell {
     
     let itemImageView: UIImageView = {
         let iv = UIImageView()

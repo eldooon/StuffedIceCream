@@ -27,7 +27,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         
         headerCollectionView.dataSource = self
         headerCollectionView.delegate = self
-        headerCollectionView.register(HomeHeaderItemCell.self, forCellWithReuseIdentifier: cellId)
+        headerCollectionView.register(HeaderCell.self, forCellWithReuseIdentifier: cellId)
         
         createLayout()
         startTimer()
@@ -66,7 +66,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeHeaderItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HeaderCell
         
         return cell
     }
