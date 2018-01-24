@@ -36,7 +36,7 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+        return founders.count
         
     }
     
@@ -48,7 +48,8 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AboutFounderCell
     
-        // Configure the cell
+        cell.founderImageView.image = founders[indexPath.item].founderImage
+        cell.founderNameLabel.text = founders[indexPath.item].founderName
     
         return cell
     }
