@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE09587D2016AAC9005C9901 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587C2016AAC9005C9901 /* HeaderCell.swift */; };
+		BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */; };
 		BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587E2017BB18005C9901 /* MenuLauncher.swift */; };
 		BE0958852017C1C9005C9901 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958842017C1C9005C9901 /* MenuCell.swift */; };
 		BE0958872017C636005C9901 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0958862017C636005C9901 /* Default-568h@2x.png */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE09587C2016AAC9005C9901 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderItemCell.swift; sourceTree = "<group>"; };
 		BE09587E2017BB18005C9901 /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
 		BE0958842017C1C9005C9901 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		BE0958862017C636005C9901 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		BE0958812017BEE6005C9901 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE09587C2016AAC9005C9901 /* HeaderCell.swift */,
+				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
 				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
 				BE0958842017C1C9005C9901 /* MenuCell.swift */,
 			);
@@ -210,7 +210,7 @@
 				BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */,
 				BE09588A2017CA5C005C9901 /* MenuItem.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,
-				BE09587D2016AAC9005C9901 /* HeaderCell.swift in Sources */,
+				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
 				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 				BE09588C2017DC03005C9901 /* AboutController.swift in Sources */,

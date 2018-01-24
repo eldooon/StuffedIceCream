@@ -19,7 +19,7 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
         navigationItem.title = "About"
         collectionView?.backgroundColor = .white
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView?.register(HomeHeaderItemCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
 
     }
 
@@ -51,7 +51,9 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! HeaderCell
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! HomeHeaderItemCell
+        
+        header.itemImageView.image = #imageLiteral(resourceName: "aboutHeaderImage")
         
         print("Setting Header")
         return header
