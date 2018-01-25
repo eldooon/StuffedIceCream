@@ -34,6 +34,13 @@ class AboutFounderCell: UICollectionViewCell {
         return label
     }()
     
+    let readAboutLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Click to read more..."
+        label.font = label.font.withSize(10)
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -54,6 +61,9 @@ class AboutFounderCell: UICollectionViewCell {
         
         addSubview(founderNameLabel)
         founderNameLabel.anchor(centerX: nil, centerY: nil, top: founderLabel.bottomAnchor, left: founderLabel.leftAnchor, bottom: nil, right: nil, paddingTop: 2, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        addSubview(readAboutLabel)
+        readAboutLabel.anchor(centerX: nil, centerY: nil, top: nil, left: nil, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 10, paddingRight: 10, width: 0, height: 0)
         
     }
 }
