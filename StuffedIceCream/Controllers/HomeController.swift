@@ -30,11 +30,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     @objc func menuButtonTapped() {
         menuLauncher.showMenu()
+        menuLauncher.homeController = self
     }
     
     func didSelectAboutCell() {
         
-        let aboutVC = AboutController()
+        let aboutVC = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
         navigationController?.pushViewController(aboutVC, animated: true)
     }
     

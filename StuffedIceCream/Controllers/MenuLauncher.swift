@@ -23,6 +23,8 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     
     let menuItems = MenuItems()
     
+    var homeController: HomeController?
+    
     override init() {
         super.init()
         
@@ -64,29 +66,9 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    func changeRootView(){
-        guard let delegate = UIApplication.shared.delegate else { return }
-        guard let window = (delegate as! AppDelegate).window else { return }
-        
-        // capture a reference to the old root controller so it doesn't
-        // go away until the animation completes
-        var oldRootController = window.rootViewController
-        
-        UIView.transition(with: window,
-                          duration: 0.3,
-                          options: .transitionCrossDissolve,
-                          animations: {
-                            let aboutController = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
-                            window.rootViewController = StuffedNavController(rootViewController: aboutController)
-        },
-                          completion: { completed in
-                            
-                            // OK, we're done with the old root controller now
-                            oldRootController = nil
-                            
-                            self.dismissLauncher()
-                            print ("changed")
-        })
+    func presentController() {
+       homeController?.didSelectAboutCell()
+       dismissLauncher()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,7 +90,8 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-        changeRootView()
+//        changeRootView()
+        presentController()
     
     }
     
