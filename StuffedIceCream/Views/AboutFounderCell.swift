@@ -12,7 +12,13 @@ class AboutFounderCell: UICollectionViewCell {
     
     let founderImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .blue
+        iv.sizeToFit()
+        iv.contentMode = .scaleAspectFill
+        iv.layer.borderWidth = 2
+        iv.layer.masksToBounds = false
+        iv.layer.borderColor = UIColor.stuffedBlue.cgColor
+        iv.layer.cornerRadius = 100/2
+        iv.clipsToBounds = true
         return iv
     }()
     
