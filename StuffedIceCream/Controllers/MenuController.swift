@@ -15,6 +15,7 @@ class MenuController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = "Menu"
         collectionView?.backgroundColor = .white
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
 
