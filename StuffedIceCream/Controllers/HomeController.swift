@@ -19,8 +19,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Do any additional setup after loading the view, typically from a nib.]
         
         view.backgroundColor = .white
-        
-        navigationItem.title = "STUFFED"
+        let logo = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        logo.contentMode = .scaleAspectFit
+        logo.clipsToBounds = true
+        navigationItem.titleView = logo
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(menuButtonTapped))
         
         collectionView?.backgroundColor = .white
