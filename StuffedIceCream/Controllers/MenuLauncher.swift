@@ -115,7 +115,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
-        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 10, bottom: 0, right: 0)
+        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         menuCollectionView.backgroundColor = .stuffedBlue
         
     }
