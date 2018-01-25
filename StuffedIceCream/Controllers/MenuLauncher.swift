@@ -66,8 +66,14 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    func presentController() {
-       homeController?.didSelectAboutCell()
+    func presentController(ItemSelected: String) {
+        print("Presenting", ItemSelected)
+        if ItemSelected == "Menu" {
+            homeController?.didSelectMenuItem(Item: ItemSelected)
+        }
+        if ItemSelected == "About" {
+            homeController?.didSelectMenuItem(Item: ItemSelected)
+        }
        dismissLauncher()
     }
     
@@ -90,8 +96,14 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-//        changeRootView()
-        presentController()
+        
+        if indexPath.item == 0 {
+            presentController(ItemSelected: "About")
+        }
+        
+        if indexPath.item == 1 {
+            presentController(ItemSelected: "Menu")
+        }
     
     }
     

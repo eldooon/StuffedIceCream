@@ -35,10 +35,18 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         menuLauncher.homeController = self
     }
     
-    func didSelectAboutCell() {
+    func didSelectMenuItem(Item: String) {
         
-        let aboutVC = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(aboutVC, animated: true)
+        var vc: UICollectionViewController
+        
+        if Item == "About" {
+            vc = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
+        }
+        
+        else {
+            vc = MenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
