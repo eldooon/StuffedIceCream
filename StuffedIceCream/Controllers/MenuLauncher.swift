@@ -85,7 +85,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MenuCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! SideMenuCell
         
         cell.menuImageView.image = menuItems.items[indexPath.item].menuImage
         cell.menuNameLabel.text = menuItems.items[indexPath.item].menuName
@@ -124,7 +124,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         menuCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
-        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
+        menuCollectionView.register(SideMenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
         menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)

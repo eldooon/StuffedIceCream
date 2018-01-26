@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */; };
 		BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587E2017BB18005C9901 /* MenuLauncher.swift */; };
-		BE0958852017C1C9005C9901 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958842017C1C9005C9901 /* MenuCell.swift */; };
+		BE0958852017C1C9005C9901 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958842017C1C9005C9901 /* SideMenuCell.swift */; };
 		BE0958872017C636005C9901 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0958862017C636005C9901 /* Default-568h@2x.png */; };
 		BE09588A2017CA5C005C9901 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958892017CA5C005C9901 /* MenuItem.swift */; };
 		BE09588C2017DC03005C9901 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09588B2017DC03005C9901 /* AboutController.swift */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderItemCell.swift; sourceTree = "<group>"; };
 		BE09587E2017BB18005C9901 /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
-		BE0958842017C1C9005C9901 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		BE0958842017C1C9005C9901 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		BE0958862017C636005C9901 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE0958892017CA5C005C9901 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BE09588B2017DC03005C9901 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			children = (
 				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
 				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
-				BE0958842017C1C9005C9901 /* MenuCell.swift */,
+				BE0958842017C1C9005C9901 /* SideMenuCell.swift */,
 				BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */,
 				BE0958912019231D005C9901 /* AboutFounderCell.swift */,
 			);
@@ -217,7 +217,7 @@
 			files = (
 				BE5F689B20168606006F28EF /* HomeController.swift in Sources */,
 				BE5F68AE201688ED006F28EF /* UIColor+themes.swift in Sources */,
-				BE0958852017C1C9005C9901 /* MenuCell.swift in Sources */,
+				BE0958852017C1C9005C9901 /* SideMenuCell.swift in Sources */,
 				BE5F689920168606006F28EF /* AppDelegate.swift in Sources */,
 				BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */,
 				BE0958942019361A005C9901 /* Founder.swift in Sources */,

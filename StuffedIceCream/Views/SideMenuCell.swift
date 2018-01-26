@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuCell: UICollectionViewCell {
+class SideMenuCell: UICollectionViewCell {
     
     let menuImageView: UIImageView = {
         let iv = UIImageView()
