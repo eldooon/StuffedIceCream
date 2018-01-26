@@ -38,7 +38,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
-        menuCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        menuCollectionView.register(MenuItemCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.reloadData()
         createLayout()
         
@@ -66,8 +66,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .stuffedBlue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuItemCell
         
         return cell
     }

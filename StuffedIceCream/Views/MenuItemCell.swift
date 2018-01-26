@@ -11,14 +11,15 @@ import UIKit
 class MenuItemCell: UICollectionViewCell {
     
     let itemImageView: UIImageView = {
-    let iv = UIImageView()
-    iv.contentMode = .scaleAspectFit
-    return iv
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.backgroundColor = .stuffedBlue
+        return iv
     }()
     
     let itemNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Menu Item"
+        label.text = "Menu Name"
         return label
     }()
     
@@ -35,10 +36,10 @@ class MenuItemCell: UICollectionViewCell {
     private func createLayout(){
         
         addSubview(itemImageView)
-        itemImageView.anchor(centerX: nil, centerY: centerYAnchor, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 180)
+        itemImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 140)
         
         addSubview(itemNameLabel)
-        itemNameLabel.anchor(centerX: nil, centerY: nil, top: itemImageView.topAnchor, left: itemImageView.leftAnchor, bottom: nil, right: itemImageView.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: 0, height: 15)
+        itemNameLabel.anchor(centerX: nil, centerY: nil, top: itemImageView.bottomAnchor, left: itemImageView.leftAnchor, bottom: nil, right: itemImageView.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: 0, height: 15)
     }
     
 }
