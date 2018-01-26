@@ -17,6 +17,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
     }()

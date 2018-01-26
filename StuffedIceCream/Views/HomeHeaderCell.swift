@@ -18,6 +18,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .blue
+        collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
     }()
