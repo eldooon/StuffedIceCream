@@ -37,15 +37,20 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     func didSelectMenuItem(Item: String) {
         
-        var vc: UICollectionViewController
+        var vc: UIViewController
         
-        if Item == "About" {
+        switch Item {
+        case "About":
             vc = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
+        case "Menu":
+            vc = MenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        case "Catering":
+            vc = CateringController()
+        default:
+            print("No matching item")
+            vc = CateringController()
         }
         
-        else {
-            vc = MenuController(collectionViewLayout: UICollectionViewFlowLayout())
-        }
         navigationController?.pushViewController(vc, animated: true)
     }
     

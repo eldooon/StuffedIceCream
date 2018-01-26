@@ -68,12 +68,9 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     
     func presentController(ItemSelected: String) {
         print("Presenting", ItemSelected)
-        if ItemSelected == "Menu" {
-            homeController?.didSelectMenuItem(Item: ItemSelected)
-        }
-        if ItemSelected == "About" {
-            homeController?.didSelectMenuItem(Item: ItemSelected)
-        }
+        
+        homeController?.didSelectMenuItem(Item: ItemSelected)
+
        dismissLauncher()
     }
     
@@ -105,6 +102,9 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
             presentController(ItemSelected: "Menu")
         }
     
+        if indexPath.item == 2 {
+            presentController(ItemSelected: "Catering")
+        }
     }
     
     

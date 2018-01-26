@@ -70,9 +70,9 @@
 		BE0958802017BED1005C9901 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE09587E2017BB18005C9901 /* MenuLauncher.swift */,
 				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
 				BE5F689A20168606006F28EF /* HomeController.swift */,
-				BE09587E2017BB18005C9901 /* MenuLauncher.swift */,
 				BE09588B2017DC03005C9901 /* AboutController.swift */,
 				BE095895201A73AF005C9901 /* MenuController.swift */,
 				BE09589B201BD30B005C9901 /* CateringController.swift */,
