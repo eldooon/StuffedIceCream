@@ -13,13 +13,13 @@ class MenuItemCell: UICollectionViewCell {
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .stuffedBlue
         return iv
     }()
     
     let itemNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Menu Name"
+        label.font = label.font.withSize(11)
         return label
     }()
     

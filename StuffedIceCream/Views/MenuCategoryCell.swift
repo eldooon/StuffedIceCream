@@ -69,6 +69,9 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuItemCell
         
+        cell.itemImageView.image = #imageLiteral(resourceName: "cruff")
+        cell.itemNameLabel.text = "Thai Kwon Dough"
+        
         return cell
     }
     
