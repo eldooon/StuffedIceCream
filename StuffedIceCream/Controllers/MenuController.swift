@@ -17,7 +17,7 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
         navigationItem.title = "Menu"
         collectionView?.backgroundColor = .white
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(MenuCategoryCell.self, forCellWithReuseIdentifier: cellId)
 
         // Do any additional setup after loading the view.
     }
@@ -39,10 +39,8 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCategoryCell
     
-        // Configure the cell
-        cell.backgroundColor = .blue
         return cell
     }
     
