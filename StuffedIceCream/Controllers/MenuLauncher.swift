@@ -94,16 +94,16 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         
-        if indexPath.item == 0 {
+        switch indexPath.item {
+        case 0:
             presentController(ItemSelected: "About")
-        }
-        
-        if indexPath.item == 1 {
+        case 1:
             presentController(ItemSelected: "Menu")
-        }
-    
-        if indexPath.item == 2 {
+        case 2:
             presentController(ItemSelected: "Catering")
+            
+        default:
+            print("Invalid Cell")
         }
     }
     
