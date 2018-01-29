@@ -28,6 +28,13 @@ class CateringController: UIViewController, UITextFieldDelegate
     let orderLabel: UILabel = {
         let label = UILabel()
         label.text = "Order Form"
+        label.font = label.font.withSize(18)
+        return label
+    }()
+    
+    let customerInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Customer Information"
         return label
     }()
     
@@ -58,6 +65,12 @@ class CateringController: UIViewController, UITextFieldDelegate
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Phone Number"
         return tf
+    }()
+    
+    let addressLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Address"
+        return label
     }()
     
     let address1TextField: UITextField = {
@@ -102,6 +115,13 @@ class CateringController: UIViewController, UITextFieldDelegate
         return tf
     }()
     
+    
+    let eventInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Event Information"
+        return label
+    }()
+    
     let guestTextField: UITextField = {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
@@ -123,10 +143,24 @@ class CateringController: UIViewController, UITextFieldDelegate
         return tf
     }()
     
+    let selectionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Would you like us to serve Cruffs, Ice Cream, Or Both?"
+        label.font = label.font.withSize(12)
+        return label
+    }()
+    
     let selectionSC: UISegmentedControl = {
         let items = ["Cruff", "Ice Cream", "Both"]
         let sc = UISegmentedControl(items: items)
         return sc
+    }()
+    
+    let requestTextfield: UITextField = {
+        let tf = UITextField()
+        tf.backgroundColor = .stuffedBlue
+        tf.placeholder = "Please enter special request here:"
+        return tf
     }()
     
     override func viewDidLoad() {
@@ -148,6 +182,7 @@ class CateringController: UIViewController, UITextFieldDelegate
         guestTextField.delegate = self
         dateTextField.delegate = self
         timeTextField.delegate = self
+        requestTextfield.delegate = self
         
         createLayout()
     }
@@ -168,8 +203,11 @@ class CateringController: UIViewController, UITextFieldDelegate
         scrollView.addSubview(orderLabel)
         orderLabel.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: scrollView.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
         
+        scrollView.addSubview(customerInfoLabel)
+        customerInfoLabel.anchor(centerX: nil, centerY: nil, top: orderLabel.bottomAnchor, left: orderLabel.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width-20, height: 0)
+        
         scrollView.addSubview(firstNameTextField)
-        firstNameTextField.anchor(centerX: nil, centerY: nil, top: orderLabel.bottomAnchor, left: scrollView.leftAnchor, bottom: nil, right: scrollView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: view.frame.width-20, height: 30)
+        firstNameTextField.anchor(centerX: nil, centerY: nil, top: customerInfoLabel.bottomAnchor, left: scrollView.leftAnchor, bottom: nil, right: scrollView.rightAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: view.frame.width-20, height: 30)
         
         scrollView.addSubview(lastNameTextField)
         lastNameTextField.anchor(centerX: nil, centerY: nil, top: firstNameTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
@@ -180,8 +218,11 @@ class CateringController: UIViewController, UITextFieldDelegate
         scrollView.addSubview(phoneNumberTextField)
         phoneNumberTextField.anchor(centerX: nil, centerY: nil, top: emailTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
+        scrollView.addSubview(addressLabel)
+        addressLabel.anchor(centerX: nil, centerY: nil, top: phoneNumberTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
         scrollView.addSubview(address1TextField)
-        address1TextField.anchor(centerX: nil, centerY: nil, top: phoneNumberTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        address1TextField.anchor(centerX: nil, centerY: nil, top: addressLabel.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
         scrollView.addSubview(address2TextField)
         address2TextField.anchor(centerX: nil, centerY: nil, top: address1TextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
@@ -195,8 +236,11 @@ class CateringController: UIViewController, UITextFieldDelegate
         scrollView.addSubview(countryTextField)
         countryTextField.anchor(centerX: nil, centerY: nil, top: zipcodeTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
+        scrollView.addSubview(eventInfoLabel)
+        eventInfoLabel.anchor(centerX: nil, centerY: nil, top: countryTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
         scrollView.addSubview(guestTextField)
-        guestTextField.anchor(centerX: nil, centerY: nil, top: countryTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        guestTextField.anchor(centerX: nil, centerY: nil, top: eventInfoLabel.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
         scrollView.addSubview(dateTextField)
         dateTextField.anchor(centerX: nil, centerY: nil, top: guestTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
@@ -204,9 +248,14 @@ class CateringController: UIViewController, UITextFieldDelegate
         scrollView.addSubview(timeTextField)
         timeTextField.anchor(centerX: nil, centerY: nil, top: dateTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
-        scrollView.addSubview(selectionSC)
-        selectionSC.anchor(centerX: nil, centerY: nil, top: timeTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        scrollView.addSubview(selectionLabel)
+        selectionLabel.anchor(centerX: nil, centerY: nil, top: timeTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
+        scrollView.addSubview(selectionSC)
+        selectionSC.anchor(centerX: nil, centerY: nil, top: selectionLabel.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(requestTextfield)
+        requestTextfield.anchor(centerX: nil, centerY: nil, top: selectionSC.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
     }
     
 //    func textFieldDidBeginEditing(_ textField: UITextField) {
