@@ -123,6 +123,12 @@ class CateringController: UIViewController, UITextFieldDelegate
         return tf
     }()
     
+    let selectionSC: UISegmentedControl = {
+        let items = ["Cruff", "Ice Cream", "Both"]
+        let sc = UISegmentedControl(items: items)
+        return sc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -187,6 +193,9 @@ class CateringController: UIViewController, UITextFieldDelegate
         
         scrollView.addSubview(timeTextField)
         timeTextField.anchor(centerX: nil, centerY: nil, top: dateTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(selectionSC)
+        selectionSC.anchor(centerX: nil, centerY: nil, top: timeTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
     }
     
