@@ -157,6 +157,37 @@ class CateringController: UIViewController, UITextFieldDelegate
         
         scrollView.addSubview(lastNameTextField)
         lastNameTextField.anchor(centerX: nil, centerY: nil, top: firstNameTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(emailTextField)
+        emailTextField.anchor(centerX: nil, centerY: nil, top: lastNameTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(phoneNumberTextField)
+        phoneNumberTextField.anchor(centerX: nil, centerY: nil, top: emailTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(address1TextField)
+        address1TextField.anchor(centerX: nil, centerY: nil, top: phoneNumberTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(address2TextField)
+        address2TextField.anchor(centerX: nil, centerY: nil, top: address1TextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(cityTextField)
+        cityTextField.anchor(centerX: nil, centerY: nil, top: address2TextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(zipcodeTextField)
+        zipcodeTextField.anchor(centerX: nil, centerY: nil, top: cityTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(countryTextField)
+        countryTextField.anchor(centerX: nil, centerY: nil, top: zipcodeTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(guestTextField)
+        guestTextField.anchor(centerX: nil, centerY: nil, top: countryTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(dateTextField)
+        dateTextField.anchor(centerX: nil, centerY: nil, top: guestTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
+        scrollView.addSubview(timeTextField)
+        timeTextField.anchor(centerX: nil, centerY: nil, top: dateTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
     }
     
 //    func textFieldDidBeginEditing(_ textField: UITextField) {
