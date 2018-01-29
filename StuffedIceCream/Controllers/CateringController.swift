@@ -138,6 +138,16 @@ class CateringController: UIViewController, UITextFieldDelegate
         
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        phoneNumberTextField.delegate = self
+        address1TextField.delegate = self
+        address2TextField.delegate = self
+        cityTextField.delegate = self
+        zipcodeTextField.delegate = self
+        countryTextField.delegate = self
+        guestTextField.delegate = self
+        dateTextField.delegate = self
+        timeTextField.delegate = self
         
         createLayout()
     }
