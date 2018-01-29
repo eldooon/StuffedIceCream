@@ -14,13 +14,16 @@ class CateringController: UIViewController, UITextFieldDelegate
     var scrollView : UIScrollView = {
         let sv = UIScrollView()
         sv.sizeToFit()
+        sv.isUserInteractionEnabled = true
         return sv
     }()
     
-    let contentView : UIView = {
-        let view = UIView()
-        return view
-    }()
+//    let contentView : UIView = {
+//        let view = UIView()
+//        view.isUserInteractionEnabled = true
+//        view.backgroundColor = .blue
+//        return view
+//    }()
     
     let orderLabel: UILabel = {
         let label = UILabel()
@@ -32,7 +35,7 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "First Name"
-        tf.becomeFirstResponder()
+        tf.isUserInteractionEnabled = true
         return tf
     }()
 
@@ -40,7 +43,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Last Name"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -48,7 +50,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Email Address"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -56,7 +57,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Phone Number"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -64,7 +64,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Address 1"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -72,7 +71,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Address 2"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -80,7 +78,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "City"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -88,7 +85,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "State/Province"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -96,7 +92,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Zipcode"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -104,7 +99,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Country"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -112,7 +106,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Number of Guests"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -120,7 +113,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Date"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -128,7 +120,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Time"
-        tf.becomeFirstResponder()
         return tf
     }()
     
@@ -138,6 +129,10 @@ class CateringController: UIViewController, UITextFieldDelegate
         // Do any additional setup after loading the view.
         navigationItem.title = "Catering"
         view.backgroundColor = .white
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        
         createLayout()
     }
 
@@ -151,41 +146,34 @@ class CateringController: UIViewController, UITextFieldDelegate
         view.addSubview(scrollView)
         scrollView.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        scrollView.addSubview(contentView)
-        contentView.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: nil, bottom: scrollView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.view.bounds.width, height: scrollView.frame.height)
+//        scrollView.addSubview(contentView)
+//        contentView.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: nil, bottom: scrollView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.view.bounds.width, height: scrollView.frame.height)
         
-        contentView.addSubview(orderLabel)
-        orderLabel.anchor(centerX: nil, centerY: nil, top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
+        scrollView.addSubview(orderLabel)
+        orderLabel.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: scrollView.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
         
-        contentView.addSubview(firstNameTextField)
-        firstNameTextField.anchor(centerX: nil, centerY: nil, top: orderLabel.bottomAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 30)
+        scrollView.addSubview(firstNameTextField)
+        firstNameTextField.anchor(centerX: nil, centerY: nil, top: orderLabel.bottomAnchor, left: scrollView.leftAnchor, bottom: nil, right: scrollView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: view.frame.width-20, height: 30)
         
-        contentView.addSubview(lastNameTextField)
+        scrollView.addSubview(lastNameTextField)
         lastNameTextField.anchor(centerX: nil, centerY: nil, top: firstNameTextField.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//
+//    }
+//
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
     }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return false
-    }
+//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//        return true
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
