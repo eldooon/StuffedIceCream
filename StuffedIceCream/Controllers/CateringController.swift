@@ -8,22 +8,14 @@
 
 import UIKit
 
-class CateringController: UIViewController, UITextFieldDelegate
-{
+class CateringController: UIViewController, UITextFieldDelegate {
     
     var scrollView : UIScrollView = {
         let sv = UIScrollView()
-        sv.sizeToFit()
         sv.isUserInteractionEnabled = true
+        sv.isScrollEnabled = true
         return sv
     }()
-    
-//    let contentView : UIView = {
-//        let view = UIView()
-//        view.isUserInteractionEnabled = true
-//        view.backgroundColor = .blue
-//        return view
-//    }()
     
     let orderLabel: UILabel = {
         let label = UILabel()
@@ -163,6 +155,13 @@ class CateringController: UIViewController, UITextFieldDelegate
         return tf
     }()
     
+    let submitButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Submit", for: .normal)
+        button.backgroundColor = .stuffedBlue
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -196,9 +195,6 @@ class CateringController: UIViewController, UITextFieldDelegate
         
         view.addSubview(scrollView)
         scrollView.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        
-//        scrollView.addSubview(contentView)
-//        contentView.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: nil, bottom: scrollView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.view.bounds.width, height: scrollView.frame.height)
         
         scrollView.addSubview(orderLabel)
         orderLabel.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: scrollView.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
@@ -256,6 +252,14 @@ class CateringController: UIViewController, UITextFieldDelegate
         
         scrollView.addSubview(requestTextfield)
         requestTextfield.anchor(centerX: nil, centerY: nil, top: selectionSC.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
+        
+        scrollView.addSubview(submitButton)
+        submitButton.anchor(centerX: nil, centerY: nil, top: requestTextfield.bottomAnchor, left: firstNameTextField.leftAnchor, bottom: nil, right: firstNameTextField.rightAnchor, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1000)
     }
     
 //    func textFieldDidBeginEditing(_ textField: UITextField) {
