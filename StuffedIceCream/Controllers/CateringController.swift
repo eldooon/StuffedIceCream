@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CateringController: UIViewController {
+class CateringController: UIViewController, UITextFieldDelegate
+{
     
     var scrollView : UIScrollView = {
         let sv = UIScrollView()
@@ -24,6 +25,8 @@ class CateringController: UIViewController {
     let firstNameTextField: UITextField = {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
+        tf.placeholder = "First Name"
+        tf.becomeFirstResponder()
         return tf
     }()
 
@@ -31,6 +34,7 @@ class CateringController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
         createLayout()
     }
 
@@ -48,10 +52,23 @@ class CateringController: UIViewController {
         contentView.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: nil, bottom: scrollView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.view.bounds.width, height: scrollView.frame.height)
         
         contentView.addSubview(firstNameTextField)
-        firstNameTextField.anchor(centerX: nil, centerY: nil, top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
+        firstNameTextField.delegate = self
+        firstNameTextField.anchor(centerX: nil, centerY: nil, top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 30)
     }
-
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 
     /*
     // MARK: - Navigation
