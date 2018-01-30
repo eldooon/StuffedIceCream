@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FE93E165CCFF53F43E7DC4F /* Pods_StuffedIceCream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */; };
 		BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */; };
 		BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09587E2017BB18005C9901 /* MenuLauncher.swift */; };
 		BE0958852017C1C9005C9901 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0958842017C1C9005C9901 /* SideMenuCell.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB332EA63AB457135675594A /* Pods-StuffedIceCream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.debug.xcconfig"; sourceTree = "<group>"; };
 		BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderItemCell.swift; sourceTree = "<group>"; };
 		BE09587E2017BB18005C9901 /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
 		BE0958842017C1C9005C9901 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		BE5F68AD201688ED006F28EF /* UIColor+themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
 		BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
+		CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.release.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.release.xcconfig"; sourceTree = "<group>"; };
+		CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StuffedIceCream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE93E165CCFF53F43E7DC4F /* Pods_StuffedIceCream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561404CFAF0C2D9309FB74E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C780064486174FD3130148B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB332EA63AB457135675594A /* Pods-StuffedIceCream.debug.xcconfig */,
+				CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE0958802017BED1005C9901 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +149,8 @@
 			children = (
 				BE5F689720168606006F28EF /* StuffedIceCream */,
 				BE5F689620168606006F28EF /* Products */,
+				8C780064486174FD3130148B /* Pods */,
+				561404CFAF0C2D9309FB74E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE5F68A720168607006F28EF /* Build configuration list for PBXNativeTarget "StuffedIceCream" */;
 			buildPhases = (
+				A67EFD0ABF2818D5B3FD98FA /* [CP] Check Pods Manifest.lock */,
 				BE5F689120168606006F28EF /* Sources */,
 				BE5F689220168606006F28EF /* Frameworks */,
 				BE5F689320168606006F28EF /* Resources */,
+				C8C02BD40E9583FBFCFD06A0 /* [CP] Embed Pods Frameworks */,
+				4765C098261982EF2606F994 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +245,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4765C098261982EF2606F994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67EFD0ABF2818D5B3FD98FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C02BD40E9583FBFCFD06A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE5F689120168606006F28EF /* Sources */ = {
@@ -368,6 +443,7 @@
 		};
 		BE5F68A820168607006F28EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB332EA63AB457135675594A /* Pods-StuffedIceCream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +459,7 @@
 		};
 		BE5F68A920168607006F28EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

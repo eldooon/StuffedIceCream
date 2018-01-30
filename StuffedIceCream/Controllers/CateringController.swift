@@ -49,6 +49,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Email Address"
+        tf.keyboardType = .emailAddress
         return tf
     }()
     
@@ -97,6 +98,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Zipcode"
+        tf.keyboardType = .numberPad
         return tf
     }()
     
@@ -118,6 +120,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Number of Guests"
+        tf.keyboardType = .numberPad
         return tf
     }()
     
@@ -125,6 +128,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Date"
+        tf.keyboardType = .numbersAndPunctuation
         return tf
     }()
     
@@ -132,6 +136,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let tf = UITextField()
         tf.backgroundColor = .stuffedBlue
         tf.placeholder = "Time"
+        tf.keyboardType = .numbersAndPunctuation
         return tf
     }()
     
@@ -262,10 +267,6 @@ class CateringController: UIViewController, UITextFieldDelegate {
         scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1000)
     }
     
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//
-//    }
-//
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
     }
