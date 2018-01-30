@@ -9,8 +9,8 @@
 import UIKit
 import SwiftValidator
 
-class CateringController: UIViewController, UITextFieldDelegate {
-    
+class CateringController: UIViewController, UITextFieldDelegate, ValidationDelegate {
+
     let validator = Validator()
     
     var scrollView : UIScrollView = {
@@ -167,6 +167,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         let button = UIButton()
         button.setTitle("Submit", for: .normal)
         button.backgroundColor = .stuffedBlue
+        button.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -177,6 +178,16 @@ class CateringController: UIViewController, UITextFieldDelegate {
         navigationItem.title = "Catering"
         view.backgroundColor = .white
         
+        createTextfieldProperties()
+        createLayout()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    private func createTextfieldProperties() {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
@@ -191,12 +202,7 @@ class CateringController: UIViewController, UITextFieldDelegate {
         timeTextField.delegate = self
         requestTextfield.delegate = self
         
-        createLayout()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        validator.registerField(firstNameTextField, rules: [RequiredRule(), FullNameRule()])
     }
     
     private func createLayout() {
@@ -268,6 +274,26 @@ class CateringController: UIViewController, UITextFieldDelegate {
     override func viewWillLayoutSubviews() {
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1000)
+    }
+    
+    @objc func submitButtonTapped() {
+        print("Submit Button Tapped")
+        validator.validate(self)
+    }
+    
+    func validationSuccessful() {
+        //
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                field.layer.borderColor = UIColor.red.cgColor
+                field.layer.borderWidth = 1.0
+            }
+            error.errorLabel?.text = error.errorMessage // works if you added labels
+            error.errorLabel?.isHidden = false
+        }
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
