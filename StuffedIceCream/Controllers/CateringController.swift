@@ -150,11 +150,11 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return sc
     }()
     
-    let requestTextfield: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
-        tf.placeholder = "Please enter special request here:"
-        return tf
+    let requestTextfield: UITextView = {
+        let tv = UITextView()
+        tv.backgroundColor = .stuffedBlue
+        tv.text = "Please enter special request here:"
+        return tv
     }()
     
     let submitButton: UIButton = {
@@ -193,7 +193,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         guestTextField.delegate = self
         dateTextField.delegate = self
         timeTextField.delegate = self
-        requestTextfield.delegate = self
         
         validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
         
