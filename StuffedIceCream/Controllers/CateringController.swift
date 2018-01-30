@@ -203,6 +203,8 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         requestTextfield.delegate = self
         
         validator.registerField(firstNameTextField, rules: [RequiredRule(), FullNameRule()])
+        
+        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
     }
     
     private func createLayout() {
@@ -282,7 +284,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }
     
     func validationSuccessful() {
-        //
+        print("SUCCESS")
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
