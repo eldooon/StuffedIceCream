@@ -41,17 +41,15 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }()
 
     
-    let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let emailTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Email Address"
         tf.keyboardType = .emailAddress
         return tf
     }()
     
-    let phoneNumberTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let phoneNumberTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Phone Number"
         return tf
     }()
@@ -62,45 +60,39 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return label
     }()
     
-    let address1TextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let address1TextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Address 1"
         return tf
     }()
     
-    let address2TextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let address2TextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Address 2"
         return tf
     }()
     
-    let cityTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let cityTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "City"
         return tf
     }()
     
-    let stateTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let stateTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "State/Province"
         return tf
     }()
     
-    let zipcodeTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let zipcodeTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Zipcode"
         tf.keyboardType = .numberPad
         return tf
     }()
     
-    let countryTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let countryTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Country"
         return tf
     }()
@@ -112,25 +104,22 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return label
     }()
     
-    let guestTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let guestTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Number of Guests"
         tf.keyboardType = .numberPad
         return tf
     }()
     
-    let dateTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let dateTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Date"
         tf.keyboardType = .numbersAndPunctuation
         return tf
     }()
     
-    let timeTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let timeTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Time"
         tf.keyboardType = .numbersAndPunctuation
         return tf
