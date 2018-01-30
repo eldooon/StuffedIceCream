@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SwiftValidator
 
 class CateringController: UIViewController, UITextFieldDelegate {
+    
+    let validator = Validator()
     
     var scrollView : UIScrollView = {
         let sv = UIScrollView()
