@@ -195,8 +195,15 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         timeTextField.delegate = self
         
         validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
-        
         validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
+        validator.registerField(address1TextField, rules: [RequiredRule()])
+        validator.registerField(cityTextField, rules: [RequiredRule()])
+        validator.registerField(stateTextField, rules: [RequiredRule()])
+        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
+        validator.registerField(guestTextField, rules: [RequiredRule()])
+        validator.registerField(dateTextField, rules: [RequiredRule()])
+        validator.registerField(timeTextField, rules: [RequiredRule()])
     }
     
     private func createLayout() {
@@ -231,8 +238,11 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         scrollView.addSubview(cityTextField)
         cityTextField.anchor(centerX: nil, centerY: nil, top: address2TextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
+        scrollView.addSubview(stateTextField)
+        stateTextField.anchor(centerX: nil, centerY: nil, top: cityTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        
         scrollView.addSubview(zipcodeTextField)
-        zipcodeTextField.anchor(centerX: nil, centerY: nil, top: cityTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        zipcodeTextField.anchor(centerX: nil, centerY: nil, top: stateTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
         scrollView.addSubview(countryTextField)
         countryTextField.anchor(centerX: nil, centerY: nil, top: zipcodeTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
