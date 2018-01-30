@@ -33,9 +33,8 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return label
     }()
     
-    let fullNameTextField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .stuffedBlue
+    let fullNameTextField: StuffedTextField = {
+        let tf = StuffedTextField()
         tf.placeholder = "Full Name"
         tf.isUserInteractionEnabled = true
         return tf
