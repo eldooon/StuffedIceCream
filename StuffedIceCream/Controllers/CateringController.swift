@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import SwiftMailgun
 
 class CateringController: UIViewController, UITextFieldDelegate, ValidationDelegate {
 
