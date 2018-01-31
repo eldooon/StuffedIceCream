@@ -185,16 +185,16 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         dateTextField.delegate = self
         timeTextField.delegate = self
         
-//        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
-//        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
-//        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
-//        validator.registerField(address1TextField, rules: [RequiredRule()])
-//        validator.registerField(cityTextField, rules: [RequiredRule()])
-//        validator.registerField(stateTextField, rules: [RequiredRule()])
-//        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
-//        validator.registerField(guestTextField, rules: [RequiredRule()])
-//        validator.registerField(dateTextField, rules: [RequiredRule()])
-//        validator.registerField(timeTextField, rules: [RequiredRule()])
+        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
+        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
+        validator.registerField(address1TextField, rules: [RequiredRule()])
+        validator.registerField(cityTextField, rules: [RequiredRule()])
+        validator.registerField(stateTextField, rules: [RequiredRule()])
+        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
+        validator.registerField(guestTextField, rules: [RequiredRule()])
+        validator.registerField(dateTextField, rules: [RequiredRule()])
+        validator.registerField(timeTextField, rules: [RequiredRule()])
     }
     
     private func createLayout() {
@@ -281,7 +281,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         }
         
         let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Last test", bodyHTML: "<b>test test<b>") { mailgunResult in
+            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!)") { mailgunResult in
                 
                 if mailgunResult.success{
                     print("Email was sent")
