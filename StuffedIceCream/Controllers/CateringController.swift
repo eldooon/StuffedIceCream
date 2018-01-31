@@ -310,13 +310,32 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
     }
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        return true
-//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == phoneNumberTextField {
+            if range.location == 12 {
+                return false
+            }
+            
+            if range.length == 0 && (range.location == 3 || range.location == 7) {
+                textField.text = "\(textField.text!)-\(string)"
+                return false
+            }
+            // Delete hyphen when deleting its trailing digit
+            //        if range.length == 1 && (range.location == 4 || range.location == 8) {
+            //            range.location--
+            //            range.length = 2
+            //            textField.text = textField.text!.stringByReplacingCharactersInRange(range, withString: "")
+            //            return false
+            //        }
+        }
         return true
     }
 
