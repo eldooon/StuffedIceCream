@@ -14,7 +14,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
 
     let validator = Validator()
     
-//    let mailgun = MailgunAPI(apiKey: <#T##String#>, clientDomain: <#T##String#>)
+    let mailgun = MailgunAPI(apiKey: M, clientDomain: <#T##String#>)
     
     var scrollView : UIScrollView = {
         let sv = UIScrollView()

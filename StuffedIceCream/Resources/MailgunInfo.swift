@@ -1,5 +1,5 @@
 //
-//  MailgunAPI.swift
+//  MailgunInfo.swift
 //  StuffedIceCream
 //
 //  Created by Eldon Chan on 1/31/18.
@@ -8,3 +8,7 @@
 
 import Foundation
 
+public class MailgunInfo  {
+    
+    
+}
