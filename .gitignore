@@ -54,4 +54,5 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-./StuffedIceCream/Resources/MailgunInfo.swift
+# File to ignore
+.MailgunInfo.swift
