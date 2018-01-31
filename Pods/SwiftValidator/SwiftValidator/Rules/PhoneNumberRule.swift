@@ -14,7 +14,7 @@ public class PhoneNumberRule: RegexRule {
 //    let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
     
     /// Phone number regular express string to be used in validation.
-    static let regex = "^\\d{10}$"
+    static let regex = "^\\d{3}-\\d{3}-\\d{4}$"
     
     /**
      Initializes a `PhoneNumberRule` object. Used to validate that a field has a valid phone number.
