@@ -14,7 +14,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
 
     let validator = Validator()
     
-//    let mailgun = MailgunAPI(apiKey: M, clientDomain: <#T##String#>)
+    let mailgun = MailgunAPI(apiKey: MailgunInfo.key, clientDomain: MailgunInfo.domain)
     
     var scrollView : UIScrollView = {
         let sv = UIScrollView()
@@ -185,16 +185,16 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         dateTextField.delegate = self
         timeTextField.delegate = self
         
-        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
-        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
-        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
-        validator.registerField(address1TextField, rules: [RequiredRule()])
-        validator.registerField(cityTextField, rules: [RequiredRule()])
-        validator.registerField(stateTextField, rules: [RequiredRule()])
-        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
-        validator.registerField(guestTextField, rules: [RequiredRule()])
-        validator.registerField(dateTextField, rules: [RequiredRule()])
-        validator.registerField(timeTextField, rules: [RequiredRule()])
+//        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
+//        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
+//        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
+//        validator.registerField(address1TextField, rules: [RequiredRule()])
+//        validator.registerField(cityTextField, rules: [RequiredRule()])
+//        validator.registerField(stateTextField, rules: [RequiredRule()])
+//        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
+//        validator.registerField(guestTextField, rules: [RequiredRule()])
+//        validator.registerField(dateTextField, rules: [RequiredRule()])
+//        validator.registerField(timeTextField, rules: [RequiredRule()])
     }
     
     private func createLayout() {
@@ -281,7 +281,13 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         }
         
         let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
-            //
+            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Last test", bodyHTML: "<b>test test<b>") { mailgunResult in
+                
+                if mailgunResult.success{
+                    print("Email was sent")
+                }
+                
+            }
         }
         
         alertController.addAction(okButton)
