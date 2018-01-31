@@ -22,7 +22,7 @@
 		BE09589A201BA29C005C9901 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE095899201BA29C005C9901 /* MenuItemCell.swift */; };
 		BE09589C201BD30B005C9901 /* CateringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09589B201BD30B005C9901 /* CateringController.swift */; };
 		BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FDB2020F18E0064C527 /* StuffedTextField.swift */; };
-		BE446FE02022457F0064C527 /* Mailgun.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FDF2022457F0064C527 /* Mailgun.swift */; };
+		BE446FE2202246140064C527 /* MailgunKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE1202246140064C527 /* MailgunKey.swift */; };
 		BE5F689920168606006F28EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689820168606006F28EF /* AppDelegate.swift */; };
 		BE5F689B20168606006F28EF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689A20168606006F28EF /* HomeController.swift */; };
 		BE5F68A020168606006F28EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F689F20168606006F28EF /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 		BE095899201BA29C005C9901 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		BE09589B201BD30B005C9901 /* CateringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CateringController.swift; sourceTree = "<group>"; };
 		BE446FDB2020F18E0064C527 /* StuffedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedTextField.swift; sourceTree = "<group>"; };
-		BE446FDF2022457F0064C527 /* Mailgun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailgun.swift; sourceTree = "<group>"; };
+		BE446FE1202246140064C527 /* MailgunKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailgunKey.swift; sourceTree = "<group>"; };
 		BE5F689520168606006F28EF /* StuffedIceCream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedIceCream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F689820168606006F28EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F689A20168606006F28EF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				BE5F689F20168606006F28EF /* Assets.xcassets */,
 				BE5F68A120168606006F28EF /* LaunchScreen.storyboard */,
 				BE5F689820168606006F28EF /* AppDelegate.swift */,
-				BE446FDF2022457F0064C527 /* Mailgun.swift */,
+				BE446FE1202246140064C527 /* MailgunKey.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -314,7 +314,6 @@
 				BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */,
 				BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */,
 				BE0958942019361A005C9901 /* Founder.swift in Sources */,
-				BE446FE02022457F0064C527 /* Mailgun.swift in Sources */,
 				BE09588A2017CA5C005C9901 /* MenuItem.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,
 				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
@@ -323,6 +322,7 @@
 				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
 				BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
+				BE446FE2202246140064C527 /* MailgunKey.swift in Sources */,
 				BE09589C201BD30B005C9901 /* CateringController.swift in Sources */,
 				BE09588C2017DC03005C9901 /* AboutController.swift in Sources */,
 			);

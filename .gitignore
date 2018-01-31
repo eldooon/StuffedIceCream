@@ -55,4 +55,4 @@ fastlane/screenshots
 fastlane/test_output
 
 # File to ignore
-/StuffedIceCream/Resources/Mailgun.swift
+MailgunKey.swift
