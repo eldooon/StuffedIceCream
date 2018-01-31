@@ -1,7 +1,13 @@
 PODS:
+  - Alamofire (4.5.1)
+  - ObjectMapper (3.0.0)
+  - SwiftMailgun (1.0.1):
+    - Alamofire
+    - ObjectMapper
   - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
+  - SwiftMailgun
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 EXTERNAL SOURCES:
@@ -15,8 +21,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  SwiftMailgun: 311a28057e0ced2dbcfbc8320e4aa282511877d2
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: e915e62caf2944f466d2aa4c8242603f1649ef7c
+PODFILE CHECKSUM: 002ca246cbaa5ac1da69e396834519804af93df5
 
 COCOAPODS: 1.2.0.rc.1

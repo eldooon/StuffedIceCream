@@ -20,6 +20,7 @@ class StuffedTextField: UITextField {
     }
     
     private func createLayout() {
+        
         self.layer.cornerRadius = 5
         self.layer.borderColor = UIColor.stuffedBlue.cgColor
         self.layer.borderWidth = 2
