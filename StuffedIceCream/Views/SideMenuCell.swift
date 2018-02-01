@@ -19,6 +19,7 @@ class SideMenuCell: UICollectionViewCell {
     let menuNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Menu Item"
+        label.font = UIFont.primary
         return label
     }()
     

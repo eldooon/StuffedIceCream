@@ -25,19 +25,21 @@ class AboutFounderCell: UICollectionViewCell {
     let founderLabel: UILabel = {
         let label = UILabel()
         label.text = "Co-Founder"
+        label.font = UIFont.commentsBold
         return label
     }()
     
     let founderNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Founder Name"
+        label.font = UIFont.primary
         return label
     }()
     
     let readAboutLabel: UILabel = {
         let label = UILabel()
         label.text = "Click to read more..."
-        label.font = label.font.withSize(10)
+        label.font = UIFont.comments
         return label
     }()
     
