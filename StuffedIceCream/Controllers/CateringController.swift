@@ -328,14 +328,8 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
                 textField.text = "\(textField.text!)-\(string)"
                 return false
             }
-            // Delete hyphen when deleting its trailing digit
-            //        if range.length == 1 && (range.location == 4 || range.location == 8) {
-            //            range.location--
-            //            range.length = 2
-            //            textField.text = textField.text!.stringByReplacingCharactersInRange(range, withString: "")
-            //            return false
-            //        }
         }
+        
         return true
     }
 
