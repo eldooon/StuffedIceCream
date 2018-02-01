@@ -10,4 +10,6 @@ import UIKit
 
 extension UIFont {
     
+    static let primaryFont = UIFont(name: "Raleway-Medium", size: 12)
+    
 }

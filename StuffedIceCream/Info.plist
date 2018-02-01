@@ -39,5 +39,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Raleway-Italic.ttf</string>
+		<string>Raleway-Black.ttf</string>
+		<string>Raleway-Medium.ttf</string>
+		<string>Raleway-Semibold.ttf</string>
+	</array>
 </dict>
 </plist>
