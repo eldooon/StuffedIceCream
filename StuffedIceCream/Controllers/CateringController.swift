@@ -26,13 +26,14 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     let orderLabel: UILabel = {
         let label = UILabel()
         label.text = "Order Form"
-        label.font = label.font.withSize(18)
+        label.font = UIFont.titles
         return label
     }()
     
     let customerInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "Customer Information"
+        label.font = UIFont.primary
         return label
     }()
     
@@ -60,6 +61,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     let addressLabel: UILabel = {
         let label = UILabel()
         label.text = "Address"
+        label.font = UIFont.primary
         return label
     }()
     
@@ -104,6 +106,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     let eventInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "Event Information"
+        label.font = UIFont.primary
         return label
     }()
     
@@ -131,7 +134,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     let selectionLabel: UILabel = {
         let label = UILabel()
         label.text = "Would you like us to serve Cruffs, Ice Cream, Or Both?"
-        label.font = label.font.withSize(12)
+        label.font = UIFont.comments
         return label
     }()
     
