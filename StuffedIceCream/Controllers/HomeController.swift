@@ -42,6 +42,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         switch Item {
         case "About":
             vc = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
+        case "Location":
+            vc = LocationController()
         case "Menu":
             vc = MenuController(collectionViewLayout: UICollectionViewFlowLayout())
         case "Catering":

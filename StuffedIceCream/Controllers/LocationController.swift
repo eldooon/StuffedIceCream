@@ -9,12 +9,20 @@
 import UIKit
 
 class LocationController: UIViewController {
+    
+    let neighborhoodLabel: UILabel = {
+        let label = UILabel()
+        label.text = "East Village"
+        label.font = UIFont.primaryBold
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        view.backgroundColor = .white
+        createLayout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +30,11 @@ class LocationController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func createLayout() {
+        
+        view.addSubview(neighborhoodLabel)
+        neighborhoodLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    }
 
     /*
     // MARK: - Navigation
