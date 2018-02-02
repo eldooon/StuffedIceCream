@@ -37,6 +37,7 @@
 		BED56F8C20238ADD00ABF855 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */; };
 		BED56F8D20238ADD00ABF855 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8920238A7100ABF855 /* Raleway-Medium.ttf */; };
 		BED56F8E20238ADD00ABF855 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8A20238A7A00ABF855 /* Raleway-SemiBold.ttf */; };
+		BED56F902024CFF400ABF855 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F8F2024CFF400ABF855 /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		BED56F8920238A7100ABF855 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		BED56F8A20238A7A00ABF855 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		BED56F8F2024CFF400ABF855 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.release.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.release.xcconfig"; sourceTree = "<group>"; };
 		CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StuffedIceCream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
 				BE5F689A20168606006F28EF /* HomeController.swift */,
 				BE09588B2017DC03005C9901 /* AboutController.swift */,
+				BED56F8F2024CFF400ABF855 /* LocationController.swift */,
 				BE095895201A73AF005C9901 /* MenuController.swift */,
 				BE09589B201BD30B005C9901 /* CateringController.swift */,
 			);
@@ -329,6 +332,7 @@
 			files = (
 				BE5F689B20168606006F28EF /* HomeController.swift in Sources */,
 				BE5F68AE201688ED006F28EF /* UIColor+themes.swift in Sources */,
+				BED56F902024CFF400ABF855 /* LocationController.swift in Sources */,
 				BE0958852017C1C9005C9901 /* SideMenuCell.swift in Sources */,
 				BE5F689920168606006F28EF /* AppDelegate.swift in Sources */,
 				BE095898201B98F5005C9901 /* MenuCategoryCell.swift in Sources */,
