@@ -16,6 +16,13 @@ class LocationController: UIViewController {
         label.font = UIFont.primaryBold
         return label
     }()
+    
+    let addresLabel: UILabel = {
+        let label = UILabel()
+        label.text = "139 1ST AVENUE, NEW YORK, NY 10003"
+        label.font = UIFont.primaryBold
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
