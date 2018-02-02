@@ -188,9 +188,9 @@
 		BE5F689720168606006F28EF /* StuffedIceCream */ = {
 			isa = PBXGroup;
 			children = (
-				BED56F932024E81200ABF855 /* Fonts */,
 				BE5F68A420168607006F28EF /* Info.plist */,
 				BE0958862017C636005C9901 /* Default-568h@2x.png */,
+				BED56F932024E81200ABF855 /* Fonts */,
 				BE0958882017CA4B005C9901 /* Model */,
 				BE0958832017BF00005C9901 /* Resources */,
 				BE0958822017BEF3005C9901 /* Extensions */,

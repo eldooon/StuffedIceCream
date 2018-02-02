@@ -15,6 +15,7 @@ extension UIFont {
     static let titles = UIFont(name: "Raleway-Black", size: 32)
     static let comments = UIFont(name: "Raleway-Medium", size: 12)
     static let commentsBold = UIFont(name: "Raleway-SemiBold", size: 12)
+    static let primaryLight = UIFont(name: "Raleway-ExtraLight", size: 16)
     
     
 }
