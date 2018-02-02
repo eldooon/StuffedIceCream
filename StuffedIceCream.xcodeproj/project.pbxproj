@@ -38,6 +38,7 @@
 		BED56F8E20238ADD00ABF855 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8A20238A7A00ABF855 /* Raleway-SemiBold.ttf */; };
 		BED56F902024CFF400ABF855 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F8F2024CFF400ABF855 /* LocationController.swift */; };
 		BED56F922024E80500ABF855 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F912024E7F200ABF855 /* Raleway-ExtraLight.ttf */; };
+		BED56F952024E9A400ABF855 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BED56F8A20238A7A00ABF855 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		BED56F8F2024CFF400ABF855 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		BED56F912024E7F200ABF855 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.release.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.release.xcconfig"; sourceTree = "<group>"; };
 		CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StuffedIceCream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 				BED56F8920238A7100ABF855 /* Raleway-Medium.ttf */,
 				BED56F8A20238A7A00ABF855 /* Raleway-SemiBold.ttf */,
 				BED56F912024E7F200ABF855 /* Raleway-ExtraLight.ttf */,
+				BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED56F952024E9A400ABF855 /* Raleway-Thin.ttf in Resources */,
 				BED56F922024E80500ABF855 /* Raleway-ExtraLight.ttf in Resources */,
 				BED56F8C20238ADD00ABF855 /* Raleway-Black.ttf in Resources */,
 				BED56F8D20238ADD00ABF855 /* Raleway-Medium.ttf in Resources */,

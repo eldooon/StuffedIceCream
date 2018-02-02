@@ -12,15 +12,15 @@ class LocationController: UIViewController {
     
     let neighborhoodLabel: UILabel = {
         let label = UILabel()
-        label.text = "East Village"
+        label.text = "EAST VILLAGE"
         label.font = UIFont.primaryBold
         return label
     }()
     
-    let addresLabel: UILabel = {
+    let addressLabel: UILabel = {
         let label = UILabel()
         label.text = "139 1ST AVENUE, NEW YORK, NY 10003"
-        label.font = UIFont.primaryBold
+        label.font = UIFont.primaryLight
         return label
     }()
 
@@ -41,6 +41,8 @@ class LocationController: UIViewController {
         
         view.addSubview(neighborhoodLabel)
         neighborhoodLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        view.addSubview(addressLabel)
+        addressLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: neighborhoodLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
 
     /*

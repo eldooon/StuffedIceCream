@@ -41,10 +41,11 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Raleway-Italic.ttf</string>
+		<string>Raleway-Thin.ttf</string>
 		<string>Raleway-Black.ttf</string>
 		<string>Raleway-Medium.ttf</string>
 		<string>Raleway-Semibold.ttf</string>
+		<string>Raleway-ExtraLight.ttf</string>
 	</array>
 </dict>
 </plist>
