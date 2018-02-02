@@ -16,7 +16,7 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "About"
+        navigationItem.title = "ABOUT"
         collectionView?.backgroundColor = .white
         collectionView?.register(AboutFounderCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(AboutHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)

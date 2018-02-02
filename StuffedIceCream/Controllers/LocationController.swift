@@ -89,6 +89,7 @@ class LocationController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.title = "LOCATION"
         view.backgroundColor = .white
         createLayout()
     }
@@ -107,7 +108,7 @@ class LocationController: UIViewController {
         addressLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: neighborhoodLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         view.addSubview(mapView)
-        mapView.anchor(centerX: nil, centerY: nil, top: addressLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 300)
+        mapView.anchor(centerX: nil, centerY: nil, top: addressLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 300)
         
         view.addSubview(hoursLabel)
         hoursLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: mapView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)

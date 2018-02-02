@@ -163,7 +163,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationItem.title = "Catering"
+        navigationItem.title = "CATERING"
         view.backgroundColor = .white
         
         createTextfieldProperties()
