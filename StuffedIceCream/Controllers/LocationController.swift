@@ -36,6 +36,55 @@ class LocationController: UIViewController {
         return map
     }()
 
+    let hoursLabel: UILabel = {
+        let label = UILabel()
+        label.text = "HOURS"
+        label.font = UIFont.primary
+        return label
+    }()
+    
+    let monThursLabel: UILabel = {
+        let label = UILabel()
+        label.text = "MONDAY - THURSDAY"
+        label.font = UIFont.primary
+        return label
+    }()
+    
+    let monThursTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "2:00PM - 10:30PM"
+        label.font = UIFont.primaryLight
+        return label
+    }()
+    
+    let friSatLabel: UILabel = {
+        let label = UILabel()
+        label.text = "FRIDAY - SATURDAY"
+        label.font = UIFont.primary
+        return label
+    }()
+    
+    let friSatTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "2:00PM - 11:30PM"
+        label.font = UIFont.primaryLight
+        return label
+    }()
+    
+    let sunLabel: UILabel = {
+        let label = UILabel()
+        label.text = "SUNDAY"
+        label.font = UIFont.primary
+        return label
+    }()
+    
+    let sunTimeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "1:00PM - 10:30PM"
+        label.font = UIFont.primaryLight
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +108,27 @@ class LocationController: UIViewController {
         
         view.addSubview(mapView)
         mapView.anchor(centerX: nil, centerY: nil, top: addressLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 300)
+        
+        view.addSubview(hoursLabel)
+        hoursLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: mapView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(monThursLabel)
+        monThursLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: hoursLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(monThursTimeLabel)
+        monThursTimeLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: monThursLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(friSatLabel)
+        friSatLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: monThursTimeLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(friSatTimeLabel)
+        friSatTimeLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: friSatLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+
+        view.addSubview(sunLabel)
+        sunLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: friSatTimeLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+
+        view.addSubview(sunTimeLabel)
+        sunTimeLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: sunLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
 
     /*
