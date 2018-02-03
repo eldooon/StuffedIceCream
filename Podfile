@@ -8,5 +8,7 @@ target 'StuffedIceCream' do
   # Pods for StuffedIceCream
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
   pod 'SwiftMailgun'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end
