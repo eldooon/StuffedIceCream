@@ -41,6 +41,7 @@
 		BED56F952024E9A400ABF855 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */; };
 		BED56F972026369200ABF855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BED56F962026369200ABF855 /* GoogleService-Info.plist */; };
 		BED56F9A202641BC00ABF855 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F99202641BC00ABF855 /* FirebaseData.swift */; };
+		BED56F9C2026421300ABF855 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F9B2026421300ABF855 /* MenuCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		BED56F962026369200ABF855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BED56F99202641BC00ABF855 /* FirebaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
+		BED56F9B2026421300ABF855 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.release.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.release.xcconfig"; sourceTree = "<group>"; };
 		CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StuffedIceCream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				BE0958892017CA5C005C9901 /* MenuItem.swift */,
 				BE0958932019361A005C9901 /* Founder.swift */,
+				BED56F9B2026421300ABF855 /* MenuCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */,
 				BE095896201A73AF005C9901 /* MenuController.swift in Sources */,
 				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
+				BED56F9C2026421300ABF855 /* MenuCategory.swift in Sources */,
 				BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 				BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */,
