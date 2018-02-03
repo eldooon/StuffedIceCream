@@ -22,6 +22,7 @@ class LocationController: UIViewController {
         let label = UILabel()
         label.text = "139 1ST AVENUE, NEW YORK, NY 10003"
         label.font = UIFont.primaryLight
+        label.isUserInteractionEnabled = true
         return label
     }()
     
@@ -92,6 +93,9 @@ class LocationController: UIViewController {
         navigationItem.title = "LOCATION"
         view.backgroundColor = .white
         createLayout()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(addressTapped ))
+        addressLabel.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -130,6 +134,25 @@ class LocationController: UIViewController {
 
         view.addSubview(sunTimeLabel)
         sunTimeLabel.anchor(centerX: neighborhoodLabel.centerXAnchor, centerY: nil, top: sunLabel.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    }
+    
+    @objc func addressTapped(sender:UITapGestureRecognizer) {
+        
+        print ("TAPPED TAPPED")
+        let latitude: CLLocationDegrees = 40.7280466
+        let longitude: CLLocationDegrees = -73.98536439999998
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Stuffed Icecream"
+        mapItem.openInMaps(launchOptions: options)
     }
 
     /*
