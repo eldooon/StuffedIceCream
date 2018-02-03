@@ -6,4 +6,36 @@
 //  Copyright © 2018 ByEldon. All rights reserved.
 //
 
-import Foundation
+import FirebaseDatabase
+
+class FireBaseData {
+    
+    static let sharedInstance = FireBaseData()
+    var menuDatabase = [MenuCategory]()
+    let ref = Database.database().reference()
+    
+    
+    func retrieveData(completion: @escaping () -> ()) {
+        
+        ref.observe(.value, with: { (snapshot) in
+            
+            guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            dictionaries.forEach({ (key, value) in
+                let newItemCategory = MenuCategory()
+                newItemCategory.name = key
+                
+                guard let testvalue = value as? [String: Any] else { return }
+                for eachValue in testvalue {
+                    guard let value = eachValue.value as? [String: Any] else {return}
+                    let item = MenuItem(dictionary: value)
+                    newItemCategory.items.append(item)
+                    print("eachvalue", eachValue.value)
+                }
+                self.menuDatabase.append(newItemCategory)
+            })
+            completion()
+        })
+        
+    }
+    
+}

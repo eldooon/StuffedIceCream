@@ -19,7 +19,6 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
         collectionView?.register(MenuCategoryCell.self, forCellWithReuseIdentifier: cellId)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
