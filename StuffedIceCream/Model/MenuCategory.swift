@@ -11,5 +11,6 @@ import UIKit
 class MenuCategory {
     
     var name = String()
+    var items = [MenuItem]()
     
 }
