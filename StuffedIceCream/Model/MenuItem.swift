@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MenuItem {
+public class SideMenuItem {
     
     let menuName: String?
     let menuImage: UIImage?
@@ -23,7 +23,7 @@ public class MenuItem {
 
 class MenuItems {
     
-    let items = [MenuItem(Image: #imageLiteral(resourceName: "aboutIcon"), Name: "About"), MenuItem(Image: #imageLiteral(resourceName: "jobIcon"), Name: "Location"), MenuItem(Image: #imageLiteral(resourceName: "menuIcon"), Name: "Menu"), MenuItem(Image: #imageLiteral(resourceName: "cateringIcon"), Name: "Catering"), MenuItem(Image: #imageLiteral(resourceName: "shopIcon"), Name: "Shop")]
+    let items = [SideMenuItem(Image: #imageLiteral(resourceName: "aboutIcon"), Name: "About"), SideMenuItem(Image: #imageLiteral(resourceName: "jobIcon"), Name: "Location"), SideMenuItem(Image: #imageLiteral(resourceName: "menuIcon"), Name: "Menu"), SideMenuItem(Image: #imageLiteral(resourceName: "cateringIcon"), Name: "Catering"), SideMenuItem(Image: #imageLiteral(resourceName: "shopIcon"), Name: "Shop")]
 }
 
 
