@@ -11,6 +11,7 @@ import UIKit
 class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "cellId"
+    let database = FireBaseData.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,9 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
         collectionView?.register(MenuCategoryCell.self, forCellWithReuseIdentifier: cellId)
 
+        database.retrieveData {
+            self.collectionView?.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,20 +30,21 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return database.menuDatabase.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCategoryCell
     
+        cell.nameLabel.text = database.menuDatabase[indexPath.item].name
         return cell
     }
     
