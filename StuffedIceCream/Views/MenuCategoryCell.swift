@@ -26,7 +26,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name"
-        label.font = UIFont.titles
+        label.font = UIFont.titlesSmall
         return label
     }()
     
@@ -69,7 +69,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         nameLabel.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         addSubview(menuCollectionView)
-        menuCollectionView.anchor(centerX: nil, centerY: nil, top: nameLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        menuCollectionView.anchor(centerX: nil, centerY: nil, top: nameLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         addSubview(dividerLineView)
         dividerLineView.anchor(centerX: nil, centerY: nil, top: menuCollectionView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 1)
