@@ -20,9 +20,6 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
         collectionView?.register(MenuCategoryCell.self, forCellWithReuseIdentifier: cellId)
 
-        database.retrieveData {
-            self.collectionView?.reloadData()
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,13 +35,19 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        
+        if database.menuDatabase.count == 0 {
+            return 1
+        }
         return database.menuDatabase.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCategoryCell
     
-        cell.nameLabel.text = database.menuDatabase[indexPath.item].name
+        if database.menuDatabase.count != 0 {
+            cell.nameLabel.text = database.menuDatabase[indexPath.item].name
+        }
         return cell
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
@@ -34,9 +35,15 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         return view
     }()
     
+    let database = FireBaseData.sharedInstance
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        database.retrieveData {
+            print("Retrieving")
+            self.menuCollectionView.reloadData()
+        }
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
         menuCollectionView.register(MenuItemCell.self, forCellWithReuseIdentifier: cellId)
