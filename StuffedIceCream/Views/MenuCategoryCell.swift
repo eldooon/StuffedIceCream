@@ -26,6 +26,7 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name"
+        label.font = UIFont.titles
         return label
     }()
     
