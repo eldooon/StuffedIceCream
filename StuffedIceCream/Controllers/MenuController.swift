@@ -8,8 +8,16 @@
 
 import UIKit
 
-class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+protocol MenuControllerDelegate {
+   func didFetchData()
+}
 
+class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLayout, MenuControllerDelegate {
+    
+    func didFetchData() {
+        collectionView?.reloadData()
+    }
+    
     private let cellId = "cellId"
     let database = FireBaseData.sharedInstance
     
