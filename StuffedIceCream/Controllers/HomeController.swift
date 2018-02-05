@@ -13,6 +13,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     private let cellId = "cellId"
     private let headerId = "HeaderId"
     let menuLauncher = MoreMenuLauncher()
+    
+    let database = FireBaseData.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(HomeHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        
+        database.retrieveData {
+            print("RETRIEVED DATA")
+        }
     }
 
     @objc func menuButtonTapped() {

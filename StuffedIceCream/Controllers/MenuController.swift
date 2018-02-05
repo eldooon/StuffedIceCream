@@ -8,15 +8,7 @@
 
 import UIKit
 
-protocol MenuControllerDelegate {
-   func didFetchData()
-}
-
-class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLayout, MenuControllerDelegate {
-    
-    func didFetchData() {
-        collectionView?.reloadData()
-    }
+class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let cellId = "cellId"
     let database = FireBaseData.sharedInstance
@@ -44,18 +36,15 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         
-        if database.menuDatabase.count == 0 {
-            return 1
-        }
         return database.menuDatabase.count
+
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCategoryCell
     
-        if database.menuDatabase.count != 0 {
-            cell.nameLabel.text = database.menuDatabase[indexPath.item].name
-        }
+        cell.menuCategory = database.menuDatabase[indexPath.item]
+    
         return cell
     }
     

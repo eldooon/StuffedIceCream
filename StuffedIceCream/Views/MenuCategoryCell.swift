@@ -35,15 +35,21 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         return view
     }()
     
-    let database = FireBaseData.sharedInstance
+    var menuCategory: MenuCategory? {
+        didSet {
+            
+            if let name = menuCategory?.name {
+                nameLabel.text = name
+            }
+            
+            menuCollectionView.reloadData()
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        database.retrieveData {
-            print("Retrieving")
-            self.menuCollectionView.reloadData()
-        }
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
         menuCollectionView.register(MenuItemCell.self, forCellWithReuseIdentifier: cellId)
@@ -70,14 +76,17 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        if let count = menuCategory?.items.count {
+            return count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuItemCell
         
-        cell.itemImageView.image = #imageLiteral(resourceName: "cruff")
-        cell.itemNameLabel.text = "Thai Kwon Dough"
+        cell.itemImageView.image = menuCategory?.items[indexPath.item].image
+        cell.itemNameLabel.text = menuCategory?.items[indexPath.item].name
         
         return cell
     }
