@@ -19,7 +19,7 @@ class MenuItemCell: UICollectionViewCell {
     let itemNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Menu Name"
-        label.font = label.font.withSize(11)
+        label.font = UIFont.commentsBold
         return label
     }()
     
