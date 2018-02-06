@@ -59,6 +59,7 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let detailVC = ItemDetailController()
         detailVC.itemImageView.image = item.image
         detailVC.itemNameLabel.text = item.name
+        detailVC.itemDescriptionTextView.text = item.description
         
         navigationController?.pushViewController(detailVC, animated: true)
         
