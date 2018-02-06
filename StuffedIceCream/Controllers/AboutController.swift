@@ -68,5 +68,15 @@ class AboutController: UICollectionViewController, UICollectionViewDelegateFlowL
         
         return CGSize(width: view.frame.width, height: 670)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailVC = ItemDetailController()
+        detailVC.itemImageView.image = founders[indexPath.item].founderImage
+        detailVC.itemNameLabel.text = founders[indexPath.item].founderName
+        detailVC.itemDescriptionTextView.text = founders[indexPath.item].founderDescription
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 
 }
