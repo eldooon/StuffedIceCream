@@ -13,14 +13,13 @@ class ItemDetailController: UIViewController {
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .blue
         return iv
     }()
     
     let itemNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Item Name"
-        label.font = UIFont.primary
+        label.font = UIFont.primaryBold
         return label
     }()
     
