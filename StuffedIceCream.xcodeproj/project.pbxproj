@@ -22,6 +22,7 @@
 		BE09589C201BD30B005C9901 /* CateringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09589B201BD30B005C9901 /* CateringController.swift */; };
 		BE0FD3252026456600CE68C5 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD3242026456600CE68C5 /* SideMenuItem.swift */; };
 		BE0FD327202645AF00CE68C5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD326202645AF00CE68C5 /* MenuItem.swift */; };
+		BE0FD329202A271B00CE68C5 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */; };
 		BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FDB2020F18E0064C527 /* StuffedTextField.swift */; };
 		BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE320224B630064C527 /* MailgunInfo.swift */; };
 		BE446FE620225DD60064C527 /* RegexRule+rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE520225DD60064C527 /* RegexRule+rules.swift */; };
@@ -61,6 +62,7 @@
 		BE09589B201BD30B005C9901 /* CateringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CateringController.swift; sourceTree = "<group>"; };
 		BE0FD3242026456600CE68C5 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		BE0FD326202645AF00CE68C5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
 		BE446FDB2020F18E0064C527 /* StuffedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedTextField.swift; sourceTree = "<group>"; };
 		BE446FE320224B630064C527 /* MailgunInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailgunInfo.swift; sourceTree = "<group>"; };
 		BE446FE520225DD60064C527 /* RegexRule+rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegexRule+rules.swift"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				BED56F8F2024CFF400ABF855 /* LocationController.swift */,
 				BE095895201A73AF005C9901 /* MenuController.swift */,
 				BE09589B201BD30B005C9901 /* CateringController.swift */,
+				BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				BE0958942019361A005C9901 /* Founder.swift in Sources */,
 				BED56F842023820500ABF855 /* UIFont+style.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,
+				BE0FD329202A271B00CE68C5 /* ItemDetailController.swift in Sources */,
 				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
 				BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */,
 				BE095896201A73AF005C9901 /* MenuController.swift in Sources */,
