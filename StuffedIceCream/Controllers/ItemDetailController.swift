@@ -23,6 +23,14 @@ class ItemDetailController: UIViewController {
         return label
     }()
     
+    let itemDescriptionTextView: UITextView = {
+        let tv = UITextView()
+        tv.font = UIFont.commentsBold
+        tv.text = "Item Description"
+        tv.isUserInteractionEnabled = false
+        return tv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,5 +50,8 @@ class ItemDetailController: UIViewController {
         
         view.addSubview(itemNameLabel)
         itemNameLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(itemDescriptionTextView)
+        itemDescriptionTextView.anchor(centerX: nil, centerY: nil, top: itemNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
     }
 }
