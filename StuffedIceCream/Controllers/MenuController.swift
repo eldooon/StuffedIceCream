@@ -43,6 +43,7 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCategoryCell
     
+        cell.menuController = self
         cell.menuCategory = database.menuDatabase[indexPath.item]
     
         return cell
@@ -53,4 +54,11 @@ class MenuController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: view.frame.width, height: 200)
     }
 
+    func didSelectItemCell(item: MenuItem) {
+        
+        let detailVC = ItemDetailController()
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
 }
