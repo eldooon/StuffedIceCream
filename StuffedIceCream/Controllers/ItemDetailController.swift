@@ -6,4 +6,22 @@
 //  Copyright © 2018 ByEldon. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ItemDetailController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        createLayout()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    private func createLayout() {
+        
+    }
+}
