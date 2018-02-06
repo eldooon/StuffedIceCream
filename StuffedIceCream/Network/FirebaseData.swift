@@ -20,6 +20,7 @@ class FireBaseData {
         print("Fetching Data")
         ref.observe(.value, with: { (snapshot) in
             
+            self.menuDatabase.removeAll()
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in
                 let newItemCategory = MenuCategory()
