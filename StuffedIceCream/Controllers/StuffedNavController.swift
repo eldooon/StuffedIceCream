@@ -16,6 +16,7 @@ class StuffedNavController: UINavigationController {
         // Do any additional setup after loading the view.
         navigationBar.backgroundColor = .stuffedBlue
         navigationBar.tintColor = .stuffedBlue
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.primaryBold!]
     
     }
     
