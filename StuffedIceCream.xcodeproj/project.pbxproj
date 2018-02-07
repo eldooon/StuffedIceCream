@@ -23,6 +23,7 @@
 		BE0FD3252026456600CE68C5 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD3242026456600CE68C5 /* SideMenuItem.swift */; };
 		BE0FD327202645AF00CE68C5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD326202645AF00CE68C5 /* MenuItem.swift */; };
 		BE0FD329202A271B00CE68C5 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */; };
+		BE0FD32B202AA5F100CE68C5 /* UIViewController+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD32A202AA5F100CE68C5 /* UIViewController+style.swift */; };
 		BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FDB2020F18E0064C527 /* StuffedTextField.swift */; };
 		BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE320224B630064C527 /* MailgunInfo.swift */; };
 		BE446FE620225DD60064C527 /* RegexRule+rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE520225DD60064C527 /* RegexRule+rules.swift */; };
@@ -63,6 +64,7 @@
 		BE0FD3242026456600CE68C5 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		BE0FD326202645AF00CE68C5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		BE0FD32A202AA5F100CE68C5 /* UIViewController+style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+style.swift"; sourceTree = "<group>"; };
 		BE446FDB2020F18E0064C527 /* StuffedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedTextField.swift; sourceTree = "<group>"; };
 		BE446FE320224B630064C527 /* MailgunInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailgunInfo.swift; sourceTree = "<group>"; };
 		BE446FE520225DD60064C527 /* RegexRule+rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegexRule+rules.swift"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				BE5F68AD201688ED006F28EF /* UIColor+themes.swift */,
 				BE5F68B12016A7F6006F28EF /* UIView+layout.swift */,
 				BED56F832023820400ABF855 /* UIFont+style.swift */,
+				BE0FD32A202AA5F100CE68C5 /* UIViewController+style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */,
 				BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */,
 				BE0FD3252026456600CE68C5 /* SideMenuItem.swift in Sources */,
+				BE0FD32B202AA5F100CE68C5 /* UIViewController+style.swift in Sources */,
 				BE0958942019361A005C9901 /* Founder.swift in Sources */,
 				BED56F842023820500ABF855 /* UIFont+style.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,
