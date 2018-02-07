@@ -87,9 +87,8 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuItemCell
-        
-//        cell.itemImageView.image = menuCategory?.items[indexPath.item].image
-        cell.itemNameLabel.text = menuCategory?.items[indexPath.item].name
+
+        cell.menuItem = menuCategory?.items[indexPath.item]
         
         return cell
     }

@@ -28,7 +28,10 @@ class MenuItemCell: UICollectionViewCell {
                     
                     guard let imageData = data else { return }
                     let image = UIImage(data: imageData)
-                    self.itemImageView.image = image
+                    
+                    DispatchQueue.main.async {
+                      self.itemImageView.image = image
+                    }
                     
                 }).resume()
             }
