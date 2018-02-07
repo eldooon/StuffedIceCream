@@ -10,6 +10,38 @@ import UIKit
 
 class ItemDetailController: UIViewController {
     
+    var menuItem: MenuItem? {
+        didSet {
+            
+            if let name = menuItem?.name {
+                itemNameLabel.text = name
+            }
+            
+            if let description = menuItem?.description {
+                itemDescriptionTextView.text = description
+            }
+            
+            if let imageURL = menuItem?.image {
+                
+                guard let url = URL(string: imageURL) else { return }
+                
+                URLSession.shared.dataTask(with: url, completionHandler: { (data, response, err) in
+                    if let err = err {
+                        print("Failed to convert this image due to", err)
+                    }
+                    
+                    guard let imageData = data else { return }
+                    let image = UIImage(data: imageData)
+                    
+                    DispatchQueue.main.async {
+                        self.itemImageView.image = image
+                    }
+                    
+                }).resume()
+            }
+        }
+    }
+    
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
