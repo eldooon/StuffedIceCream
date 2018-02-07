@@ -16,7 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Set Navigation bar appearance
+        let backImage = #imageLiteral(resourceName: "back")
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .normal)
+        
+        //Configure firebase
         FirebaseApp.configure()
+        
+        //Confire window and rootVC
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = StuffedNavController(rootViewController: HomeController(collectionViewLayout: UICollectionViewFlowLayout()))
         window?.makeKeyAndVisible()
