@@ -12,14 +12,15 @@ class ItemDetailController: UIViewController {
     
     let itemImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
         return iv
     }()
     
     let itemNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Item Name"
-        label.font = UIFont.primaryBold
+        label.font = UIFont.titlesSmall
         return label
     }()
     
@@ -28,6 +29,7 @@ class ItemDetailController: UIViewController {
         tv.font = UIFont.commentsBold
         tv.text = "Item Description"
         tv.isUserInteractionEnabled = false
+        tv.textAlignment = .center
         return tv
     }()
     
@@ -49,7 +51,7 @@ class ItemDetailController: UIViewController {
         itemImageView.anchor(centerX: nil, centerY: nil, top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
         
         view.addSubview(itemNameLabel)
-        itemNameLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        itemNameLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         view.addSubview(itemDescriptionTextView)
         itemDescriptionTextView.anchor(centerX: nil, centerY: nil, top: itemNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
