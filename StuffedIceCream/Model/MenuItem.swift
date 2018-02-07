@@ -10,7 +10,7 @@ import UIKit
 
 public class MenuItem {
     
-    var image: UIImage?
+    var image: String?
     var name: String?
     var description: String?
     
@@ -18,10 +18,9 @@ public class MenuItem {
         
         self.name = dictionary["Name"] as? String ?? ""
         self.description = dictionary["Description"] as? String ?? ""
-        guard let imageURL = URL(string: dictionary["Image"] as? String ?? "") else { return }
-        guard let imageData = try? Data(contentsOf: imageURL) else { return }
-        self.image = UIImage(data: imageData)
+        self.image = dictionary["Image"] as? String ?? ""
     }
+    
     
 }
 

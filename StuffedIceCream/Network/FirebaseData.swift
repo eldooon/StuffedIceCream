@@ -19,7 +19,27 @@ class FireBaseData {
         
         print("Fetching Data")
         
-//        ref.observeSingleEvent(of: .value) { (snapshot) in
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            self.menuDatabase.removeAll()
+            guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            dictionaries.forEach({ (key, value) in
+                let newItemCategory = MenuCategory()
+                newItemCategory.name = key
+
+                guard let testvalue = value as? [String: Any] else { return }
+                for eachValue in testvalue {
+                    guard let value = eachValue.value as? [String: Any] else {return}
+                    let item = MenuItem(dictionary: value)
+                    newItemCategory.items.append(item)
+                    print("eachvalue", eachValue.value)
+                }
+                self.menuDatabase.append(newItemCategory)
+            })
+            completion()
+        }
+
+//        ref.observe(.value, with: { (snapshot) in
+//
 //            self.menuDatabase.removeAll()
 //            guard let dictionaries = snapshot.value as? [String: Any] else { return }
 //            dictionaries.forEach({ (key, value) in
@@ -36,27 +56,7 @@ class FireBaseData {
 //                self.menuDatabase.append(newItemCategory)
 //            })
 //            completion()
-//        }
-
-        ref.observe(.value, with: { (snapshot) in
-            
-            self.menuDatabase.removeAll()
-            guard let dictionaries = snapshot.value as? [String: Any] else { return }
-            dictionaries.forEach({ (key, value) in
-                let newItemCategory = MenuCategory()
-                newItemCategory.name = key
-                
-                guard let testvalue = value as? [String: Any] else { return }
-                for eachValue in testvalue {
-                    guard let value = eachValue.value as? [String: Any] else {return}
-                    let item = MenuItem(dictionary: value)
-                    newItemCategory.items.append(item)
-                    print("eachvalue", eachValue.value)
-                }
-                self.menuDatabase.append(newItemCategory)
-            })
-            completion()
-        })
+//        })
         
     }
     
