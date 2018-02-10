@@ -50,6 +50,7 @@ class MenuItemCell: UICollectionViewCell {
         label.font = UIFont.commentsBold
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
