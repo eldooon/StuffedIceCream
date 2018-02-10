@@ -48,6 +48,8 @@ class MenuItemCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Menu Name"
         label.font = UIFont.commentsBold
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
     
@@ -67,7 +69,7 @@ class MenuItemCell: UICollectionViewCell {
         itemImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 140)
         
         addSubview(itemNameLabel)
-        itemNameLabel.anchor(centerX: centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 15)
+        itemNameLabel.anchor(centerX: centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 90, height: 50)
     }
     
 }
