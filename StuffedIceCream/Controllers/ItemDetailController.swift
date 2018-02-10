@@ -44,7 +44,7 @@ class ItemDetailController: UIViewController {
     
     let itemImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         return iv
     }()
