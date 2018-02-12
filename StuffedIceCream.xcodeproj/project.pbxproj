@@ -165,6 +165,7 @@
 		BE0958832017BF00005C9901 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BED56F932024E81200ABF855 /* Fonts */,
 				BE5F689F20168606006F28EF /* Assets.xcassets */,
 				BE5F68A120168606006F28EF /* LaunchScreen.storyboard */,
 				BE5F689820168606006F28EF /* AppDelegate.swift */,
@@ -210,7 +211,6 @@
 				BED56F962026369200ABF855 /* GoogleService-Info.plist */,
 				BE0958862017C636005C9901 /* Default-568h@2x.png */,
 				BED56F98202641A700ABF855 /* Network */,
-				BED56F932024E81200ABF855 /* Fonts */,
 				BE0958882017CA4B005C9901 /* Model */,
 				BE0958832017BF00005C9901 /* Resources */,
 				BE0958822017BEF3005C9901 /* Extensions */,
