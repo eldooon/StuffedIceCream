@@ -20,14 +20,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.]
         
-        view.backgroundColor = .white
         let logo = UIImageView(image: #imageLiteral(resourceName: "logo"))
         logo.contentMode = .scaleAspectFit
         logo.clipsToBounds = true
         navigationItem.titleView = logo
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(menuButtonTapped))
         
-        collectionView?.backgroundColor = .white
+        collectionView?.backgroundColor = .stuffedBlue
         collectionView?.register(HomeCategoryCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(HomeHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         

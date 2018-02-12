@@ -26,6 +26,7 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         let label = UILabel()
         label.text = "Media"
         label.font = UIFont.titlesSmall
+        label.textColor = .white
         return label
     }()
     
@@ -55,7 +56,7 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     func createLayout() {
         
         addSubview(nameLabel)
-        nameLabel.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        nameLabel.anchor(centerX: centerXAnchor, centerY: nil, top: topAnchor, left: nil , bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         addSubview(dividerLineView)
         dividerLineView.anchor(centerX: nil, centerY: nil, top: bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 1)
