@@ -35,6 +35,8 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         return view
     }()
     
+    let mediaItems = MediaItems()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -64,11 +66,13 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return mediaItems.items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeItemCell
+        cell.itemImageView.image = mediaItems.items[indexPath.item].mediaImage
         
         return cell
     }

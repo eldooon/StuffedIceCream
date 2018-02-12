@@ -14,7 +14,6 @@ class HomeItemCell: UICollectionViewCell {
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .stuffedBlue
         return iv
     }()
     
