@@ -14,6 +14,7 @@ class HomeItemCell: UICollectionViewCell {
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
+        iv.backgroundColor = .stuffedBlue
         return iv
     }()
     
@@ -30,7 +31,7 @@ class HomeItemCell: UICollectionViewCell {
     private func createLayout(){
         
         addSubview(itemImageView)
-        itemImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 140)
+        itemImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 10, paddingRight: 0, width: 0, height: 0)
         
     }
     

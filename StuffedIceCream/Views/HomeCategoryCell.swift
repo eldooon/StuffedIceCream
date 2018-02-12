@@ -40,7 +40,7 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
-        homeCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        homeCollectionView.register(HomeItemCell.self, forCellWithReuseIdentifier: cellId)
         homeCollectionView.reloadData()
         createLayout()
         
@@ -68,13 +68,13 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeItemCell
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 220)
+        return CGSize(width: 200, height: 160)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
