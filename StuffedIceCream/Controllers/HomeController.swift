@@ -30,7 +30,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(HomeCategoryCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(HomeHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
-        database.retrieveData {
+        database.fetchMenuData {
             print("RETRIEVED DATA")
         }
     }
