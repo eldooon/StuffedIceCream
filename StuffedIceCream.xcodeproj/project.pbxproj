@@ -147,8 +147,8 @@
 			children = (
 				BE0FD32C20321F0100CE68C5 /* HomeCategoryCell.swift */,
 				BE0FD32E203220A200CE68C5 /* HomeItemCell.swift */,
-				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
 				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
+				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
 				BE0958842017C1C9005C9901 /* SideMenuCell.swift */,
 				BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */,
 				BE0958912019231D005C9901 /* AboutFounderCell.swift */,

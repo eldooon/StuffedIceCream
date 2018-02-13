@@ -17,11 +17,13 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
-        collectionView.backgroundColor = .blue
+//        collectionView.backgroundColor = .blue
         collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
     }()
+    
+    let testImages = [#imageLiteral(resourceName: "ForkYeah"),#imageLiteral(resourceName: "NBC"), #imageLiteral(resourceName: "Fox5")]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,9 +50,17 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         
         let cellSize = CGSize(width: frame.width, height: frame.height)
         
-        let contentOffset = headerCollectionView.contentOffset;
+        let contentOffset = headerCollectionView.contentOffset
         
-        headerCollectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        if contentOffset.x > 760.0 {
+
+            headerCollectionView.scrollRectToVisible(CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        } else {
+            
+            headerCollectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        }
+        print(contentOffset.x)
+        print(contentOffset.y)
         
     }
     
@@ -62,12 +72,13 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return testImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeHeaderItemCell
+        cell.itemImageView.image = testImages[indexPath.item]
         
         return cell
     }
