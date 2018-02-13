@@ -23,7 +23,13 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         return collectionView
     }()
     
-    let testImages = [#imageLiteral(resourceName: "ForkYeah"),#imageLiteral(resourceName: "NBC"), #imageLiteral(resourceName: "Fox5")]
+    var headerImages: [String]? {
+        didSet {
+            
+            headerCollectionView.reloadData()
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,13 +76,13 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return testImages.count
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeHeaderItemCell
-        cell.itemImageView.image = testImages[indexPath.item]
+//        cell.itemImageView.image = database.frontpageDatabase[indexPath.item]
         
         return cell
     }
