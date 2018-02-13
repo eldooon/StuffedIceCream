@@ -52,7 +52,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         
         let contentOffset = headerCollectionView.contentOffset
         
-        if contentOffset.x > 760.0 {
+        if contentOffset.x > 600.0 {
 
             headerCollectionView.scrollRectToVisible(CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
         } else {
@@ -86,6 +86,10 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: frame.width, height: frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     
