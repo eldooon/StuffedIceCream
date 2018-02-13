@@ -59,8 +59,6 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
             
             headerCollectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
         }
-        print(contentOffset.x)
-        print(contentOffset.y)
         
     }
     
