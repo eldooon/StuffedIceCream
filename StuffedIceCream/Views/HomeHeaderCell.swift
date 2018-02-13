@@ -23,7 +23,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         return collectionView
     }()
     
-    var headerImages: [String]? {
+    var headerImages: [HeaderItem]? {
         didSet {
             
             headerCollectionView.reloadData()

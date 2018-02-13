@@ -12,7 +12,7 @@ class FireBaseData {
     
     static let sharedInstance = FireBaseData()
     var menuDatabase = [MenuCategory]()
-    var frontpageDatabase = [String]()
+    var frontpageDatabase = [HeaderItem]()
     let ref = Database.database().reference().child("Menu")
     let ref2 = Database.database().reference().child("Frontpage")
     
@@ -68,9 +68,10 @@ class FireBaseData {
                 guard let testvalue = value as? [String: Any] else { return }
                 for eachValue in testvalue {
                     guard let value = eachValue.value as? [String: String] else {return}
-                    guard let imageString = value["Image"] as? String else {return}
-                    print("Image String", imageString)
-                    self.frontpageDatabase.append(imageString)
+//                    guard let imageString = value["Image"] as? String else {return}
+//                    print("Image String", imageString)
+                    let item = HeaderItem(dictionary: value)
+                    self.frontpageDatabase.append(item)
                 }
             })
             completion()

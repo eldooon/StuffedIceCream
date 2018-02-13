@@ -35,7 +35,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
         
         database.fetchHeaderImages { 
-            
+            self.collectionView?.reloadData()
         }
     }
 
