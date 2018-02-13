@@ -76,14 +76,17 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if let count = headerImages?.count {
+            print("Count", count)
+            return count
+        }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeHeaderItemCell
-//        cell.itemImageView.image = database.frontpageDatabase[indexPath.item]
-        
         return cell
     }
     

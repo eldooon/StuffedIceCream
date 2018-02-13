@@ -78,7 +78,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeCategoryCell
-
         return cell
     }
     
@@ -93,6 +92,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                                  at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! HomeHeaderCell
+        header.headerImages = database.frontpageDatabase
         
         return header
         
