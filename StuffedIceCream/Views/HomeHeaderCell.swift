@@ -17,7 +17,7 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
-//        collectionView.backgroundColor = .blue
+        collectionView.backgroundColor = .stuffedBlue
         collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
