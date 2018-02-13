@@ -12,15 +12,10 @@ class HomeHeaderItemCell: UICollectionViewCell {
     
     let itemImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .red
+        iv.backgroundColor = .white
+        iv.contentMode = .scaleAspectFit
         return iv
     }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        createLayout()
-    }
     
     var headerItem: HeaderItem? {
         didSet {
@@ -44,6 +39,12 @@ class HomeHeaderItemCell: UICollectionViewCell {
                 }).resume()
             }
         }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        createLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
