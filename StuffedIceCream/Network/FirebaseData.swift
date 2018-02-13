@@ -13,9 +13,10 @@ class FireBaseData {
     static let sharedInstance = FireBaseData()
     var menuDatabase = [MenuCategory]()
     let ref = Database.database().reference().child("Menu")
+    let ref2 = Database.database().reference().child("Frontpage")
     
     
-    func retrieveData(completion: @escaping () -> ()) {
+    func fetchMenuData(completion: @escaping () -> ()) {
         
         print("Fetching Data")
         
