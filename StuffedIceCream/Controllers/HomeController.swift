@@ -33,6 +33,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         database.fetchMenuData {
             print("RETRIEVED DATA")
         }
+        
+        database.fetchHeaderImages { 
+            
+        }
     }
 
     @objc func menuButtonTapped() {
