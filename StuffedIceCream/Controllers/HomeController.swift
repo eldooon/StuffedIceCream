@@ -83,7 +83,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         if indexPath.item == 1 {
             cell.nameLabel.text = "Social Media"
             cell.mediaItems =  mediaItems.socialItems
-            cell.cellSize = CGSize(width: 100, height: 100)
+            cell.cellSize = CGSize(width: (view.frame.width/2) - 20, height: 100)
         } else {
             cell.nameLabel.text = "Media"
             cell.mediaItems =  mediaItems.items
