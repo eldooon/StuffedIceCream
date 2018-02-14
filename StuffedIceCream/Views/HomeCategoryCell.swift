@@ -96,5 +96,14 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         
         print("Selected item at: ", indexPath)
         
+        if let link = mediaItems?[indexPath.item].mediaLink {
+            
+            guard let url = URL(string: link) else {return}
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: { (status) in
+                //
+            })
+        }
+        
     }
 }
