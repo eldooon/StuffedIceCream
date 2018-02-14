@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import TextFieldEffects
 
-class StuffedTextField: UITextField {
+class StuffedTextField: HoshiTextField {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -21,9 +22,9 @@ class StuffedTextField: UITextField {
     
     private func createLayout() {
         
-        self.layer.cornerRadius = 5
-        self.layer.borderColor = UIColor.stuffedBlue.cgColor
-        self.layer.borderWidth = 2
+        self.placeholderColor = .darkGray
+        self.borderInactiveColor = .lightGray
+        self.font = UIFont.primary
         
     }
     
