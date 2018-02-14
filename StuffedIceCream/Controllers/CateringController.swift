@@ -303,9 +303,9 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         for (field, error) in errors {
-            if let field = field as? UITextField {
-                field.layer.borderColor = UIColor.red.cgColor
-                field.layer.borderWidth = 1.0
+            if let field = field as? StuffedTextField {
+                field.borderActiveColor = .red
+                field.borderInactiveColor = .red
             }
             error.errorLabel?.text = error.errorMessage // works if you added labels
             error.errorLabel?.isHidden = false
@@ -318,7 +318,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
     
