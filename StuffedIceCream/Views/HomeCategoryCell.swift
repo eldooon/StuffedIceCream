@@ -38,6 +38,8 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     var mediaItems: [MediaItem]?
     
+    var cellSize: CGSize = CGSize(width: 150, height: 150)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -83,7 +85,7 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 150, height: 150)
+        return cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
