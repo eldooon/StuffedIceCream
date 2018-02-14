@@ -24,6 +24,7 @@ class StuffedTextField: HoshiTextField {
         
         self.placeholderColor = .darkGray
         self.borderInactiveColor = .lightGray
+        self.borderActiveColor = .stuffedBlue
         self.font = UIFont.primary
         
     }
