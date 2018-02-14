@@ -22,8 +22,7 @@ public class MediaItem {
 class MediaItems {
     
     let items = [MediaItem(Image: #imageLiteral(resourceName: "Insider")), MediaItem(Image: #imageLiteral(resourceName: "Thrillist")), MediaItem(Image: #imageLiteral(resourceName: "BuzzFeed")), MediaItem(Image: #imageLiteral(resourceName: "Eater")), MediaItem(Image: #imageLiteral(resourceName: "NBC")), MediaItem(Image:#imageLiteral(resourceName: "Fox5")), MediaItem(Image: #imageLiteral(resourceName: "Gothamist")), MediaItem(Image: #imageLiteral(resourceName: "TimeOutNY")), MediaItem(Image: #imageLiteral(resourceName: "Best")), MediaItem(Image: #imageLiteral(resourceName: "Cosmopolitan")), MediaItem(Image: #imageLiteral(resourceName: "FoodNetwork")), MediaItem(Image: #imageLiteral(resourceName: "DiningWithSkyler")), MediaItem(Image: #imageLiteral(resourceName: "Where")), MediaItem(Image: #imageLiteral(resourceName: "ExtraCrispy")), MediaItem(Image: #imageLiteral(resourceName: "Refinery29")), MediaItem(Image: #imageLiteral(resourceName: "ForkYeah")), MediaItem(Image: #imageLiteral(resourceName: "Metro")), MediaItem(Image: #imageLiteral(resourceName: "Bedford+Bowery"))]
+    
+    let socialItems = [MediaItem(Image: #imageLiteral(resourceName: "Facebook")), MediaItem(Image: #imageLiteral(resourceName: "Instagram"))]
 }
 
-class SocialMediaItems {
-    let items = [MediaItem(Image: #imageLiteral(resourceName: "Facebook")), MediaItem(Image: #imageLiteral(resourceName: "Instagram"))]
-}

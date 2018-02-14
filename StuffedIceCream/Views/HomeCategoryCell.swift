@@ -36,7 +36,7 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
         return view
     }()
     
-    let mediaItems = MediaItems()
+    var mediaItems: [MediaItem]?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -67,19 +67,23 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return mediaItems.items.count
+        if let count = mediaItems?.count {
+           return count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeItemCell
-        cell.itemImageView.image = mediaItems.items[indexPath.item].mediaImage
+        cell.itemImageView.image = mediaItems?[indexPath.item].mediaImage
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 160)
+        
+        return CGSize(width: 150, height: 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

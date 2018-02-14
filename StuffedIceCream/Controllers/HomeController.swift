@@ -72,12 +72,21 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeCategoryCell
+        let mediaItems = MediaItems()
+        
+        if indexPath.item == 1 {
+            cell.nameLabel.text = "Social Media"
+            cell.mediaItems =  mediaItems.socialItems
+        } else {
+            cell.nameLabel.text = "Media"
+            cell.mediaItems =  mediaItems.items
+        }
         return cell
     }
     
