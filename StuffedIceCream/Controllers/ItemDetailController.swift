@@ -42,6 +42,13 @@ class ItemDetailController: UIViewController {
         }
     }
     
+    var scrollView : UIScrollView = {
+        let sv = UIScrollView()
+//        sv.isUserInteractionEnabled = true
+        sv.isScrollEnabled = true
+        return sv
+    }()
+    
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
@@ -79,13 +86,23 @@ class ItemDetailController: UIViewController {
     
     private func createLayout() {
         
-        view.addSubview(itemImageView)
-        itemImageView.anchor(centerX: nil, centerY: nil, top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
+        view.addSubview(scrollView)
+        scrollView.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        view.addSubview(itemNameLabel)
-        itemNameLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        scrollView.addSubview(itemImageView)
+        itemImageView.anchor(centerX: nil, centerY: nil, top: scrollView.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
         
-        view.addSubview(itemDescriptionTextView)
-        itemDescriptionTextView.anchor(centerX: nil, centerY: nil, top: itemNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 400)
+        scrollView.addSubview(itemNameLabel)
+        itemNameLabel.anchor(centerX: scrollView.centerXAnchor, centerY: nil, top: itemImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        scrollView.addSubview(itemDescriptionTextView)
+        itemDescriptionTextView.anchor(centerX: nil, centerY: nil, top: itemNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 420)
+    }
+    
+    override func viewWillLayoutSubviews() {
+
+        if itemNameLabel.text == "Jackie Luu" {
+            scrollView.contentSize.height = 700
+        }
     }
 }
