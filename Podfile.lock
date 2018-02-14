@@ -33,12 +33,14 @@ PODS:
     - Alamofire
     - ObjectMapper
   - SwiftValidator (4.0.0)
+  - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - SwiftMailgun
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - TextFieldEffects
 
 EXTERNAL SOURCES:
   SwiftValidator:
@@ -63,7 +65,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   SwiftMailgun: 311a28057e0ced2dbcfbc8320e4aa282511877d2
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: c1b12ae7d00d3145666a540bf4d5a9bc68e01b9b
+PODFILE CHECKSUM: 34f33d09b7578a1b54c0b769059ca893ee5b4ad5
 
 COCOAPODS: 1.2.0.rc.1

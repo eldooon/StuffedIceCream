@@ -10,5 +10,6 @@ target 'StuffedIceCream' do
   pod 'SwiftMailgun'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'TextFieldEffects'
 
 end
