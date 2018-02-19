@@ -147,7 +147,9 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     let requestTextfield: UITextView = {
         let tv = UITextView()
-        tv.backgroundColor = .stuffedBlue
+        tv.layer.borderColor = UIColor.stuffedBlue.cgColor
+        tv.layer.borderWidth = 1
+        tv.layer.cornerRadius = 5
         tv.text = "Please enter special request here:"
         return tv
     }()
