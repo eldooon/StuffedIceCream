@@ -195,16 +195,18 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         address2TextField.tag = 4
         cityTextField.delegate = self
         cityTextField.tag = 5
+        stateTextField.delegate = self
+        stateTextField.tag = 6
         zipcodeTextField.delegate = self
-        zipcodeTextField.tag = 6
+        zipcodeTextField.tag = 7
         countryTextField.delegate = self
-        countryTextField.tag = 7
+        countryTextField.tag = 8
         guestTextField.delegate = self
-        guestTextField.tag = 8
+        guestTextField.tag = 9
         dateTextField.delegate = self
-        dateTextField.tag = 9
+        dateTextField.tag = 10
         timeTextField.delegate = self
-        timeTextField.tag = 10
+        timeTextField.tag = 11
         
         validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
         validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
@@ -306,7 +308,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         
         guard let selectionItem = selectionSC.titleForSegment(at: selectionSC.selectedSegmentIndex) else {return}
         let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!),<br><b>Type:</b> \(selectionItem)") { mailgunResult in
+            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!) <br><b>Type:</b> \(selectionItem)<br><b>Special Request:</b>\(self.requestTextfield.text)") { mailgunResult in
                 
                 if mailgunResult.success{
                     print("Email was sent")
