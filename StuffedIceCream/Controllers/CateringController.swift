@@ -311,8 +311,15 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
             self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!) <br><b>Type:</b> \(selectionItem)<br><b>Special Request:</b>\(self.requestTextfield.text)") { mailgunResult in
                 
                 if mailgunResult.success{
-                    print("Email was sent")
+                    let alertController = UIAlertController(title: "Succesful!", message: "Thank you for submitting a catering request! We will get back to AS SOON AS POSSIBLE!", preferredStyle: .alert)
+                    let okButton = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    alertController.addAction(okButton)
+                    
+                    self.present(alertController, animated: true, completion: nil)
                 }
+                
                 
             }
         }

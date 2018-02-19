@@ -43,8 +43,6 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
             darkenView.alpha = 0
             
             window.addSubview(menuCollectionView)
-            let width : CGFloat = 400
-            let x =  width - window.frame.width
             menuCollectionView.frame = CGRect(x: -window.frame.width, y: 0 , width: window.frame.width, height:window.frame.height)
             
             UIView.animate(withDuration: 0.5, animations: {
