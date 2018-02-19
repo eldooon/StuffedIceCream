@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure firebase
         FirebaseApp.configure()
+        
+        //Configure IQKeyboard
+        IQKeyboardManager.sharedManager().enable = true
         
         //Confire window and rootVC
         window = UIWindow(frame: UIScreen.main.bounds)

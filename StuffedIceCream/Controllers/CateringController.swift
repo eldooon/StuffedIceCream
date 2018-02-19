@@ -168,6 +168,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         
         createTextfieldProperties()
         createLayout()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -348,7 +349,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
                 }
             }
         }
-        
         
         return true
     }
