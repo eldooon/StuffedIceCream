@@ -147,6 +147,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     let requestTextfield: UITextView = {
         let tv = UITextView()
+        tv.font = UIFont.commentsBold
         tv.layer.borderColor = UIColor.stuffedBlue.cgColor
         tv.layer.borderWidth = 1
         tv.layer.cornerRadius = 5
