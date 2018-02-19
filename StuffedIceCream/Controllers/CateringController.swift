@@ -324,10 +324,18 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        
+        let alertController = UIAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
         for (field, error) in errors {
             if let field = field as? StuffedTextField {
                 field.borderActiveColor = .red
                 field.borderInactiveColor = .red
+                field.errorLabel.text = error.errorMessage
             }
             error.errorLabel?.text = error.errorMessage // works if you added labels
             error.errorLabel?.isHidden = false
