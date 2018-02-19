@@ -177,16 +177,27 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     private func createTextfieldProperties() {
         fullNameTextField.delegate = self
+        fullNameTextField.tag = 0
         emailTextField.delegate = self
+        emailTextField.tag = 1
         phoneNumberTextField.delegate = self
+        phoneNumberTextField.tag = 2
         address1TextField.delegate = self
+        address1TextField.tag = 3
         address2TextField.delegate = self
+        address2TextField.tag = 4
         cityTextField.delegate = self
+        cityTextField.tag = 5
         zipcodeTextField.delegate = self
+        zipcodeTextField.tag = 6
         countryTextField.delegate = self
+        countryTextField.tag = 7
         guestTextField.delegate = self
+        guestTextField.tag = 8
         dateTextField.delegate = self
+        dateTextField.tag = 9
         timeTextField.delegate = self
+        timeTextField.tag = 10
         
         validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
         validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
@@ -318,19 +329,27 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        validator.validateField(textField){ error in
-            if error == nil {
-                let stuffedTF = textField as? StuffedTextField
-                stuffedTF?.borderActiveColor = .stuffedBlue
-                stuffedTF?.borderInactiveColor = .stuffedBlue
-                stuffedTF?.errorLabel.text = ""
+        if let stuffedTF = textField as? StuffedTextField {
+            if let nextField = stuffedTF.superview?.viewWithTag(stuffedTF.tag + 1) as? StuffedTextField {
+                nextField.becomeFirstResponder()
             } else {
-                let stuffedTF = textField as? StuffedTextField
-                stuffedTF?.borderActiveColor = .red
-                stuffedTF?.borderInactiveColor = .red
-                stuffedTF?.errorLabel.text = error?.errorMessage
+                stuffedTF.resignFirstResponder()
+            }
+            
+            validator.validateField(textField){ error in
+                if error == nil {
+                    stuffedTF.borderActiveColor = .stuffedBlue
+                    stuffedTF.borderInactiveColor = .stuffedBlue
+                    stuffedTF.errorLabel.text = ""
+                } else {
+                    stuffedTF.borderActiveColor = .red
+                    stuffedTF.borderInactiveColor = .red
+                    stuffedTF.errorLabel.text = error?.errorMessage
+                }
             }
         }
+        
+        
         return true
     }
     
