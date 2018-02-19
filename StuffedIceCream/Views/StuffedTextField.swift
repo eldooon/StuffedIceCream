@@ -11,9 +11,22 @@ import TextFieldEffects
 
 class StuffedTextField: HoshiTextField {
 
+    let errorLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.commentsBold
+        label.textColor = .red
+        label.text = "ERROR ERROR"
+        return label
+    }()
+    
     override init(frame: CGRect){
         super.init(frame: frame)
         createLayout()
+        
+        addSubview(errorLabel)
+        errorLabel.anchor(centerX: nil, centerY: nil, top: topAnchor, left: nil, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
