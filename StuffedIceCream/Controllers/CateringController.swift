@@ -168,6 +168,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         
         createTextfieldProperties()
         createLayout()
+        hideKeyboardWhenTapped()
         
     }
 
