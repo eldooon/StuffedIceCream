@@ -298,13 +298,15 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     func validationSuccessful() {
         print("SUCCESS")
+        
         let alertController = UIAlertController(title: "Submit", message: "Is everything correct?", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             //
         }
         
+        guard let selectionItem = selectionSC.titleForSegment(at: selectionSC.selectedSegmentIndex) else {return}
         let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!)") { mailgunResult in
+            self.mailgun.sendEmail(to: MailgunInfo.email, from: MailgunInfo.email, subject: "Catering Order #", bodyHTML: "<b>Full Name:</b> \(self.fullNameTextField.text!)<br><b>Email Address:</b> \(self.emailTextField.text!)<br><b>Phone Number:</b> \(self.phoneNumberTextField.text!)<br><b>Address 1:</b> \(self.address1TextField.text!)<br><b>Address 2:</b> \(self.address2TextField.text!)<br><b>City:</b> \(self.cityTextField.text!),<br><b>State:</b> \(self.stateTextField.text!)<br><b>Zipcode:</b> \(self.zipcodeTextField.text!)<br><b>Guest #:</b> \(self.guestTextField.text!)<br><b>Date:</b> \(self.dateTextField.text!)<br><b>Time:</b> \(self.timeTextField.text!),<br><b>Type:</b> \(selectionItem)") { mailgunResult in
                 
                 if mailgunResult.success{
                     print("Email was sent")
