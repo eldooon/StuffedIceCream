@@ -150,7 +150,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         tv.layer.borderColor = UIColor.stuffedBlue.cgColor
         tv.layer.borderWidth = 1
         tv.layer.cornerRadius = 5
-        tv.text = "Please enter special request here:"
+        tv.placeholder = "Please enter special request here:"
         return tv
     }()
     
@@ -158,6 +158,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         let button = UIButton()
         button.setTitle("Submit", for: .normal)
         button.backgroundColor = .stuffedBlue
+        button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
         return button
     }()

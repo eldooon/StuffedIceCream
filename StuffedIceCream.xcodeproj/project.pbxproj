@@ -31,6 +31,7 @@
 		BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FDB2020F18E0064C527 /* StuffedTextField.swift */; };
 		BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE320224B630064C527 /* MailgunInfo.swift */; };
 		BE446FE620225DD60064C527 /* RegexRule+rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446FE520225DD60064C527 /* RegexRule+rules.swift */; };
+		BE48A895203B63EA001E6F6B /* UITextView+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48A894203B63EA001E6F6B /* UITextView+style.swift */; };
 		BE5F689920168606006F28EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689820168606006F28EF /* AppDelegate.swift */; };
 		BE5F689B20168606006F28EF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F689A20168606006F28EF /* HomeController.swift */; };
 		BE5F68A020168606006F28EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F689F20168606006F28EF /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		BE446FDB2020F18E0064C527 /* StuffedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedTextField.swift; sourceTree = "<group>"; };
 		BE446FE320224B630064C527 /* MailgunInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailgunInfo.swift; sourceTree = "<group>"; };
 		BE446FE520225DD60064C527 /* RegexRule+rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegexRule+rules.swift"; sourceTree = "<group>"; };
+		BE48A894203B63EA001E6F6B /* UITextView+style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+style.swift"; sourceTree = "<group>"; };
 		BE5F689520168606006F28EF /* StuffedIceCream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedIceCream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F689820168606006F28EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F689A20168606006F28EF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				BE5F68B12016A7F6006F28EF /* UIView+layout.swift */,
 				BED56F832023820400ABF855 /* UIFont+style.swift */,
 				BE0FD32A202AA5F100CE68C5 /* UIViewController+style.swift */,
+				BE48A894203B63EA001E6F6B /* UITextView+style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				BED56F842023820500ABF855 /* UIFont+style.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,
 				BE0FD329202A271B00CE68C5 /* ItemDetailController.swift in Sources */,
+				BE48A895203B63EA001E6F6B /* UITextView+style.swift in Sources */,
 				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
 				BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */,
 				BE095896201A73AF005C9901 /* MenuController.swift in Sources */,
