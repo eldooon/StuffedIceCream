@@ -15,7 +15,6 @@ class StuffedTextField: HoshiTextField {
         let label = UILabel()
         label.font = UIFont.commentsBold
         label.textColor = .red
-        label.text = "ERROR ERROR"
         return label
     }()
     
