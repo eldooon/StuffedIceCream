@@ -317,15 +317,18 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         validator.validateField(textField){ error in
             if error == nil {
                 let stuffedTF = textField as? StuffedTextField
                 stuffedTF?.borderActiveColor = .stuffedBlue
                 stuffedTF?.borderInactiveColor = .stuffedBlue
+                stuffedTF?.errorLabel.text = ""
             } else {
                 let stuffedTF = textField as? StuffedTextField
                 stuffedTF?.borderActiveColor = .red
                 stuffedTF?.borderInactiveColor = .red
+                stuffedTF?.errorLabel.text = error?.errorMessage
             }
         }
         return true
