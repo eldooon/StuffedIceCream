@@ -364,6 +364,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let datePicker = UIDatePicker()
         if textField == dateTextField {
+            datePicker.datePickerMode = .date
             textField.inputView = datePicker
             datePicker.addTarget(self, action: (#selector(datePickerChanged)), for: .valueChanged)
 
