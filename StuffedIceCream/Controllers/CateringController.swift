@@ -354,7 +354,13 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         formatter.dateStyle = .full
         dateTextField.text = formatter.string(from: sender.date)
         
-        print("Date:", formatter.string(from: sender.date))
+    }
+    
+    @objc func timePickerChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        timeTextField.text = formatter.string(from: sender.date)
+        
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -366,7 +372,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         } else if textField == timeTextField {
             datePicker.datePickerMode = .time
             textField.inputView = datePicker
-            datePicker.addTarget(self, action: (#selector(datePickerChanged)), for: .valueChanged)
+            datePicker.addTarget(self, action: (#selector(timePickerChanged)), for: .valueChanged)
             
         }
         return true
