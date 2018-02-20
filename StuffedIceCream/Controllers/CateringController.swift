@@ -120,14 +120,12 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     let dateTextField: StuffedTextField = {
         let tf = StuffedTextField()
         tf.placeholder = "Date"
-        tf.keyboardType = .numbersAndPunctuation
         return tf
     }()
     
     let timeTextField: StuffedTextField = {
         let tf = StuffedTextField()
         tf.placeholder = "Time"
-        tf.keyboardType = .numbersAndPunctuation
         return tf
     }()
     
