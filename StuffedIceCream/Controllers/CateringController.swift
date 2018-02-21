@@ -140,6 +140,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         let items = ["Cruff", "Ice Cream", "Both"]
         let sc = UISegmentedControl(items: items)
         sc.tintColor = .stuffedBlue
+        sc.selectedSegmentIndex = 0
         return sc
     }()
     
