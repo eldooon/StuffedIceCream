@@ -13,7 +13,7 @@ class HomeHeaderItemCell: UICollectionViewCell {
     let itemImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .white
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         return iv
     }()
     
