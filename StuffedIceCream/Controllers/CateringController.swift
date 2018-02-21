@@ -300,9 +300,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         print("SUCCESS")
         
         let alertController = UIAlertController(title: "Submit", message: "Is everything correct?", preferredStyle: .alert)
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            //
-        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         guard let selectionItem = selectionSC.titleForSegment(at: selectionSC.selectedSegmentIndex) else {return}
         let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
