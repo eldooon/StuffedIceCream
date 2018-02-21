@@ -96,12 +96,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return tf
     }()
     
-    let countryTextField: StuffedTextField = {
-        let tf = StuffedTextField()
-        tf.placeholder = "Country"
-        return tf
-    }()
-    
     
     let eventInfoLabel: UILabel = {
         let label = UILabel()
@@ -198,8 +192,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         stateTextField.tag = 6
         zipcodeTextField.delegate = self
         zipcodeTextField.tag = 7
-        countryTextField.delegate = self
-        countryTextField.tag = 8
         guestTextField.delegate = self
         guestTextField.tag = 9
         dateTextField.delegate = self
@@ -259,11 +251,8 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         scrollView.addSubview(zipcodeTextField)
         zipcodeTextField.anchor(centerX: nil, centerY: nil, top: stateTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: labelHeight)
         
-        scrollView.addSubview(countryTextField)
-        countryTextField.anchor(centerX: nil, centerY: nil, top: zipcodeTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: labelHeight)
-        
         scrollView.addSubview(eventInfoLabel)
-        eventInfoLabel.anchor(centerX: nil, centerY: nil, top: countryTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        eventInfoLabel.anchor(centerX: nil, centerY: nil, top: zipcodeTextField.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         scrollView.addSubview(guestTextField)
         guestTextField.anchor(centerX: nil, centerY: nil, top: eventInfoLabel.bottomAnchor, left: fullNameTextField.leftAnchor, bottom: nil, right: fullNameTextField.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: labelHeight)
