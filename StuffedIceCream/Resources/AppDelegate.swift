@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func registerForNotification(application: UIApplication) {
         print("Registering APNS...")
+        
+        let option : UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: option) { (granted, err) in
+            if let err = err {
+                print("Authorization failed")
+            }
+            
+            if granted {
+                print("Authorization granted")
+            } else {
+                print("Authorization denied")
+            }
+        }
         application.registerForRemoteNotifications()
     }
 
