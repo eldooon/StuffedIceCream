@@ -403,6 +403,12 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
             }
         }
         
+        if textField == zipcodeTextField {
+            if range.location == 5 {
+                return false
+            }
+        }
+        
         return true
     }
 
