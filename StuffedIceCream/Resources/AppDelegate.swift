@@ -35,7 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = StuffedNavController(rootViewController: HomeController(collectionViewLayout: UICollectionViewFlowLayout()))
         window?.makeKeyAndVisible()
         
+        //Register for Notification
+        registerForNotification(application: application)
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Registering for notification...")
+    }
+    
+    private func registerForNotification(application: UIApplication) {
+        print("Registering APNS...")
+        application.registerForRemoteNotifications()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

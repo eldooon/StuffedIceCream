@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>618194589684-4uhdukpdn93auffvle9tsvsd3q2jtgdi.apps.googleusercontent.com</string>
+	<string>618194589684-lk3o2jej2v4ul29gqc0due6joean8svr.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.618194589684-4uhdukpdn93auffvle9tsvsd3q2jtgdi</string>
+	<string>com.googleusercontent.apps.618194589684-lk3o2jej2v4ul29gqc0due6joean8svr</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDjAFFxtsV3SgFrHXxB-_9lVQPDi6Qkp7A</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ByEldon.StuffedIceCream</string>
+	<string>com.ByEldon.StuffedIceCream</string>
 	<key>PROJECT_ID</key>
 	<string>stuffedicecream-43e11</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:618194589684:ios:739801cf20bc93bf</string>
+	<string>1:618194589684:ios:41660b86f9a94ab1</string>
 	<key>DATABASE_URL</key>
 	<string>https://stuffedicecream-43e11.firebaseio.com</string>
 </dict>
