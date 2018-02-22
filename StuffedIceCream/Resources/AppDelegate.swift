@@ -12,7 +12,7 @@ import IQKeyboardManagerSwift
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
@@ -49,10 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         print("Registered with FCM Token:", fcmToken)
     }
     
+    
     private func registerForNotification(application: UIApplication) {
         print("Registering APNS...")
         
         Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
         
         let option : UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: option) { (granted, err) in
