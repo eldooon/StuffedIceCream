@@ -12,5 +12,6 @@ target 'StuffedIceCream' do
   pod 'Firebase/Database'
   pod 'TextFieldEffects'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Messaging'
 
 end
