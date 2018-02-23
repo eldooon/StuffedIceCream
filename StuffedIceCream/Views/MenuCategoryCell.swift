@@ -103,8 +103,6 @@ class MenuCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("Selected item at: ", indexPath)
-        
         if let item = menuCategory?.items[indexPath.item] {
             menuController.didSelectItemCell(item: item)
         }

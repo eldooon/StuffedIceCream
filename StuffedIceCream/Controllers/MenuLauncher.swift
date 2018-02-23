@@ -65,8 +65,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func presentController(ItemSelected: String) {
-        print("Presenting", ItemSelected)
-        
+
         homeController?.didSelectMenuItem(Item: ItemSelected)
 
        dismissLauncher()
@@ -89,8 +88,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        // handle tap events)
         
         switch indexPath.item {
         case 0:
@@ -103,7 +101,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
             presentController(ItemSelected: "Catering")
             
         default:
-            print("Invalid Cell")
+            return
         }
     }
     

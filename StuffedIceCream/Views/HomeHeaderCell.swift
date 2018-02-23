@@ -78,7 +78,6 @@ class HomeHeaderCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let count = headerImages?.count {
-            print("Count", count)
             return count
         }
         return 0

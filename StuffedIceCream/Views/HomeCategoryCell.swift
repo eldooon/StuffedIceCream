@@ -94,8 +94,6 @@ class HomeCategoryCell: UICollectionViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("Selected item at: ", indexPath)
-        
         if let link = mediaItems?[indexPath.item].mediaLink {
             
             guard let url = URL(string: link) else {return}

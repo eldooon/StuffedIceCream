@@ -138,7 +138,6 @@ class LocationController: UIViewController {
     
     @objc func addressTapped(sender:UITapGestureRecognizer) {
         
-        print ("TAPPED TAPPED")
         let latitude: CLLocationDegrees = 40.7280466
         let longitude: CLLocationDegrees = -73.98536439999998
         

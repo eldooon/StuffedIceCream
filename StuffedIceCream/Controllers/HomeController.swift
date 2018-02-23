@@ -58,8 +58,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         case "Catering":
             vc = CateringController()
         default:
-            print("No matching item")
-            vc = CateringController()
+            return
         }
         
         navigationController?.pushViewController(vc, animated: true)
