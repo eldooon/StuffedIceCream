@@ -175,29 +175,6 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    private func createTextfieldProperties() {
-        
-        let textFields: [StuffedTextField] = [fullNameTextField, emailTextField, phoneNumberTextField, address1TextField, address2TextField, cityTextField, stateTextField, zipcodeTextField, guestTextField, dateTextField, timeTextField]
-        var tag = 0
-        
-        for textField in textFields {
-            
-            textField.delegate = self
-            textField.tag = tag
-            tag = tag + 1
-        }
-        
-        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
-        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
-        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
-        validator.registerField(address1TextField, rules: [RequiredRule()])
-        validator.registerField(cityTextField, rules: [RequiredRule()])
-        validator.registerField(stateTextField, rules: [RequiredRule()])
-        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
-        validator.registerField(guestTextField, rules: [RequiredRule()])
-        validator.registerField(dateTextField, rules: [RequiredRule()])
-        validator.registerField(timeTextField, rules: [RequiredRule()])
-    }
     
     private func createLayout() {
         
@@ -398,4 +375,31 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return true
     }
 
+}
+
+extension CateringController {
+    
+    private func createTextfieldProperties() {
+        
+        let textFields: [StuffedTextField] = [fullNameTextField, emailTextField, phoneNumberTextField, address1TextField, address2TextField, cityTextField, stateTextField, zipcodeTextField, guestTextField, dateTextField, timeTextField]
+        var tag = 0
+        
+        for textField in textFields {
+            
+            textField.delegate = self
+            textField.tag = tag
+            tag = tag + 1
+        }
+        
+        validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
+        validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(phoneNumberTextField, rules: [RequiredRule(), PhoneNumberRule()])
+        validator.registerField(address1TextField, rules: [RequiredRule()])
+        validator.registerField(cityTextField, rules: [RequiredRule()])
+        validator.registerField(stateTextField, rules: [RequiredRule()])
+        validator.registerField(zipcodeTextField, rules: [RequiredRule(), ZipCodeRule()])
+        validator.registerField(guestTextField, rules: [RequiredRule()])
+        validator.registerField(dateTextField, rules: [RequiredRule()])
+        validator.registerField(timeTextField, rules: [RequiredRule()])
+    }
 }
