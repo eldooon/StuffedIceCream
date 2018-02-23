@@ -270,12 +270,10 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }
     
     @objc func submitButtonTapped() {
-        print("Submit Button Tapped")
         validator.validate(self)
     }
     
     func validationSuccessful() {
-        print("SUCCESS")
         
         let alertController = UIAlertController(title: "Submit", message: "Is everything correct?", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
