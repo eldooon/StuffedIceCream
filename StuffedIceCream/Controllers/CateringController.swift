@@ -176,28 +176,16 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     }
     
     private func createTextfieldProperties() {
-        fullNameTextField.delegate = self
-        fullNameTextField.tag = 0
-        emailTextField.delegate = self
-        emailTextField.tag = 1
-        phoneNumberTextField.delegate = self
-        phoneNumberTextField.tag = 2
-        address1TextField.delegate = self
-        address1TextField.tag = 3
-        address2TextField.delegate = self
-        address2TextField.tag = 4
-        cityTextField.delegate = self
-        cityTextField.tag = 5
-        stateTextField.delegate = self
-        stateTextField.tag = 6
-        zipcodeTextField.delegate = self
-        zipcodeTextField.tag = 7
-        guestTextField.delegate = self
-        guestTextField.tag = 9
-        dateTextField.delegate = self
-        dateTextField.tag = 10
-        timeTextField.delegate = self
-        timeTextField.tag = 11
+        
+        let textFields: [StuffedTextField] = [fullNameTextField, emailTextField, phoneNumberTextField, address1TextField, address2TextField, cityTextField, stateTextField, zipcodeTextField, guestTextField, dateTextField, timeTextField]
+        var tag = 0
+        
+        for textField in textFields {
+            
+            textField.delegate = self
+            textField.tag = tag
+            tag = tag + 1
+        }
         
         validator.registerField(fullNameTextField, rules: [RequiredRule(), FullNameRule()])
         validator.registerField(emailTextField, rules: [RequiredRule(), EmailRule()])
