@@ -24,7 +24,8 @@ class FireBaseData {
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in
                 let newItemCategory = MenuCategory()
-                newItemCategory.name = key
+                newItemCategory.name = String(key.dropFirst())
+                print(key)
 
                 guard let testvalue = value as? [String: Any] else { return }
                 for eachValue in testvalue {
