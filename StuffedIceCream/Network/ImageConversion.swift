@@ -13,6 +13,7 @@ class ImageConversion {
     static func convertStringToImage (imageURL: String, imageView: UIImageView) {
         
         guard let url = URL(string: imageURL) else { return }
+        imageView.image = #imageLiteral(resourceName: "stuffedLogo")
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, err) in
             if let err = err {
@@ -28,5 +29,6 @@ class ImageConversion {
             
         }).resume()
     }
+    
     
 }
