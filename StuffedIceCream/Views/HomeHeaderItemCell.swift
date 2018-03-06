@@ -10,22 +10,21 @@ import UIKit
 
 class HomeHeaderItemCell: UICollectionViewCell {
     
-    let itemImageView: UIImageView = {
-        let iv = UIImageView()
+    let itemImageView: StuffedImageView = {
+        let iv = StuffedImageView()
         iv.backgroundColor = .white
         iv.contentMode = .scaleAspectFill
         return iv
     }()
     
-//    var headerItem: HeaderItem? {
-//        didSet {
-//
-//            if let imageURL = headerItem?.image {
-//
-//                ImageConversion.convertStringToImage(imageURL: imageURL, imageView: itemImageView)
-//            }
-//        }
-//    }
+    var headerItem: HeaderItem? {
+        didSet {
+
+            if let imageURL = headerItem?.image {
+                itemImageView.loadImage(urlString: imageURL)
+            }
+        }
+    }
 
     
     override init(frame: CGRect) {
