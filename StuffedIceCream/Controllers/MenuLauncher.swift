@@ -43,7 +43,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
             darkenView.alpha = 0
             
             window.addSubview(menuCollectionView)
-            menuCollectionView.frame = CGRect(x: -window.frame.width, y: 0, width: window.frame.width, height:window.frame.height)
+            menuCollectionView.frame = CGRect(x: -window.frame.width, y: 0, width: 200, height:window.frame.height)
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.darkenView.alpha = 1
@@ -115,7 +115,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         let layout = UICollectionViewFlowLayout()
         
         layout.scrollDirection = UICollectionViewScrollDirection.vertical
-        layout.itemSize = CGSize(width: screenWidth/2.005, height: screenWidth/5)
+        layout.itemSize = CGSize(width: 100, height: screenWidth/5)
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
         
@@ -125,7 +125,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         menuCollectionView.register(SideMenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
-        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 30, bottom: 0, right: 100)
         menuCollectionView.backgroundColor = .stuffedBlue
         
     }
