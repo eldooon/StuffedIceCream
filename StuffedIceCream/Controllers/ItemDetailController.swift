@@ -23,7 +23,7 @@ class ItemDetailController: UIViewController {
             
             if let imageURL = menuItem?.image {
                 
-                ImageConversion.convertStringToImage(imageURL: imageURL, imageView: itemImageView)
+                itemImageView.loadImage(urlString: imageURL)
             }
         }
     }
@@ -35,8 +35,8 @@ class ItemDetailController: UIViewController {
         return sv
     }()
     
-    let itemImageView: UIImageView = {
-        let iv = UIImageView()
+    let itemImageView: StuffedImageView = {
+        let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         return iv

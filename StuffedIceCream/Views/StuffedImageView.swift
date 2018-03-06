@@ -34,6 +34,7 @@ class StuffedImageView: UIImageView {
             }
             
             if url.absoluteString != self.lastURLUsedToLoadImage {
+                print("Is not equal")
                 return
             }
             
