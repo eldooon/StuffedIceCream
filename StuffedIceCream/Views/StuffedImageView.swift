@@ -15,6 +15,7 @@ class StuffedImageView: UIImageView {
     var lastURLUsedToLoadImage: String?
     
     func loadImage(urlString: String) {
+
         lastURLUsedToLoadImage = urlString
         
         self.image = nil

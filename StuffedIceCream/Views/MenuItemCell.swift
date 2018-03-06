@@ -19,13 +19,13 @@ class MenuItemCell: UICollectionViewCell {
             
             if let imageURL = menuItem?.image {
                 
-                ImageConversion.convertStringToImage(imageURL: imageURL, imageView: itemImageView)
+                itemImageView.loadImage(urlString: imageURL)
             }
         }
     }
     
-    let itemImageView: UIImageView = {
-        let iv = UIImageView()
+    let itemImageView: StuffedImageView = {
+        let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
         return iv
     }()
