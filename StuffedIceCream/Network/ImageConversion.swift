@@ -30,5 +30,27 @@ class ImageConversion {
         }).resume()
     }
     
+    static func convertStringToImage (imageURL: String) -> UIImage?{
+        print("CONVERTING")
+        guard let url = URL(string: imageURL) else { return nil }
+        var image: UIImage?
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, err) in
+            if let err = err {
+                print("Failed to convert this image due to", err)
+            }
+            
+            print("CONVERTING 2")
+            guard let imageData = data else { return }
+            image = UIImage(data: imageData)
+            
+            DispatchQueue.main.async {
+                
+            }
+            
+        }).resume()
+        
+        return image
+    }
+    
     
 }

@@ -17,15 +17,16 @@ class HomeHeaderItemCell: UICollectionViewCell {
         return iv
     }()
     
-    var headerItem: HeaderItem? {
-        didSet {
-            
-            if let imageURL = headerItem?.image {
-                
-                ImageConversion.convertStringToImage(imageURL: imageURL, imageView: itemImageView)
-            }
-        }
-    }
+//    var headerItem: HeaderItem? {
+//        didSet {
+//
+//            if let imageURL = headerItem?.image {
+//
+//                ImageConversion.convertStringToImage(imageURL: imageURL, imageView: itemImageView)
+//            }
+//        }
+//    }
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)

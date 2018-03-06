@@ -40,6 +40,7 @@
 		BE5F68AE201688ED006F28EF /* UIColor+themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AD201688ED006F28EF /* UIColor+themes.swift */; };
 		BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */; };
 		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
+		BEB9DAEF204E2BC200F85E11 /* StuffedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */; };
 		BED56F842023820500ABF855 /* UIFont+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F832023820400ABF855 /* UIFont+style.swift */; };
 		BED56F8C20238ADD00ABF855 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */; };
 		BED56F8D20238ADD00ABF855 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8920238A7100ABF855 /* Raleway-Medium.ttf */; };
@@ -90,6 +91,7 @@
 		BE5F68AD201688ED006F28EF /* UIColor+themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
 		BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
+		BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedImageView.swift; sourceTree = "<group>"; };
 		BED56F832023820400ABF855 /* UIFont+style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+style.swift"; sourceTree = "<group>"; };
 		BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		BED56F8920238A7100ABF855 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				BE095897201B98F5005C9901 /* MenuCategoryCell.swift */,
 				BE095899201BA29C005C9901 /* MenuItemCell.swift */,
 				BE446FDB2020F18E0064C527 /* StuffedTextField.swift */,
+				BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				BE446FDC2020F18E0064C527 /* StuffedTextField.swift in Sources */,
 				BE0FD3252026456600CE68C5 /* SideMenuItem.swift in Sources */,
 				BE0FD32B202AA5F100CE68C5 /* UIViewController+style.swift in Sources */,
+				BEB9DAEF204E2BC200F85E11 /* StuffedImageView.swift in Sources */,
 				BE0958942019361A005C9901 /* Founder.swift in Sources */,
 				BED56F842023820500ABF855 /* UIFont+style.swift in Sources */,
 				BE09587F2017BB18005C9901 /* MenuLauncher.swift in Sources */,

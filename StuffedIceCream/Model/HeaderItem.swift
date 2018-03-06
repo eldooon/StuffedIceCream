@@ -10,11 +10,13 @@ import UIKit
 
 public class HeaderItem {
     
-    var image: String?
+    var image: UIImage?
     
     init(dictionary: [String: Any]) {
         
-        self.image = dictionary["Image"] as? String ?? ""
+        self.image = ImageConversion.convertStringToImage(imageURL: dictionary["Image"] as! String)
+            
+//            dictionary["Image"] as? String ?? ""
     }
     
     
