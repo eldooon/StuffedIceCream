@@ -49,6 +49,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         var vc: UIViewController
         
         switch Item {
+        case "My Account":
+            vc = MyAccountController(collectionViewLayout: UICollectionViewFlowLayout())
         case "About":
             vc = AboutController(collectionViewLayout: UICollectionViewFlowLayout())
         case "Location":
