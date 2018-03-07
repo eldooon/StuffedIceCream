@@ -53,5 +53,12 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         return CGSize(width: (view.frame.width/2)-1, height: 230)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
 
 }
