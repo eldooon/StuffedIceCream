@@ -8,10 +8,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    private let cellId = "cellId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +19,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.backgroundColor = .white
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
 
         // Do any additional setup after loading the view.
     }
@@ -41,7 +41,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     
         // Configure the cell
         cell.backgroundColor = .blue
