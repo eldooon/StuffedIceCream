@@ -13,12 +13,13 @@ class CouponItemCell: UICollectionViewCell {
     let couponImageView: StuffedImageView = {
         let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
+        iv.backgroundColor = .red
         return iv
     }()
     
     let couponNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Menu Name"
+        label.text = "Coupon Name"
         label.font = UIFont.commentsBold
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -39,7 +40,7 @@ class CouponItemCell: UICollectionViewCell {
     private func createLayout(){
         
         addSubview(couponImageView)
-        couponImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 140)
+        couponImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 180)
         
         addSubview(couponNameLabel)
         couponNameLabel.anchor(centerX: centerXAnchor, centerY: nil, top: couponImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 90, height: 50)
