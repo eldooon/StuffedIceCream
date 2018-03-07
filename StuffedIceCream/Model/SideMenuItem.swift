@@ -23,5 +23,5 @@ public class SideMenuItem {
 
 class MenuItems {
     
-    let items = [SideMenuItem(Image: #imageLiteral(resourceName: "aboutIcon"), Name: "About"), SideMenuItem(Image: #imageLiteral(resourceName: "jobIcon"), Name: "Location"), SideMenuItem(Image: #imageLiteral(resourceName: "menuIcon"), Name: "Menu"), SideMenuItem(Image: #imageLiteral(resourceName: "cateringIcon"), Name: "Catering")]//, SideMenuItem(Image: #imageLiteral(resourceName: "shopIcon"), Name: "Shop")]
+    let items = [SideMenuItem(Image: #imageLiteral(resourceName: "aboutIcon"), Name: "My Account"),SideMenuItem(Image: #imageLiteral(resourceName: "aboutIcon"), Name: "About"), SideMenuItem(Image: #imageLiteral(resourceName: "jobIcon"), Name: "Location"), SideMenuItem(Image: #imageLiteral(resourceName: "menuIcon"), Name: "Menu"), SideMenuItem(Image: #imageLiteral(resourceName: "cateringIcon"), Name: "Catering")]//, SideMenuItem(Image: #imageLiteral(resourceName: "shopIcon"), Name: "Shop")]
 }
