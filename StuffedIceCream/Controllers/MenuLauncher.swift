@@ -92,12 +92,14 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         
         switch indexPath.item {
         case 0:
-            presentController(ItemSelected: "About")
+            presentController(ItemSelected: "My Account")
         case 1:
-            presentController(ItemSelected: "Location")
+            presentController(ItemSelected: "About")
         case 2:
-            presentController(ItemSelected: "Menu")
+            presentController(ItemSelected: "Location")
         case 3:
+            presentController(ItemSelected: "Menu")
+        case 4:
             presentController(ItemSelected: "Catering")
             
         default:
