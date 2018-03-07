@@ -115,7 +115,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         let layout = UICollectionViewFlowLayout()
         
         layout.scrollDirection = UICollectionViewScrollDirection.vertical
-        layout.itemSize = CGSize(width: 100, height: screenWidth/5)
+        layout.itemSize = CGSize(width: 200, height: screenWidth/5)
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
         
@@ -125,7 +125,7 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         menuCollectionView.register(SideMenuCell.self, forCellWithReuseIdentifier: cellId)
         menuCollectionView.showsVerticalScrollIndicator = false
         menuCollectionView.showsHorizontalScrollIndicator = false
-        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 30, bottom: 0, right: 100)
+        menuCollectionView.contentInset = UIEdgeInsets(top: 50, left: 30, bottom: 0, right: 0)
         menuCollectionView.backgroundColor = .stuffedBlue
         
     }
