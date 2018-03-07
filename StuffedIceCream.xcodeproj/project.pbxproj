@@ -42,6 +42,7 @@
 		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
 		BE9DD10F20506A8E005E9E6F /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */; };
 		BE9DD11120506D0D005E9E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */; };
+		BE9DD113205098FD005E9E6F /* CouponItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD112205098FD005E9E6F /* CouponItemCell.swift */; };
 		BEB9DAEF204E2BC200F85E11 /* StuffedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */; };
 		BED56F842023820500ABF855 /* UIFont+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F832023820400ABF855 /* UIFont+style.swift */; };
 		BED56F8C20238ADD00ABF855 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */; };
@@ -95,6 +96,7 @@
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 		BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE9DD112205098FD005E9E6F /* CouponItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponItemCell.swift; sourceTree = "<group>"; };
 		BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedImageView.swift; sourceTree = "<group>"; };
 		BED56F832023820400ABF855 /* UIFont+style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+style.swift"; sourceTree = "<group>"; };
 		BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				BE095899201BA29C005C9901 /* MenuItemCell.swift */,
 				BE446FDB2020F18E0064C527 /* StuffedTextField.swift */,
 				BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */,
+				BE9DD112205098FD005E9E6F /* CouponItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */,
 				BE0FD327202645AF00CE68C5 /* MenuItem.swift in Sources */,
 				BED56F9C2026421300ABF855 /* MenuCategory.swift in Sources */,
+				BE9DD113205098FD005E9E6F /* CouponItemCell.swift in Sources */,
 				BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 				BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */,
