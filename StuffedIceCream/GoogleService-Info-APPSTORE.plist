@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>618194589684-lk3o2jej2v4ul29gqc0due6joean8svr.apps.googleusercontent.com</string>
+	<string>773415013220-unq9hti9fior0oht52ia829nr0bnt9af.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.618194589684-lk3o2jej2v4ul29gqc0due6joean8svr</string>
+	<string>com.googleusercontent.apps.773415013220-unq9hti9fior0oht52ia829nr0bnt9af</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDjAFFxtsV3SgFrHXxB-_9lVQPDi6Qkp7A</string>
+	<string>AIzaSyD9NqDH1UQhsU-gYRjg4VfQ50iyzm9ptUU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>618194589684</string>
+	<string>773415013220</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ByEldon.StuffedIceCream</string>
 	<key>PROJECT_ID</key>
-	<string>stuffedicecream-43e11</string>
+	<string>stuffedicecream-29c43</string>
 	<key>STORAGE_BUCKET</key>
-	<string>stuffedicecream-43e11.appspot.com</string>
+	<string>stuffedicecream-29c43.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:618194589684:ios:41660b86f9a94ab1</string>
+	<string>1:773415013220:ios:41660b86f9a94ab1</string>
 	<key>DATABASE_URL</key>
-	<string>https://stuffedicecream-43e11.firebaseio.com</string>
+	<string>https://stuffedicecream-29c43.firebaseio.com</string>
 </dict>
 </plist>

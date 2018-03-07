@@ -41,6 +41,7 @@
 		BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */; };
 		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
 		BE9DD10F20506A8E005E9E6F /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */; };
+		BE9DD11120506D0D005E9E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */; };
 		BEB9DAEF204E2BC200F85E11 /* StuffedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */; };
 		BED56F842023820500ABF855 /* UIFont+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F832023820400ABF855 /* UIFont+style.swift */; };
 		BED56F8C20238ADD00ABF855 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */; };
@@ -51,7 +52,7 @@
 		BED56F952024E9A400ABF855 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */; };
 		BED56F9A202641BC00ABF855 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F99202641BC00ABF855 /* FirebaseData.swift */; };
 		BED56F9C2026421300ABF855 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED56F9B2026421300ABF855 /* MenuCategory.swift */; };
-		BED5DBC2203F80BF00595B14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BED5DBC1203F80BE00595B14 /* GoogleService-Info.plist */; };
+		BED5DBC2203F80BF00595B14 /* GoogleService-Info-APPSTORE.plist in Resources */ = {isa = PBXBuildFile; fileRef = BED5DBC1203F80BE00595B14 /* GoogleService-Info-APPSTORE.plist */; };
 		BED5DBC4204095A800595B14 /* ImageConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED5DBC3204095A800595B14 /* ImageConversion.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 		BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
+		BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedImageView.swift; sourceTree = "<group>"; };
 		BED56F832023820400ABF855 /* UIFont+style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+style.swift"; sourceTree = "<group>"; };
 		BED56F8820238A6C00ABF855 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		BED56F942024E99F00ABF855 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		BED56F99202641BC00ABF855 /* FirebaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		BED56F9B2026421300ABF855 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
-		BED5DBC1203F80BE00595B14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BED5DBC1203F80BE00595B14 /* GoogleService-Info-APPSTORE.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-APPSTORE.plist"; sourceTree = "<group>"; };
 		BED5DBC3204095A800595B14 /* ImageConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConversion.swift; sourceTree = "<group>"; };
 		CC7B7F69892AB36716877765 /* Pods-StuffedIceCream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StuffedIceCream.release.xcconfig"; path = "Pods/Target Support Files/Pods-StuffedIceCream/Pods-StuffedIceCream.release.xcconfig"; sourceTree = "<group>"; };
 		CFC260D46FDBB2D4409CEABA /* Pods_StuffedIceCream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StuffedIceCream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,7 +236,8 @@
 				BE48A896203F4E4B001E6F6B /* StuffedIceCream.entitlements */,
 				BE5F68A420168607006F28EF /* Info.plist */,
 				BE0958862017C636005C9901 /* Default-568h@2x.png */,
-				BED5DBC1203F80BE00595B14 /* GoogleService-Info.plist */,
+				BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */,
+				BED5DBC1203F80BE00595B14 /* GoogleService-Info-APPSTORE.plist */,
 				BED56F98202641A700ABF855 /* Network */,
 				BE0958882017CA4B005C9901 /* Model */,
 				BE0958832017BF00005C9901 /* Resources */,
@@ -340,7 +343,8 @@
 				BED56F8E20238ADD00ABF855 /* Raleway-SemiBold.ttf in Resources */,
 				BE5F68A320168606006F28EF /* LaunchScreen.storyboard in Resources */,
 				BE5F68A020168606006F28EF /* Assets.xcassets in Resources */,
-				BED5DBC2203F80BF00595B14 /* GoogleService-Info.plist in Resources */,
+				BE9DD11120506D0D005E9E6F /* GoogleService-Info.plist in Resources */,
+				BED5DBC2203F80BF00595B14 /* GoogleService-Info-APPSTORE.plist in Resources */,
 				BE0958872017C636005C9901 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
