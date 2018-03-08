@@ -44,8 +44,16 @@ class LogInController: UIViewController {
     
     private func createLayout() {
         
+        let labelHeight: CGFloat = 40
+        
         view.addSubview(logoImageView)
         logoImageView.anchor(centerX: view.centerXAnchor, centerY: nil, top: view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 200, height: 200)
+        
+        view.addSubview(emailTextfield)
+        emailTextfield.anchor(centerX: nil, centerY: nil, top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        
+        view.addSubview(passwordTextfield)
+        passwordTextfield.anchor(centerX: nil, centerY: nil, top: emailTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
     }
 
     /*
