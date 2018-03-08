@@ -38,6 +38,17 @@ class LogInController: UIViewController {
         return button
     }()
     
+    let signupButton: UIButton = {
+        let button = UIButton()
+        let stringAttributes : [NSAttributedStringKey: Any] = [
+            NSAttributedStringKey.font : UIFont.comments,
+            NSAttributedStringKey.foregroundColor : UIColor.gray,
+            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
+        let title = NSMutableAttributedString(string: "Not registered? Click here to Sign Up.", attributes: stringAttributes)
+        button.setAttributedTitle(title, for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +76,9 @@ class LogInController: UIViewController {
         
         view.addSubview(loginButton)
         loginButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: passwordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
+        
+        view.addSubview(signupButton)
+        signupButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: loginButton.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 250, height: 20)
     }
 
     /*
