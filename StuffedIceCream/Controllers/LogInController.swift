@@ -30,6 +30,14 @@ class LogInController: UIViewController {
         return tf
     }()
     
+    let loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Login", for: .normal)
+        button.backgroundColor = .stuffedBlue
+        button.layer.cornerRadius = 5
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
