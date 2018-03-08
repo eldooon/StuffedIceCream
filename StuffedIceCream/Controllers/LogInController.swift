@@ -62,6 +62,9 @@ class LogInController: UIViewController {
         
         view.addSubview(passwordTextfield)
         passwordTextfield.anchor(centerX: nil, centerY: nil, top: emailTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        
+        view.addSubview(loginButton)
+        loginButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: passwordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
     }
 
     /*
