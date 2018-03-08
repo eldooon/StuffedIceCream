@@ -46,6 +46,7 @@ class LogInController: UIViewController {
             NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
         let title = NSMutableAttributedString(string: "Not registered? Click here to Sign Up.", attributes: stringAttributes)
         button.setAttributedTitle(title, for: .normal)
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -61,6 +62,10 @@ class LogInController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func signUpButtonTapped() {
+        
+        present(SignUpController(), animated: true, completion: nil)
+    }
     private func createLayout() {
         
         let labelHeight: CGFloat = 40
