@@ -30,8 +30,8 @@ class LogInController: UIViewController {
         return tf
     }()
     
-    let loginButton: UIButton = {
-        let button = UIButton()
+    let loginButton: StuffedButton = {
+        let button = StuffedButton()
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .stuffedBlue
         button.layer.cornerRadius = 5

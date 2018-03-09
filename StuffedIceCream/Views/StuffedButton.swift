@@ -14,9 +14,11 @@ class StuffedButton: UIButton {
         
         self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 6, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 6, options: .curveEaseOut, animations: {
             self.transform = CGAffineTransform.identity
         }, completion: nil)
+        
+        super.touchesBegan(touches, with: event)
     }
 
 

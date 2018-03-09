@@ -148,8 +148,8 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
         return tv
     }()
     
-    let submitButton: UIButton = {
-        let button = UIButton()
+    let submitButton: StuffedButton = {
+        let button = StuffedButton()
         button.setTitle("Submit", for: .normal)
         button.backgroundColor = .stuffedBlue
         button.layer.cornerRadius = 5
