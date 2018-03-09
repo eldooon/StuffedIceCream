@@ -10,8 +10,8 @@ import UIKit
 
 class SignUpController: UIViewController {
     
-    let cancelButton: UIButton = {
-        let button = UIButton()
+    let cancelButton: StuffedButton = {
+        let button = StuffedButton()
         button.setTitle("Cancel", for: .normal)
         button.titleLabel?.font = UIFont.primaryBold
         button.setTitleColor(.stuffedBlue, for: .normal)
