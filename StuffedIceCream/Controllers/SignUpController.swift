@@ -18,6 +18,32 @@ class SignUpController: UIViewController {
         button.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    let emailTextfield: StuffedTextField = {
+        let tf = StuffedTextField()
+        tf.placeholder = "Email Address"
+        return tf
+    }()
+    
+    let passwordTextfield: StuffedTextField = {
+        let tf = StuffedTextField()
+        tf.placeholder = "Password"
+        return tf
+    }()
+    
+    let confirmPasswordTextfield: StuffedTextField = {
+        let tf = StuffedTextField()
+        tf.placeholder = "Confirm Password"
+        return tf
+    }()
+    
+    let registerButton: StuffedButton = {
+        let button = StuffedButton()
+        button.setTitle("Register", for: .normal)
+        button.backgroundColor = .stuffedBlue
+        button.layer.cornerRadius = 5
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
