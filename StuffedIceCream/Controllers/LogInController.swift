@@ -38,8 +38,8 @@ class LogInController: UIViewController {
         return button
     }()
     
-    let signupButton: UIButton = {
-        let button = UIButton()
+    let signupButton: StuffedButton = {
+        let button = StuffedButton()
         let stringAttributes : [NSAttributedStringKey: Any] = [
             NSAttributedStringKey.font : UIFont.comments,
             NSAttributedStringKey.foregroundColor : UIColor.gray,
