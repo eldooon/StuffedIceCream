@@ -43,6 +43,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         button.setTitle("Register", for: .normal)
         button.backgroundColor = .stuffedBlue
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -54,6 +55,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         createLayout()
+        createTextfieldProperties()
         hideKeyboardWhenTapped()
     }
 
@@ -66,12 +68,31 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         dismiss(animated: true, completion: nil)
     }
 
+    @objc func registerButtonTapped() {
+        validator.validate(self)
+    }
+    
     func validationSuccessful() {
         //
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
-        //
+        
+        let alertController = UIAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        for (field, error) in errors {
+            if let field = field as? StuffedTextField {
+                field.borderActiveColor = .red
+                field.borderInactiveColor = .red
+                field.errorLabel.text = error.errorMessage
+            }
+            error.errorLabel?.text = error.errorMessage // works if you added labels
+            error.errorLabel?.isHidden = false
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -108,23 +129,23 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
 
 extension SignUpController {
     
-//    private func createTextfieldProperties() {
-//        
-//        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
-//        var tag = 0
-//        
-//        for textField in textFields {
-//            
-//            textField.delegate = self
-//            textField.tag = tag
-//            tag = tag + 1
-//        }
-//        
-//        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
-//        validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
-//        validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
-//
-//    }
+    private func createTextfieldProperties() {
+        
+        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
+        var tag = 0
+        
+        for textField in textFields {
+            
+            textField.delegate = self
+            textField.tag = tag
+            tag = tag + 1
+        }
+        
+        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
+        validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
+
+    }
     
     private func createLayout() {
         
