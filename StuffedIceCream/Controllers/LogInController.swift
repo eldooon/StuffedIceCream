@@ -41,7 +41,7 @@ class LogInController: UIViewController {
     let signupButton: StuffedButton = {
         let button = StuffedButton()
         let stringAttributes : [NSAttributedStringKey: Any] = [
-            NSAttributedStringKey.font : UIFont.comments,
+            NSAttributedStringKey.font : UIFont.comments ?? .systemFont(ofSize: 12),
             NSAttributedStringKey.foregroundColor : UIColor.gray,
             NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
         let title = NSMutableAttributedString(string: "Not registered? Click here to Sign Up.", attributes: stringAttributes)
