@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import Firebase
 
 class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegate {
     
@@ -88,6 +89,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     func validationSuccessful() {
         //
         print("Success!")
+        
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
