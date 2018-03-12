@@ -45,6 +45,8 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         button.layer.cornerRadius = 5
         return button
     }()
+    
+    let validator = Validator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,4 +92,24 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         //
     }
 
+}
+
+extension SignUpController {
+    private func createTextfieldProperties() {
+        
+        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
+        var tag = 0
+        
+        for textField in textFields {
+            
+            textField.delegate = self
+            textField.tag = tag
+            tag = tag + 1
+        }
+        
+        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
+        validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
+
+    }
 }
