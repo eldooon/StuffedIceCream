@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2AE72503F3ED85352CBD44E8265843DB"
+               BlueprintIdentifier = "218CB2EA55990D9D79944520F550080B"
                BuildableName = "Pods_StuffedIceCream.framework"
                BlueprintName = "Pods-StuffedIceCream"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2AE72503F3ED85352CBD44E8265843DB"
+            BlueprintIdentifier = "218CB2EA55990D9D79944520F550080B"
             BuildableName = "Pods_StuffedIceCream.framework"
             BlueprintName = "Pods-StuffedIceCream"
             ReferencedContainer = "container:Pods.xcodeproj">

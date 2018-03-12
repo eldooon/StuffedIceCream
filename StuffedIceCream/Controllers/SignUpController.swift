@@ -89,7 +89,6 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     func validationSuccessful() {
         //
         print("Success!")
-        
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
