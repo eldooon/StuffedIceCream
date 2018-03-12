@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwiftValidator
 
-class SignUpController: UIViewController {
+class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegate {
     
     let cancelButton: StuffedButton = {
         let button = StuffedButton()
@@ -81,14 +82,12 @@ class SignUpController: UIViewController {
         registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func validationSuccessful() {
+        //
     }
-    */
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        //
+    }
 
 }
