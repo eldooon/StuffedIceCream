@@ -55,6 +55,7 @@ class LogInController: UIViewController {
 
         view.backgroundColor = .white
         createLayout()
+        hideKeyboardWhenTapped()
     }
 
     override func didReceiveMemoryWarning() {
