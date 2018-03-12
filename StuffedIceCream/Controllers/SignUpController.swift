@@ -54,6 +54,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         createLayout()
+        hideKeyboardWhenTapped()
     }
 
     override func didReceiveMemoryWarning() {
