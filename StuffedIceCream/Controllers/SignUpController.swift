@@ -64,6 +64,67 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     @objc func cancelButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
+
+    func validationSuccessful() {
+        //
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        //
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let stuffedTF = textField as? StuffedTextField {
+            if let nextField = stuffedTF.superview?.viewWithTag(stuffedTF.tag + 1) as? StuffedTextField {
+                nextField.becomeFirstResponder()
+            } else {
+                stuffedTF.resignFirstResponder()
+            }
+            
+            validator.validateField(textField){ error in
+                if error == nil {
+                    stuffedTF.borderActiveColor = .stuffedBlue
+                    stuffedTF.borderInactiveColor = .stuffedBlue
+                    stuffedTF.errorLabel.text = ""
+                } else {
+                    stuffedTF.borderActiveColor = .red
+                    stuffedTF.borderInactiveColor = .red
+                    stuffedTF.errorLabel.text = error?.errorMessage
+                }
+            }
+        }
+        
+        return true
+    }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        
+//        return true
+//    }
+
+}
+
+extension SignUpController {
+    
+//    private func createTextfieldProperties() {
+//        
+//        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
+//        var tag = 0
+//        
+//        for textField in textFields {
+//            
+//            textField.delegate = self
+//            textField.tag = tag
+//            tag = tag + 1
+//        }
+//        
+//        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
+//        validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
+//        validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
+//
+//    }
+    
     private func createLayout() {
         
         let labelHeight: CGFloat = 40
@@ -82,34 +143,5 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         
         view.addSubview(registerButton)
         registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
-    }
-
-    func validationSuccessful() {
-        //
-    }
-    
-    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
-        //
-    }
-
-}
-
-extension SignUpController {
-    private func createTextfieldProperties() {
-        
-        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
-        var tag = 0
-        
-        for textField in textFields {
-            
-            textField.delegate = self
-            textField.tag = tag
-            tag = tag + 1
-        }
-        
-        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
-        validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
-        validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
-
     }
 }
