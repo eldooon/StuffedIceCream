@@ -69,11 +69,25 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     }
 
     @objc func registerButtonTapped() {
+        
+        if passwordTextfield.text != confirmPasswordTextfield.text {
+            
+            print("Does not match")
+            let alertController = UIAlertController(title: "Uh Oh!", message: "Passwords do not match", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okButton)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
         validator.validate(self)
     }
     
     func validationSuccessful() {
         //
+        print("Success!")
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
