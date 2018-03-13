@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -17,11 +18,8 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
 
         navigationItem.title = "My Account"
         self.collectionView?.backgroundColor = .white
-
-        // Register cell classes
         self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
