@@ -56,6 +56,8 @@ class LogInController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Log In"
+        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backButton
         view.backgroundColor = .white
         createLayout()
         hideKeyboardWhenTapped()
@@ -64,6 +66,10 @@ class LogInController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func backButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func loginButtonTapped() {
