@@ -89,7 +89,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             // ...
             if let err = error {
-                print("Failed to create user:", err)
+                self.presentAlertController(title: "Uh Oh!", message: err.localizedDescription)
                 return
             }
             
