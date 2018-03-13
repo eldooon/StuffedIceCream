@@ -88,8 +88,6 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     }
     
     func validationSuccessful() {
-        //
-        print("Success!")
         
         guard let email = emailTextfield.text else {return}
         guard let password = passwordTextfield.text else {return}
