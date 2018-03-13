@@ -67,6 +67,18 @@ class LogInController: UIViewController {
     
     @objc func loginButtonTapped() {
        print("Login button tapped")
+        
+        guard let email = emailTextfield.text else {return}
+        guard let password = passwordTextfield.text else {return}
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let err = error {
+                self.presentAlertController(title: "Uh Oh", message: err.localizedDescription)
+                return
+            }
+            
+            print("Succesfully authenticated")
+        }
     }
     
     @objc func signUpButtonTapped() {
