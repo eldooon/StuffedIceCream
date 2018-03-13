@@ -104,7 +104,9 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
                     return
                 }
                 
-                self.presentAlertController(title: "Success!", message: "Your account has been created!")
+                self.presentAlertControllerWithCompletion(title: "Success!", message: "Your account has been created!", completion: {
+                    self.dismiss(animated: true, completion: nil)
+                })
             })
         }
         
