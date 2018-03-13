@@ -49,8 +49,14 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     @objc func logOutButtonTapped() {
-    
         print("Logging out")
+        
+        do {
+            try Auth.auth().signOut()
+            checkIfLoggedIn()
+        } catch let err {
+            print("Unable to sign out", err)
+        }
     }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
