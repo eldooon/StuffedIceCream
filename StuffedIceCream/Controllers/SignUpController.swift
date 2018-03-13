@@ -74,13 +74,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         
         if passwordTextfield.text != confirmPasswordTextfield.text {
             
-            print("Does not match")
-            let alertController = UIAlertController(title: "Uh Oh!", message: "Passwords do not match", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okButton)
-            
-            self.present(alertController, animated: true, completion: nil)
-            
+            presentAlertController(title: "Uh Oh", message: "Passwords do not match")
             return
         }
         
@@ -118,11 +112,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         
-        let alertController = UIAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okButton)
-        
-        self.present(alertController, animated: true, completion: nil)
+        presentAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!")
         
         for (field, error) in errors {
             if let field = field as? StuffedTextField {

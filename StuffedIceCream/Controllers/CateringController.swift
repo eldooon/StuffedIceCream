@@ -216,11 +216,7 @@ class CateringController: UIViewController, UITextFieldDelegate, ValidationDeleg
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         
-        let alertController = UIAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okButton)
-        
-        self.present(alertController, animated: true, completion: nil)
+        presentAlertController(title: "Uh Oh!", message: "One or more required field is missing or incorrect!")
         
         for (field, error) in errors {
             if let field = field as? StuffedTextField {
