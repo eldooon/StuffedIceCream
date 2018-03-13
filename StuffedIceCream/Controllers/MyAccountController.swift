@@ -17,6 +17,8 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
 
         navigationItem.title = "My Account"
+        let logOutButton = UIBarButtonItem(image: #imageLiteral(resourceName: "setting"), style: .plain, target: self, action: #selector(logOutButtonTapped))
+        navigationItem.rightBarButtonItem = logOutButton
         self.collectionView?.backgroundColor = .white
         self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
 
@@ -44,6 +46,11 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             print("Already logged in")
             print(Auth.auth().currentUser)
         }
+    }
+    
+    @objc func logOutButtonTapped() {
+    
+        print("Logging out")
     }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
