@@ -9,6 +9,7 @@
 import UIKit
 import SwiftValidator
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegate {
     
@@ -89,6 +90,31 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     func validationSuccessful() {
         //
         print("Success!")
+        
+        guard let email = emailTextfield.text else {return}
+        guard let password = passwordTextfield.text else {return}
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            // ...
+            if let err = error {
+                print("Failed to create user:", err)
+                return
+            }
+            
+            print("User created:", user?.uid ?? "")
+            
+            guard let uid = user?.uid else {return}
+            let dicValues = ["Birthday": "01/01/1991"]
+            let values = [uid: dicValues]
+            Database.database().reference().child("Users").updateChildValues(values, withCompletionBlock: { (error, ref) in
+                if let err = error {
+                    print("Failed to save users to database", err)
+                    return
+                }
+                
+                print("Succesfully saved users to database")
+            })
+        }
         
     }
     
