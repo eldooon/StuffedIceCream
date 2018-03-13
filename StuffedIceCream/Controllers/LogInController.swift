@@ -35,6 +35,7 @@ class LogInController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .stuffedBlue
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -61,6 +62,10 @@ class LogInController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func loginButtonTapped() {
+       print("Login button tapped")
     }
     
     @objc func signUpButtonTapped() {
