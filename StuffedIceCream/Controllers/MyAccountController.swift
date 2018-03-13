@@ -20,6 +20,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.backgroundColor = .white
         self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
 
+        checkIfLoggedIn()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +28,23 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         // Dispose of any resources that can be recreated.
     }
 
+    func checkIfLoggedIn() {
+        
+        if Auth.auth().currentUser == nil {
+
+            print("not logged in")
+            DispatchQueue.main.async {
+                let loginController = LogInController()
+                let navController = UINavigationController(rootViewController: loginController)
+                self.present(navController, animated: true, completion: nil)
+            }
+            
+            return
+        } else {
+            print("Already logged in")
+            print(Auth.auth().currentUser)
+        }
+    }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

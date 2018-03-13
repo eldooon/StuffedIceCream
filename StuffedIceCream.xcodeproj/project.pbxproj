@@ -154,12 +154,12 @@
 				BE09587E2017BB18005C9901 /* MenuLauncher.swift */,
 				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
 				BE5F689A20168606006F28EF /* HomeController.swift */,
+				BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */,
 				BE09588B2017DC03005C9901 /* AboutController.swift */,
 				BED56F8F2024CFF400ABF855 /* LocationController.swift */,
 				BE095895201A73AF005C9901 /* MenuController.swift */,
 				BE09589B201BD30B005C9901 /* CateringController.swift */,
 				BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */,
-				BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */,
 				BE9DD11420518596005E9E6F /* LogInController.swift */,
 				BE9DD1162051AD2F005E9E6F /* SignUpController.swift */,
 			);
