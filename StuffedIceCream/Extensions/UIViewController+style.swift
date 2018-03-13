@@ -28,4 +28,16 @@ extension UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func presentAlertControllerWithCompletion(title: String, message: String, completion: @escaping () -> ()) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default) { (action) in
+            completion()
+        }
+        
+        alertController.addAction(okButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

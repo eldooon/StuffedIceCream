@@ -100,11 +100,11 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
             let values = [uid: dicValues]
             Database.database().reference().child("Users").updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if let err = error {
-                    print("Failed to save users to database", err)
+                    self.presentAlertController(title: "Uh Oh!", message: err.localizedDescription)
                     return
                 }
                 
-                print("Succesfully saved users to database")
+                self.presentAlertController(title: "Success!", message: "Your account has been created!")
             })
         }
         
