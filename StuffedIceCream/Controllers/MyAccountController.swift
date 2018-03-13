@@ -37,7 +37,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             print("not logged in")
             DispatchQueue.main.async {
                 let loginController = LogInController()
-                let navController = UINavigationController(rootViewController: loginController)
+                let navController = StuffedNavController(rootViewController: loginController)
                 self.present(navController, animated: true, completion: nil)
             }
             

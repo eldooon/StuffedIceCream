@@ -55,6 +55,7 @@ class LogInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = "Log In"
         view.backgroundColor = .white
         createLayout()
         hideKeyboardWhenTapped()
