@@ -12,6 +12,7 @@ import FirebaseAuth
 class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "cellId"
+    let database = FireBaseData.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
 
         checkIfLoggedIn()
+        database.fetchUserCoupons {
+            print("Fetched user coupons")
+        }
     }
 
     override func didReceiveMemoryWarning() {

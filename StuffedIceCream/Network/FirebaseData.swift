@@ -13,13 +13,10 @@ class FireBaseData {
     static let sharedInstance = FireBaseData()
     var menuDatabase = [MenuCategory]()
     var frontpageDatabase = [HeaderItem]()
-    let ref = Database.database().reference().child("Menu")
-    let ref2 = Database.database().reference().child("Frontpage")
-    let ref3 = Database.database().reference().child("Users")
-    
-    
+
     func fetchMenuData(completion: @escaping () -> ()) {
         
+        let ref = Database.database().reference().child("Menu")
         ref.observeSingleEvent(of: .value) { (snapshot) in
             self.menuDatabase.removeAll()
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
@@ -42,7 +39,8 @@ class FireBaseData {
     
     func fetchHeaderImages(completion: @escaping () -> ()) {
         
-        ref2.observeSingleEvent(of: .value) { (snapshot) in
+        let ref = Database.database().reference().child("Frontpage")
+        ref.observeSingleEvent(of: .value) { (snapshot) in
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in
                 guard let testvalue = value as? [String: Any] else { return }
@@ -59,6 +57,8 @@ class FireBaseData {
     }
     
     func fetchUserCoupons(completion: @escaping () -> ()) {
+        
+        let ref = Database.database().reference().child("Users")
         ref.observeSingleEvent(of: .value) { (snapshot) in
             print(snapshot.value)
         }
