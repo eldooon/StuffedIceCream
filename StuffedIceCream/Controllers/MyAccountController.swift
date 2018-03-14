@@ -34,6 +34,13 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         // Dispose of any resources that can be recreated.
     }
 
+    func reFetchUserInfo() {
+        
+        database.fetchUserInfo {
+            self.collectionView?.reloadData()
+        }
+    }
+    
     func checkIfLoggedIn() {
         
         if Auth.auth().currentUser == nil {
