@@ -24,7 +24,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
 
         checkIfLoggedIn()
-        database.fetchUserCoupons {
+        database.fetchUserInfo {
             print("Fetched user coupons")
         }
     }
