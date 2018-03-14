@@ -40,6 +40,18 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         return tf
     }()
     
+    let nameTextField: StuffedTextField = {
+        let tf = StuffedTextField()
+        tf.placeholder = "Full Name"
+        return tf
+    }()
+    
+    let birthdayTextField: StuffedTextField = {
+        let tf = StuffedTextField()
+        tf.placeholder = "Birthday"
+        return tf
+    }()
+    
     let registerButton: StuffedButton = {
         let button = StuffedButton()
         button.setTitle("Register", for: .normal)
@@ -195,7 +207,12 @@ extension SignUpController {
         view.addSubview(confirmPasswordTextfield)
         confirmPasswordTextfield.anchor(centerX: nil, centerY: nil, top: passwordTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
         
+        view.addSubview(nameTextField)
+        nameTextField.anchor(centerX: nil, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        
+        view.addSubview(birthdayTextField)
+        birthdayTextField.anchor(centerX: nil, centerY: nil, top: nameTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
         view.addSubview(registerButton)
-        registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
+        registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: birthdayTextField.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
     }
 }
