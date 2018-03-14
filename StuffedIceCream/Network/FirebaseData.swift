@@ -15,6 +15,7 @@ class FireBaseData {
     var frontpageDatabase = [HeaderItem]()
     let ref = Database.database().reference().child("Menu")
     let ref2 = Database.database().reference().child("Frontpage")
+    let ref3 = Database.database().reference().child("Users")
     
     
     func fetchMenuData(completion: @escaping () -> ()) {
@@ -56,5 +57,13 @@ class FireBaseData {
             completion()
         }
     }
+    
+    func fetchUserCoupons(completion: @escaping () -> ()) {
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot.value)
+        }
+    }
+    
+    
     
 }
