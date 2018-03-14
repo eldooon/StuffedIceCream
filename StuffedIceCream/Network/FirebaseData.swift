@@ -71,16 +71,10 @@ class FireBaseData {
                 if key == currentUID {
                     guard let uservalue = value as? [String: Any] else {return}
                     let user = User(dictionary: uservalue)
-                    print("USER: ", user.name)
-                    print("USER: ", user.birthday)
                     self.currentUser = user
-                    print("CURRENT USER: ", self.currentUser?.name)
                 }
-
             })
-            
-
-            
+            completion()    
         }
     }
     

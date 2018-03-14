@@ -38,6 +38,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         database.fetchUserInfo {
             self.collectionView?.reloadData()
+            print("CURRENT USER", self.database.currentUser?.name)
         }
     }
     
