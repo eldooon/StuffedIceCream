@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import SwiftValidator
 
-class LogInController: UIViewController {
+class LogInController: UIViewController, UITextFieldDelegate {
+    
+    let validator = Validator()
     
     let logoImageView: UIImageView = {
         let iv = UIImageView()
@@ -61,6 +64,7 @@ class LogInController: UIViewController {
         view.backgroundColor = .white
         createLayout()
         hideKeyboardWhenTapped()
+        createTextfieldProperties()
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,6 +97,41 @@ class LogInController: UIViewController {
         
         present(SignUpController(), animated: true, completion: nil)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let stuffedTF = textField as? StuffedTextField {
+            if let nextField = stuffedTF.superview?.viewWithTag(stuffedTF.tag + 1) as? StuffedTextField {
+                nextField.becomeFirstResponder()
+            } else {
+                stuffedTF.resignFirstResponder()
+            }
+        
+        }
+        
+        return true
+    }
+
+}
+
+extension LogInController {
+    
+    private func createTextfieldProperties() {
+        
+        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield]
+        var tag = 0
+        
+        for textField in textFields {
+            
+            textField.delegate = self
+            textField.tag = tag
+            tag = tag + 1
+        }
+        
+        validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(passwordTextfield, rules: [RequiredRule()])
+    }
+    
     private func createLayout() {
         
         let labelHeight: CGFloat = 40
@@ -112,15 +151,5 @@ class LogInController: UIViewController {
         view.addSubview(signupButton)
         signupButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: loginButton.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 250, height: 20)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
