@@ -42,6 +42,7 @@
 		BE5F68B02016A6BF006F28EF /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */; };
 		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
 		BE8632D82058AB460075BF87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8632D72058AB460075BF87 /* User.swift */; };
+		BE8632DA2059895D0075BF87 /* MyAccountHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8632D92059895D0075BF87 /* MyAccountHeaderCell.swift */; };
 		BE9DD10F20506A8E005E9E6F /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */; };
 		BE9DD11120506D0D005E9E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */; };
 		BE9DD113205098FD005E9E6F /* CouponItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD112205098FD005E9E6F /* CouponItemCell.swift */; };
@@ -100,6 +101,7 @@
 		BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 		BE8632D72058AB460075BF87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE8632D92059895D0075BF87 /* MyAccountHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountHeaderCell.swift; sourceTree = "<group>"; };
 		BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE9DD112205098FD005E9E6F /* CouponItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponItemCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,8 @@
 				BE5F68AF2016A6BF006F28EF /* HomeHeaderCell.swift */,
 				BE09587C2016AAC9005C9901 /* HomeHeaderItemCell.swift */,
 				BE0958842017C1C9005C9901 /* SideMenuCell.swift */,
+				BE8632D92059895D0075BF87 /* MyAccountHeaderCell.swift */,
+				BE9DD112205098FD005E9E6F /* CouponItemCell.swift */,
 				BE09588F2018FE97005C9901 /* AboutHeaderCell.swift */,
 				BE0958912019231D005C9901 /* AboutFounderCell.swift */,
 				BE095897201B98F5005C9901 /* MenuCategoryCell.swift */,
@@ -183,7 +187,6 @@
 				BE446FDB2020F18E0064C527 /* StuffedTextField.swift */,
 				BEB9DAEE204E2BC200F85E11 /* StuffedImageView.swift */,
 				BE489E4720530036006E5DD8 /* StuffedButton.swift */,
-				BE9DD112205098FD005E9E6F /* CouponItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
 				BE446FE420224B630064C527 /* MailgunInfo.swift in Sources */,
 				BE09589C201BD30B005C9901 /* CateringController.swift in Sources */,
+				BE8632DA2059895D0075BF87 /* MyAccountHeaderCell.swift in Sources */,
 				BE09588C2017DC03005C9901 /* AboutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
