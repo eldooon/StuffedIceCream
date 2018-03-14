@@ -7,12 +7,14 @@
 //
 
 import FirebaseDatabase
+import FirebaseAuth
 
 class FireBaseData {
     
     static let sharedInstance = FireBaseData()
     var menuDatabase = [MenuCategory]()
     var frontpageDatabase = [HeaderItem]()
+    var currentUser: User?
 
     func fetchMenuData(completion: @escaping () -> ()) {
         
@@ -60,7 +62,21 @@ class FireBaseData {
         
         let ref = Database.database().reference().child("Users")
         ref.observeSingleEvent(of: .value) { (snapshot) in
-            print(snapshot.value)
+            
+            guard let currentUID = Auth.auth().currentUser?.uid else {return}
+            guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            dictionaries.forEach({ (key, value) in
+                
+                if key == currentUID {
+                    guard let uservalue = value as? [String: Any] else {return}
+                    let user = User(dictionary: uservalue)
+                    self.currentUser = user
+                }
+
+            })
+            
+
+            
         }
     }
     
