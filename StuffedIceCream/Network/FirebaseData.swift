@@ -74,7 +74,7 @@ class FireBaseData {
                     self.currentUser = user
                 }
             })
-            completion()    
+            completion()
         }
     }
     

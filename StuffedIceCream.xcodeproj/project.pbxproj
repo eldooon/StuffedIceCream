@@ -43,6 +43,7 @@
 		BE5F68B22016A7F6006F28EF /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F68B12016A7F6006F28EF /* UIView+layout.swift */; };
 		BE8632D82058AB460075BF87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8632D72058AB460075BF87 /* User.swift */; };
 		BE8632DA2059895D0075BF87 /* MyAccountHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8632D92059895D0075BF87 /* MyAccountHeaderCell.swift */; };
+		BE8632DC20599E720075BF87 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8632DB20599E720075BF87 /* Coupon.swift */; };
 		BE9DD10F20506A8E005E9E6F /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */; };
 		BE9DD11120506D0D005E9E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */; };
 		BE9DD113205098FD005E9E6F /* CouponItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DD112205098FD005E9E6F /* CouponItemCell.swift */; };
@@ -102,6 +103,7 @@
 		BE5F68B12016A7F6006F28EF /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 		BE8632D72058AB460075BF87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE8632D92059895D0075BF87 /* MyAccountHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountHeaderCell.swift; sourceTree = "<group>"; };
+		BE8632DB20599E720075BF87 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		BE9DD11020506D0D005E9E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE9DD112205098FD005E9E6F /* CouponItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponItemCell.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				BE0FD3322033764900CE68C5 /* HeaderItem.swift */,
 				BE0FD3302032226E00CE68C5 /* MediaItem.swift */,
 				BE8632D72058AB460075BF87 /* User.swift */,
+				BE8632DB20599E720075BF87 /* Coupon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				BE48A895203B63EA001E6F6B /* UITextView+style.swift in Sources */,
 				BE09587D2016AAC9005C9901 /* HomeHeaderItemCell.swift in Sources */,
 				BE9DD1172051AD2F005E9E6F /* SignUpController.swift in Sources */,
+				BE8632DC20599E720075BF87 /* Coupon.swift in Sources */,
 				BE489E4820530036006E5DD8 /* StuffedButton.swift in Sources */,
 				BE0958902018FE97005C9901 /* AboutHeaderCell.swift in Sources */,
 				BE095896201A73AF005C9901 /* MenuController.swift in Sources */,
