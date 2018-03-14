@@ -175,7 +175,7 @@ extension SignUpController {
     
     private func createTextfieldProperties() {
         
-        let textFields: [StuffedTextField] = [emailTextfield, passwordTextfield, confirmPasswordTextfield]
+        let textFields: [StuffedTextField] = [nameTextField, birthdayTextField, emailTextfield, passwordTextfield, confirmPasswordTextfield]
         var tag = 0
         
         for textField in textFields {
@@ -188,6 +188,8 @@ extension SignUpController {
         validator.registerField(emailTextfield, rules: [RequiredRule(), EmailRule()])
         validator.registerField(passwordTextfield, rules: [RequiredRule(), PasswordRule()])
         validator.registerField(confirmPasswordTextfield, rules: [RequiredRule(), PasswordRule()])
+        validator.registerField(nameTextField, rules: [RequiredRule(), FullNameRule()])
+        validator.registerField(birthdayTextField, rules: [RequiredRule()])
 
     }
     
@@ -198,8 +200,14 @@ extension SignUpController {
         view.addSubview(cancelButton)
         cancelButton.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, paddingTop: 30, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 60, height: 20)
         
+        view.addSubview(nameTextField)
+        nameTextField.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        
+        view.addSubview(birthdayTextField)
+        birthdayTextField.anchor(centerX: nil, centerY: nil, top: nameTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        
         view.addSubview(emailTextfield)
-        emailTextfield.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
+        emailTextfield.anchor(centerX: nil, centerY: nil, top: birthdayTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
         
         view.addSubview(passwordTextfield)
         passwordTextfield.anchor(centerX: nil, centerY: nil, top: emailTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
@@ -207,12 +215,7 @@ extension SignUpController {
         view.addSubview(confirmPasswordTextfield)
         confirmPasswordTextfield.anchor(centerX: nil, centerY: nil, top: passwordTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
         
-        view.addSubview(nameTextField)
-        nameTextField.anchor(centerX: nil, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
-        
-        view.addSubview(birthdayTextField)
-        birthdayTextField.anchor(centerX: nil, centerY: nil, top: nameTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: labelHeight)
         view.addSubview(registerButton)
-        registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: birthdayTextField.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
+        registerButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: confirmPasswordTextfield.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 50)
     }
 }
