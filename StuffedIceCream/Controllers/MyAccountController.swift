@@ -23,7 +23,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         navigationItem.rightBarButtonItem = logOutButton
         self.collectionView?.backgroundColor = .white
         self.collectionView?.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
-        self.collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        self.collectionView?.register(MyAccountHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
 
         checkIfLoggedIn()
         database.fetchUserInfo {
@@ -100,7 +100,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
         
         header.backgroundColor = .stuffedBlue
         
@@ -110,7 +110,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 150)
     }
 
 }
