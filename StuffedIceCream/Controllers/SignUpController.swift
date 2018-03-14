@@ -25,6 +25,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
     let emailTextfield: StuffedTextField = {
         let tf = StuffedTextField()
         tf.placeholder = "Email Address"
+        tf.keyboardType = .emailAddress
         return tf
     }()
     
@@ -91,6 +92,13 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         }
         
         validator.validate(self)
+    }
+    
+    @objc func datePickerChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        birthdayTextField.text = formatter.string(from: sender.date)
+        
     }
     
     func validationSuccessful() {
@@ -161,6 +169,18 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
             }
         }
         
+        return true
+    }
+    
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let datePicker = UIDatePicker()
+        if textField == birthdayTextField {
+            datePicker.datePickerMode = .date
+            textField.inputView = datePicker
+            datePicker.addTarget(self, action: (#selector(datePickerChanged)), for: .valueChanged)
+            
+        }
         return true
     }
     
