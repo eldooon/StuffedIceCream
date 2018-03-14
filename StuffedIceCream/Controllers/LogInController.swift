@@ -85,6 +85,7 @@ class LogInController: UIViewController {
             }
             
             print("Succesfully authenticated")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
