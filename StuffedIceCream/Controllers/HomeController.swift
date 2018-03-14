@@ -37,6 +37,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         database.fetchHeaderImages { 
             self.collectionView?.reloadData()
         }
+        
+        database.fetchUserInfo {
+            print("RETRIEVED USER INFO")
+        }
     }
 
     @objc func menuButtonTapped() {

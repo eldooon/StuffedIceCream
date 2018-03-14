@@ -26,9 +26,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.register(MyAccountHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
 
         checkIfLoggedIn()
-        database.fetchUserInfo {
-            print("Fetched user coupons")
-        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +48,6 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             return
         } else {
             print("Already logged in")
-            print(Auth.auth().currentUser)
         }
     }
     
@@ -102,7 +99,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
         
-        header.backgroundColor = .stuffedBlue
+        header.welcomeLabel.text = "Welcome back \(database.currentUser?.name)"
         
         return header
         
