@@ -56,7 +56,7 @@ class FireBaseData {
         }
     }
     
-    func fetchUserCoupons(completion: @escaping () -> ()) {
+    func t(completion: @escaping () -> ()) {
         
         let ref = Database.database().reference().child("Users")
         ref.observeSingleEvent(of: .value) { (snapshot) in

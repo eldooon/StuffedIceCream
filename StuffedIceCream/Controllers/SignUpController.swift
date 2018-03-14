@@ -105,6 +105,8 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         
         guard let email = emailTextfield.text else {return}
         guard let password = passwordTextfield.text else {return}
+        guard let name = nameTextField.text else {return}
+        guard let birthday = birthdayTextField.text else {return}
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             // ...
@@ -116,7 +118,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
             print("User created:", user?.uid ?? "")
             
             guard let uid = user?.uid else {return}
-            let dicValues = ["Birthday": "01/01/1991"]
+            let dicValues = ["Name": name, "Email": email, "Birthday": birthday,]
             let values = [uid: dicValues]
             Database.database().reference().child("Users").updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if let err = error {
