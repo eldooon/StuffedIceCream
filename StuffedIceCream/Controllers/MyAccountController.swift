@@ -12,6 +12,7 @@ import FirebaseAuth
 class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "cellId"
+    private let headerId = "headerId"
     let database = FireBaseData.sharedInstance
     
     override func viewDidLoad() {
@@ -21,7 +22,8 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         let logOutButton = UIBarButtonItem(image: #imageLiteral(resourceName: "setting"), style: .plain, target: self, action: #selector(logOutButtonTapped))
         navigationItem.rightBarButtonItem = logOutButton
         self.collectionView?.backgroundColor = .white
-        self.collectionView!.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
+        self.collectionView?.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
+        self.collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
 
         checkIfLoggedIn()
         database.fetchUserInfo {
@@ -92,6 +94,23 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView,
+                                 viewForSupplementaryElementOfKind kind: String,
+                                 at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath)
+        
+        header.backgroundColor = .stuffedBlue
+        
+        return header
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: view.frame.width, height: 100)
     }
 
 }
