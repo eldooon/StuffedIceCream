@@ -10,6 +10,14 @@ import UIKit
 
 class MyAccountHeaderCell: UICollectionViewCell {
     
+    var user: User? {
+        didSet {
+            if let name = user?.name {
+                welcomeLabel.text = "Welcome back \(name)!"
+            }
+        }
+    }
+    
     let logoImageView: StuffedImageView = {
         let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit

@@ -48,6 +48,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             print("not logged in")
             DispatchQueue.main.async {
                 let loginController = LogInController()
+                loginController.myAccountVC = self
                 let navController = StuffedNavController(rootViewController: loginController)
                 self.present(navController, animated: true, completion: nil)
             }
@@ -63,6 +64,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         do {
             try Auth.auth().signOut()
+            reFetchUserInfo()
             checkIfLoggedIn()
         } catch let err {
             print("Unable to sign out", err)
@@ -106,7 +108,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
         
-        header.welcomeLabel.text = "Welcome back \(database.currentUser?.name)"
+        header.user = database.currentUser
         
         return header
         

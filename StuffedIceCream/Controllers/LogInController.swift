@@ -55,6 +55,8 @@ class LogInController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
+    var myAccountVC: MyAccountController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,7 +91,9 @@ class LogInController: UIViewController, UITextFieldDelegate {
             }
             
             print("Succesfully authenticated")
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: {
+                self.myAccountVC?.reFetchUserInfo()
+            })
         }
     }
     
