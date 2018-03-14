@@ -12,7 +12,7 @@ class StuffedButton: UIButton {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 6, options: .curveEaseOut, animations: {
             self.transform = CGAffineTransform.identity
