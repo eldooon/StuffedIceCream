@@ -10,6 +10,17 @@ import UIKit
 
 class CouponItemCell: UICollectionViewCell {
     
+    var coupon: Coupon? {
+        didSet{
+            if let name = coupon?.name {
+                couponNameLabel.text = name
+            }
+            
+            if let imageUrl = coupon?.image {
+                couponImageView.loadImage(urlString: imageUrl)
+            }
+        }
+    }
     let couponImageView: StuffedImageView = {
         let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
