@@ -69,29 +69,45 @@ class FireBaseData {
             dictionaries.forEach({ (key, value) in
                 
                 if key == currentUID {
-                    guard let uservalue = value as? [String: Any] else {return}t
-                    print(uservalue)
+                    guard let uservalue = value as? [String:Any] else {return}
+                    guard let coupons = uservalue["Coupons"] as? [String:Any] else {return}
+                    guard let userCoupons = Array(coupons.values) as? [String] else {return}
                     let user = User(dictionary: uservalue)
-                    self.currentUser = user
-                    dump(user)
-                    print(user.coupons?.count)
+                    print("COUPONS: ", userCoupons)
+                    self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
+                        user.coupons = coupons
+                        self.currentUser = user
+                        print(self.currentUser?.coupons?[0].name)
+                    })
+
                 }
             })
             completion()
         }
     }
     
-    func fetchUserCoupon(completion: @escaping () -> ()) {
+    func fetchUserCoupon(coupons: [String], completion: @escaping ([Coupon]) -> ()) {
         
         let ref = Database.database().reference().child("Coupons")
+        var userCoupons: [Coupon] = []
         ref.observeSingleEvent(of: .value) { (snapshot) in
             
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in
                 print("key: \(key), value: \(value)")
-
+                for coupon in coupons {
+                    if key == coupon {
+                        print("MATCHED", key)
+                        guard let eachCoupon = value as? [String:Any] else {return}
+                        let userCoupon = Coupon(dictionary: eachCoupon)
+                        userCoupons.append(userCoupon)
+                    } else {
+                        print("NO MATCH")
+                    }
+                }
+                
             })
-            completion()
+            completion(userCoupons)
         }
     }
 }
