@@ -9,7 +9,11 @@
 import UIKit
 import FirebaseAuth
 
-class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+protocol MyAccountDelegate {
+    func refetch ()
+}
+
+class MyAccountController: UICollectionViewController, UICollectionViewDelegateFlowLayout, MyAccountDelegate {
 
     private let cellId = "cellId"
     private let headerId = "headerId"
@@ -41,6 +45,10 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             self.collectionView?.reloadData()
             print("CURRENT USER", self.database.currentUser?.name)
         }
+    }
+    
+    func refetch() {
+        reFetchUserInfo()
     }
     
     func checkIfLoggedIn() {
