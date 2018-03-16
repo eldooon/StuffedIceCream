@@ -14,6 +14,8 @@ class MyAccountHeaderCell: UICollectionViewCell {
         didSet {
             if let name = user?.name {
                 welcomeLabel.text = "Welcome back \(name)!"
+            } else  {
+                welcomeLabel.text = "Please Login"
             }
         }
     }
@@ -32,6 +34,19 @@ class MyAccountHeaderCell: UICollectionViewCell {
         return label
     }()
     
+    
+    let logInButton: StuffedButton = {
+        let button = StuffedButton()
+        let stringAttributes : [NSAttributedStringKey: Any] = [
+            NSAttributedStringKey.font : UIFont.comments ?? .systemFont(ofSize: 12),
+            NSAttributedStringKey.foregroundColor : UIColor.gray,
+            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
+        let title = NSMutableAttributedString(string: "Click Here to Log In.", attributes: stringAttributes)
+        button.setAttributedTitle(title, for: .normal)
+        button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -42,6 +57,9 @@ class MyAccountHeaderCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func logInButtonTapped() {
+        print("Logging In")
+    }
     private func createLayout(){
         
         addSubview(logoImageView)
@@ -49,5 +67,8 @@ class MyAccountHeaderCell: UICollectionViewCell {
         
         addSubview(welcomeLabel)
         welcomeLabel.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 30)
+        
+        addSubview(logInButton)
+        logInButton.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 30)
     }
 }
