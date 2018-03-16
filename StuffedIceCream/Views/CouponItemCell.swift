@@ -24,7 +24,6 @@ class CouponItemCell: UICollectionViewCell {
     let couponImageView: StuffedImageView = {
         let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .red
         return iv
     }()
     
