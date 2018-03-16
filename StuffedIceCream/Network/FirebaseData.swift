@@ -73,16 +73,16 @@ class FireBaseData {
                     guard let coupons = uservalue["Coupons"] as? [String:Any] else {return}
                     guard let userCoupons = Array(coupons.values) as? [String] else {return}
                     let user = User(dictionary: uservalue)
-                    print("COUPONS: ", userCoupons)
+//                    print("COUPONS: ", userCoupons)
                     self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
                         user.coupons = coupons
                         self.currentUser = user
-                        print(self.currentUser?.coupons?[0].name)
+                        print("Set Coupon and User")
+                        completion()
                     })
 
                 }
             })
-            completion()
         }
     }
     
@@ -94,10 +94,10 @@ class FireBaseData {
             
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in
-                print("key: \(key), value: \(value)")
+//                print("key: \(key), value: \(value)")
                 for coupon in coupons {
                     if key == coupon {
-                        print("MATCHED", key)
+//                        print("MATCHED", key)
                         guard let eachCoupon = value as? [String:Any] else {return}
                         let userCoupon = Coupon(dictionary: eachCoupon)
                         userCoupons.append(userCoupon)

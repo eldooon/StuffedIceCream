@@ -57,8 +57,6 @@ class LogInController: UIViewController, UITextFieldDelegate {
     
     var myAccountVC: MyAccountController?
     
-    var delegate: MyAccountDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
