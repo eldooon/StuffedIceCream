@@ -35,7 +35,8 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     }
 
     func reFetchUserInfo() {
-        
+        print("REFETCHING")
+        self.collectionView?.reloadData()
         database.fetchUserInfo {
             self.collectionView?.reloadData()
             print("CURRENT USER", self.database.currentUser?.name)
@@ -61,7 +62,6 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     @objc func logOutButtonTapped() {
-        print("Logging out")
         
         do {
             try Auth.auth().signOut()
