@@ -79,14 +79,18 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        
+        if let count = database.currentUser?.coupons?.count {
+            return count
+        }
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CouponItemCell
     
-        // Configure the cell
-        cell.backgroundColor = .blue
+        let userCoupon = database.currentUser?.coupons?[indexPath.item]
+        cell.couponNameLabel.text = userCoupon?.name
         return cell
     }
 
