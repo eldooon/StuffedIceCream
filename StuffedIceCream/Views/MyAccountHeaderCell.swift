@@ -41,7 +41,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     let logInButton: StuffedButton = {
         let button = StuffedButton()
         let stringAttributes : [NSAttributedStringKey: Any] = [
-            NSAttributedStringKey.font : UIFont.comments ?? .systemFont(ofSize: 12),
+            NSAttributedStringKey.font : UIFont.primaryBold ?? .systemFont(ofSize: 12),
             NSAttributedStringKey.foregroundColor : UIColor.gray,
             NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
         let title = NSMutableAttributedString(string: "Click Here to Log In.", attributes: stringAttributes)
@@ -63,6 +63,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     @objc func logInButtonTapped() {
         print("Logging In")
     }
+    
     private func createLayout(){
         
         addSubview(logoImageView)
