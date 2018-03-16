@@ -14,8 +14,11 @@ class MyAccountHeaderCell: UICollectionViewCell {
         didSet {
             if let name = user?.name {
                 welcomeLabel.text = "Welcome back \(name)!"
+                logInButton.isHidden = true
+                welcomeLabel.isHidden = false
             } else  {
-                welcomeLabel.text = "Please Login"
+                logInButton.isHidden = false
+                welcomeLabel.isHidden = true
             }
         }
     }
