@@ -90,7 +90,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CouponItemCell
     
         let userCoupon = database.currentUser?.coupons?[indexPath.item]
-        cell.couponNameLabel.text = userCoupon?.name
+        cell.coupon = userCoupon
         return cell
     }
 
