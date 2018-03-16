@@ -114,6 +114,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
         
         header.user = database.currentUser
+        header.myAccountVC = self
         
         return header
         

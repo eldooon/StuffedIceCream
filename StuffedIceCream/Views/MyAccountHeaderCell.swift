@@ -50,6 +50,8 @@ class MyAccountHeaderCell: UICollectionViewCell {
         return button
     }()
     
+    var myAccountVC = MyAccountController()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -61,7 +63,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     }
     
     @objc func logInButtonTapped() {
-        print("Logging In")
+        myAccountVC.checkIfLoggedIn()
     }
     
     private func createLayout(){
