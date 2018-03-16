@@ -69,15 +69,29 @@ class FireBaseData {
             dictionaries.forEach({ (key, value) in
                 
                 if key == currentUID {
-                    guard let uservalue = value as? [String: Any] else {return}
+                    guard let uservalue = value as? [String: Any] else {return}t
+                    print(uservalue)
                     let user = User(dictionary: uservalue)
                     self.currentUser = user
+                    dump(user)
+                    print(user.coupons?.count)
                 }
             })
             completion()
         }
     }
     
-    
-    
+    func fetchUserCoupon(completion: @escaping () -> ()) {
+        
+        let ref = Database.database().reference().child("Coupons")
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            
+            guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            dictionaries.forEach({ (key, value) in
+                print("key: \(key), value: \(value)")
+
+            })
+            completion()
+        }
+    }
 }

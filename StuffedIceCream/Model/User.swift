@@ -20,7 +20,7 @@ public class User {
         self.name = dictionary["Name"] as? String ?? ""
         self.birthday = dictionary["Birthday"] as? String ?? ""
         self.email = dictionary["Email"] as? String ?? ""
-        self.coupons = dictionary["Coupons"] as? [Coupon] ?? []
+
     }
     
 }
