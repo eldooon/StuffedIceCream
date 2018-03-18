@@ -13,6 +13,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
 
     private let cellId = "cellId"
     private let headerId = "headerId"
+    private let footerId = "footerId"
     let database = FireBaseData.sharedInstance
     
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.backgroundColor = .white
         self.collectionView?.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
         self.collectionView?.register(MyAccountHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        self.collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
 
         checkIfLoggedIn()
 
@@ -32,6 +34,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     override func viewDidAppear(_ animated: Bool) {
         print("Current User: ", self.database.currentUser?.name)
         print("Current UID: ", Auth.auth().currentUser?.uid)
+        print("Current Coupon Count: ", self.database.currentUser?.coupons?.count)
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,19 +117,38 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
-        
-        header.user = database.currentUser
-        header.myAccountVC = self
-        header.isUserInteractionEnabled = true
-        
-        return header
+        switch kind  {
+        case UICollectionElementKindSectionHeader:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as! MyAccountHeaderCell
+            
+            header.user = database.currentUser
+            header.myAccountVC = self
+            header.isUserInteractionEnabled = true
+            
+            return header
+            
+        case UICollectionElementKindSectionFooter:
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId, for: indexPath)
+            footer.backgroundColor = .blue
+            return footer
+            
+        default:
+            assert(false, "Unexpected element kind")
+        }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         return CGSize(width: view.frame.width, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if database.currentUser?.coupons != nil {
+            return CGSize(width: 0, height: 0)
+        } else {
+            return CGSize(width: view.frame.width, height: 200)
+        }
     }
 
 }
