@@ -10,11 +10,20 @@ import UIKit
 
 class MyAccountFooterCell: UICollectionViewCell {
     
+    let noCouponsImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "noCoupon")
+        iv.contentMode = .scaleAspectFit
+        return iv
+    }()
+    
     let noCouponsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.primaryBold
+        label.font = UIFont.commentsBold
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Aw cruff, looks like you currently do not have any coupons"
+        label.text = "Aw cruff, looks like you currently do not have any coupons..."
         return label
     }()
     
@@ -30,8 +39,11 @@ class MyAccountFooterCell: UICollectionViewCell {
     
     private func createLayout(){
         
+        addSubview(noCouponsImageView)
+        noCouponsImageView.anchor(centerX: centerXAnchor, centerY: centerYAnchor, top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 100, height: 100)
+        
         addSubview(noCouponsLabel)
-        noCouponsLabel.anchor(centerX: centerXAnchor, centerY: centerYAnchor, top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 50)
+        noCouponsLabel.anchor(centerX: centerXAnchor, centerY: nil, top: noCouponsImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 150, height: 50)
         
     }
 }

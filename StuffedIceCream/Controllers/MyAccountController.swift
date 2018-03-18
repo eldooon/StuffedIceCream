@@ -25,16 +25,10 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.backgroundColor = .white
         self.collectionView?.register(CouponItemCell.self, forCellWithReuseIdentifier: cellId)
         self.collectionView?.register(MyAccountHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
-        self.collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
+        self.collectionView?.register(MyAccountFooterCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
 
         checkIfLoggedIn()
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("Current User: ", self.database.currentUser?.name)
-        print("Current UID: ", Auth.auth().currentUser?.uid)
-        print("Current Coupon Count: ", self.database.currentUser?.coupons?.count)
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,8 +122,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             return header
             
         case UICollectionElementKindSectionFooter:
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId, for: indexPath)
-            footer.backgroundColor = .blue
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId, for: indexPath) as! MyAccountFooterCell
             return footer
             
         default:
