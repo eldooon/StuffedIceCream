@@ -115,6 +115,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         header.user = database.currentUser
         header.myAccountVC = self
+        header.isUserInteractionEnabled = true
         
         return header
         

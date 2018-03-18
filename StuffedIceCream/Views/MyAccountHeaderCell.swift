@@ -46,7 +46,6 @@ class MyAccountHeaderCell: UICollectionViewCell {
             NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
         let title = NSMutableAttributedString(string: "Click Here to Log In.", attributes: stringAttributes)
         button.setAttributedTitle(title, for: .normal)
-        button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -54,7 +53,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        logInButton.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         createLayout()
     }
     
@@ -63,6 +62,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     }
     
     @objc func logInButtonTapped() {
+        print("CLICK CLICK CLICK")
         myAccountVC.checkIfLoggedIn()
     }
     
@@ -75,6 +75,6 @@ class MyAccountHeaderCell: UICollectionViewCell {
         welcomeLabel.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 30)
         
         addSubview(logInButton)
-        logInButton.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 30)
+        logInButton.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 200, height: 50)
     }
 }
