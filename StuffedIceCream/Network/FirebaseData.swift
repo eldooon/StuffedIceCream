@@ -70,16 +70,30 @@ class FireBaseData {
                 
                 if key == currentUID {
                     guard let uservalue = value as? [String:Any] else {return}
-                    guard let coupons = uservalue["Coupons"] as? [String:Any] else {return}
-                    guard let userCoupons = Array(coupons.values) as? [String] else {return}
-                    let user = User(dictionary: uservalue)
-//                    print("COUPONS: ", userCoupons)
-                    self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
-                        user.coupons = coupons
+                    
+                    if let coupons = uservalue["Coupons"] as? [String:Any] {
+                        guard let userCoupons = Array(coupons.values) as? [String] else {return}
+                        let user = User(dictionary: uservalue)
+                        self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
+                            user.coupons = coupons
+                            self.currentUser = user
+                            print("Set Coupon and User")
+                            completion()
+                        })
+                    } else {
+                        let user = User(dictionary: uservalue)
                         self.currentUser = user
-                        print("Set Coupon and User")
                         completion()
-                    })
+                    }
+//                    guard let coupons = uservalue["Coupons"] as? [String:Any] else {return}
+//                    guard let userCoupons = Array(coupons.values) as? [String] else {return}
+//                    let user = User(dictionary: uservalue)
+//                    self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
+//                        user.coupons = coupons
+//                        self.currentUser = user
+//                        print("Set Coupon and User")
+//                        completion()
+//                    })
 
                 }
             })

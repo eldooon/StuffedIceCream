@@ -28,6 +28,11 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         checkIfLoggedIn()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Current User: ", self.database.currentUser?.name)
+        print("Current UID: ", Auth.auth().currentUser?.uid)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,10 +40,8 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     }
 
     func reFetchUserInfo() {
-        print("REFETCHING")
         self.collectionView?.reloadData()
         database.fetchUserInfo {
-            print("Fetched, time to reload")
             self.collectionView?.reloadData()
         }
     }
