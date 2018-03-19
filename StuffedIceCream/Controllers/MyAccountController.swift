@@ -118,7 +118,6 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
             header.user = database.currentUser
             header.myAccountVC = self
             header.isUserInteractionEnabled = true
-            
             return header
             
         case UICollectionElementKindSectionFooter:
@@ -133,10 +132,15 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 150)
+        if Auth.auth().currentUser == nil {
+            return CGSize(width: view.frame.width, height: 500)
+        } else {
+            return CGSize(width: view.frame.width, height: 150)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
         if database.currentUser?.coupons != nil || Auth.auth().currentUser == nil {
             return CGSize(width: 0, height: 0)
         } else {

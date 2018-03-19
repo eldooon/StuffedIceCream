@@ -69,7 +69,7 @@ class MyAccountHeaderCell: UICollectionViewCell {
     private func createLayout(){
         
         addSubview(logoImageView)
-        logoImageView.anchor(centerX: nil, centerY: nil, top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
+        logoImageView.anchor(centerX: nil, centerY: centerYAnchor, top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
         
         addSubview(welcomeLabel)
         welcomeLabel.anchor(centerX: centerXAnchor, centerY: nil, top: logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 30)
