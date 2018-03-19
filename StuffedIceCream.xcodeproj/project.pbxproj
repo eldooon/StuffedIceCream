@@ -20,6 +20,7 @@
 		BE095898201B98F5005C9901 /* MenuCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE095897201B98F5005C9901 /* MenuCategoryCell.swift */; };
 		BE09589A201BA29C005C9901 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE095899201BA29C005C9901 /* MenuItemCell.swift */; };
 		BE09589C201BD30B005C9901 /* CateringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09589B201BD30B005C9901 /* CateringController.swift */; };
+		BE0DCECF206037B50079EC7C /* CouponDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DCECE206037B50079EC7C /* CouponDetailController.swift */; };
 		BE0FD3252026456600CE68C5 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD3242026456600CE68C5 /* SideMenuItem.swift */; };
 		BE0FD327202645AF00CE68C5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD326202645AF00CE68C5 /* MenuItem.swift */; };
 		BE0FD329202A271B00CE68C5 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */; };
@@ -78,6 +79,7 @@
 		BE095897201B98F5005C9901 /* MenuCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoryCell.swift; sourceTree = "<group>"; };
 		BE095899201BA29C005C9901 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		BE09589B201BD30B005C9901 /* CateringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CateringController.swift; sourceTree = "<group>"; };
+		BE0DCECE206037B50079EC7C /* CouponDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailController.swift; sourceTree = "<group>"; };
 		BE0FD3242026456600CE68C5 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		BE0FD326202645AF00CE68C5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		BE0FD328202A271B00CE68C5 /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				BE5F68AA20168892006F28EF /* StuffedNavController.swift */,
 				BE5F689A20168606006F28EF /* HomeController.swift */,
 				BE9DD10E20506A8E005E9E6F /* MyAccountController.swift */,
+				BE0DCECE206037B50079EC7C /* CouponDetailController.swift */,
 				BE09588B2017DC03005C9901 /* AboutController.swift */,
 				BED56F8F2024CFF400ABF855 /* LocationController.swift */,
 				BE095895201A73AF005C9901 /* MenuController.swift */,
@@ -465,6 +468,7 @@
 				BE0FD327202645AF00CE68C5 /* MenuItem.swift in Sources */,
 				BED56F9C2026421300ABF855 /* MenuCategory.swift in Sources */,
 				BE9DD113205098FD005E9E6F /* CouponItemCell.swift in Sources */,
+				BE0DCECF206037B50079EC7C /* CouponDetailController.swift in Sources */,
 				BE0958922019231D005C9901 /* AboutFounderCell.swift in Sources */,
 				BE9DD11520518596005E9E6F /* LogInController.swift in Sources */,
 				BE5F68AB20168892006F28EF /* StuffedNavController.swift in Sources */,
