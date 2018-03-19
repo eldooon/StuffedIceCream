@@ -34,8 +34,8 @@ class LogInController: UIViewController, UITextFieldDelegate {
         return tf
     }()
     
-    let loginButton: StuffedButton = {
-        let button = StuffedButton()
+    let loginButton: StuffedBlueButton = {
+        let button = StuffedBlueButton()
         button.setTitle("Login", for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button

@@ -49,11 +49,9 @@ class CouponDetailController: UIViewController {
         return tv
     }()
 
-    let claimButton: StuffedButton = {
-        let button = StuffedButton()
+    let claimButton: StuffedBlueButton = {
+        let button = StuffedBlueButton()
         button.setTitle("Claim", for: .normal)
-        button.backgroundColor = .stuffedBlue
-        button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(claimButtonTapped), for: .touchUpInside)
         return button
     }()

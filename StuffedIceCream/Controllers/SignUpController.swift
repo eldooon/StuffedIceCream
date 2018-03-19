@@ -53,8 +53,8 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
         return tf
     }()
     
-    let registerButton: StuffedButton = {
-        let button = StuffedButton()
+    let registerButton: StuffedBlueButton = {
+        let button = StuffedBlueButton()
         button.setTitle("Register", for: .normal)
         button.backgroundColor = .stuffedBlue
         button.layer.cornerRadius = 5
