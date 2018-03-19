@@ -9,11 +9,35 @@
 import UIKit
 
 class CouponDetailController: UIViewController {
+    
+    let couponImageView: StuffedImageView = {
+        let iv = StuffedImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        return iv
+    }()
+    
+    let couponNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Coupon Name"
+        label.font = UIFont.titlesSmall
+        return label
+    }()
+    
+    let couponDescriptionTextView: UITextView = {
+        let tv = UITextView()
+        tv.font = UIFont.commentsBold
+        tv.text = "Coupon Description"
+        tv.isUserInteractionEnabled = false
+        tv.textAlignment = .center
+        return tv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        createLayout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +45,17 @@ class CouponDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func createLayout() {
+        
+        view.addSubview(couponImageView)
+        couponImageView.anchor(centerX: nil, centerY: nil, top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 200)
+        
+        view.addSubview(couponNameLabel)
+        couponNameLabel.anchor(centerX: view.centerXAnchor, centerY: nil, top: couponImageView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(couponDescriptionTextView)
+        couponDescriptionTextView.anchor(centerX: nil, centerY: nil, top: couponNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 420)
+    }
 
     /*
     // MARK: - Navigation
