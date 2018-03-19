@@ -49,6 +49,15 @@ class CouponDetailController: UIViewController {
         return tv
     }()
 
+    let claimButton: StuffedButton = {
+        let button = StuffedButton()
+        button.setTitle("Claim", for: .normal)
+        button.backgroundColor = .stuffedBlue
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(claimButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +71,10 @@ class CouponDetailController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func claimButtonTapped () {
+    print("Claim Claim CLAIM")
+    }
+    
     private func createLayout() {
         
         view.addSubview(couponImageView)
@@ -72,6 +85,9 @@ class CouponDetailController: UIViewController {
         
         view.addSubview(couponDescriptionTextView)
         couponDescriptionTextView.anchor(centerX: nil, centerY: nil, top: couponNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 420)
+        
+        view.addSubview(claimButton)
+        claimButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 30, paddingRight: 10, width: 200, height: 50)
     }
 
     /*
