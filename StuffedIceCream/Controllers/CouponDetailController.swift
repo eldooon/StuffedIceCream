@@ -10,6 +10,22 @@ import UIKit
 
 class CouponDetailController: UIViewController {
     
+    var coupon: Coupon? {
+        didSet {
+            if let couponName = coupon?.name {
+                couponNameLabel.text = couponName
+            }
+            
+            if let couponDescription = coupon?.description {
+                couponDescriptionTextView.text = couponDescription
+            }
+            
+            if let couponImageURL = coupon?.image {
+                couponImageView.loadImage(urlString: couponImageURL)
+            }
+        }
+    }
+    
     let couponImageView: StuffedImageView = {
         let iv = StuffedImageView()
         iv.contentMode = .scaleAspectFit
