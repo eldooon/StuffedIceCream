@@ -37,8 +37,6 @@ class LogInController: UIViewController, UITextFieldDelegate {
     let loginButton: StuffedButton = {
         let button = StuffedButton()
         button.setTitle("Login", for: .normal)
-        button.backgroundColor = .stuffedBlue
-        button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()

@@ -87,7 +87,7 @@ class CouponDetailController: UIViewController {
         couponDescriptionTextView.anchor(centerX: nil, centerY: nil, top: couponNameLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 420)
         
         view.addSubview(claimButton)
-        claimButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 30, paddingRight: 10, width: 200, height: 50)
+        claimButton.anchor(centerX: view.centerXAnchor, centerY: nil, top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 20, paddingRight: 10, width: 200, height: 50)
     }
 
     /*
