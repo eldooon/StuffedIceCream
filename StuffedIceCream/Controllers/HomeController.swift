@@ -41,6 +41,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         database.fetchUserInfo {
             print("RETRIEVED USER INFO")
         }
+
     }
 
     @objc func menuButtonTapped() {

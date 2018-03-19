@@ -10,6 +10,8 @@ import UIKit
 
 class CouponDetailController: UIViewController {
     
+    let database = FireBaseData.sharedInstance
+    
     var coupon: Coupon? {
         didSet {
             if let couponName = coupon?.name {
@@ -70,7 +72,9 @@ class CouponDetailController: UIViewController {
     }
     
     @objc func claimButtonTapped () {
-    print("Claim Claim CLAIM")
+        if let coupon = coupon {
+            database.removeCoupon(coupon: coupon)
+        }
     }
     
     private func createLayout() {

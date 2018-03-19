@@ -85,16 +85,6 @@ class FireBaseData {
                         self.currentUser = user
                         completion()
                     }
-//                    guard let coupons = uservalue["Coupons"] as? [String:Any] else {return}
-//                    guard let userCoupons = Array(coupons.values) as? [String] else {return}
-//                    let user = User(dictionary: uservalue)
-//                    self.fetchUserCoupon(coupons: userCoupons, completion: { (coupons) in
-//                        user.coupons = coupons
-//                        self.currentUser = user
-//                        print("Set Coupon and User")
-//                        completion()
-//                    })
-
                 }
             })
         }
@@ -123,5 +113,24 @@ class FireBaseData {
             })
             completion(userCoupons)
         }
+    }
+    
+    func removeCoupon(coupon: Coupon?) {
+        
+        guard let currentUID = Auth.auth().currentUser?.uid else {return}
+        
+        let ref = Database.database().reference().child("Users").child(currentUID).child("Coupons")
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            
+            guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            dictionaries.forEach({ (key, value) in
+                guard let couponName = coupon?.name else {return}
+                guard let firCouponName = value as? String else {return}
+                if couponName == firCouponName {
+                    ref.child(key).removeValue()
+                }
+            })
+        }
+        
     }
 }
