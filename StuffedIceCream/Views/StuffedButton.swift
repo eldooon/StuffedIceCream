@@ -10,16 +10,6 @@ import UIKit
 
 class StuffedButton: UIButton {
     
-    override init(frame: CGRect) {
-        super .init(frame: frame)
-        self.backgroundColor = .stuffedBlue
-        self.layer.cornerRadius = 5
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -31,5 +21,17 @@ class StuffedButton: UIButton {
         super.touchesBegan(touches, with: event)
     }
 
+}
 
+class StuffedBlueButton: StuffedButton {
+    
+    override init(frame: CGRect) {
+        super .init(frame: frame)
+        self.backgroundColor = .stuffedBlue
+        self.layer.cornerRadius = 5
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
