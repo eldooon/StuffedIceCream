@@ -85,6 +85,12 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         }
         return 0
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let couponDetailVC = CouponDetailController()
+        navigationController?.pushViewController(couponDetailVC, animated: true)
+    }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CouponItemCell
