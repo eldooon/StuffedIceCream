@@ -89,6 +89,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let couponDetailVC = CouponDetailController()
+        couponDetailVC.coupon = database.currentUser?.coupons?[indexPath.item]
         navigationController?.pushViewController(couponDetailVC, animated: true)
     }
 
