@@ -90,6 +90,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         
         let couponDetailVC = CouponDetailController()
         couponDetailVC.coupon = database.currentUser?.coupons?[indexPath.item]
+        couponDetailVC.myAccountVC = self
         navigationController?.pushViewController(couponDetailVC, animated: true)
     }
 

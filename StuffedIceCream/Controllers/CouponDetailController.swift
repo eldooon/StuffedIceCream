@@ -58,6 +58,8 @@ class CouponDetailController: UIViewController {
         return button
     }()
     
+    var myAccountVC = MyAccountController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
