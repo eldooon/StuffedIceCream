@@ -76,9 +76,10 @@ class CouponDetailController: UIViewController {
     @objc func claimButtonTapped () {
         if let coupon = coupon {
             self.presentOptionAlertControllerWithCompletion(title: "Confirm", message: "Are you sure you want to claim this coupon?", completion: {
-                self.myAccountVC.reFetchUserInfo()
                 self.database.removeCoupon(coupon: coupon)
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true, completion: {
+                    self.myAccountVC.reFetchUserInfo()
+                })
             })
         }
     }
