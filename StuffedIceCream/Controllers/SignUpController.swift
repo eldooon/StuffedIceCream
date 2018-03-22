@@ -118,7 +118,7 @@ class SignUpController: UIViewController, UITextFieldDelegate, ValidationDelegat
             print("User created:", user?.uid ?? "")
             
             guard let uid = user?.uid else {return}
-            let dicValues = ["Name": name, "Email": email, "Birthday": birthday]
+            let dicValues = ["Name": name, "Email": email, "Birthday": birthday, "Coupons":["New": "User"]] as [String : Any]
             let values = [uid: dicValues]
             Database.database().reference().child("Users").updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if let err = error {
