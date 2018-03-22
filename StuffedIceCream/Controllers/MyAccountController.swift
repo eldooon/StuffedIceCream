@@ -149,7 +149,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         
-        if database.currentUser?.coupons != nil || Auth.auth().currentUser == nil {
+        if database.currentUser?.coupons?.count != 0 || Auth.auth().currentUser == nil {
             return CGSize(width: 0, height: 0)
         } else {
             return CGSize(width: view.frame.width, height: 200)
