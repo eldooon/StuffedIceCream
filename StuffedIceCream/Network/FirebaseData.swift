@@ -62,8 +62,8 @@ class FireBaseData {
         
         self.currentUser = nil
         let ref = Database.database().reference().child("Users")
-        ref.observeSingleEvent(of: .value) { (snapshot) in
-            
+        
+        ref.observe(.value) { (snapshot) in
             guard let currentUID = Auth.auth().currentUser?.uid else {return}
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             dictionaries.forEach({ (key, value) in

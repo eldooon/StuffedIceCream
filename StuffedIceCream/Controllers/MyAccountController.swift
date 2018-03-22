@@ -28,7 +28,7 @@ class MyAccountController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView?.register(MyAccountFooterCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
 
         checkIfLoggedIn()
-        collectionView?.reloadData()
+        reFetchUserInfo()
 
     }
 
